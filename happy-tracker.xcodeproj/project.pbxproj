@@ -11,6 +11,11 @@
 		AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F19727E8C62F0015CCE9 /* ContentView.swift */; };
 		AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF91F19927E8C6310015CCE9 /* Assets.xcassets */; };
 		AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF91F19C27E8C6310015CCE9 /* Preview Assets.xcassets */; };
+		AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1A627E8CBF90015CCE9 /* LoginView.swift */; };
+		AF91F1AF27E8CF0C0015CCE9 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */; };
+		AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */; };
+		AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */; };
+		AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		AF91F19727E8C62F0015CCE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF91F19927E8C6310015CCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF91F19C27E8C6310015CCE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF91F1A627E8CBF90015CCE9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthLabel.swift; sourceTree = "<group>"; };
+		AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */,
 				AF91F19727E8C62F0015CCE9 /* ContentView.swift */,
+				AF91F1A827E8CC080015CCE9 /* View */,
+				AF91F1A927E8CC150015CCE9 /* ViewModel */,
+				AF91F1AC27E8CC440015CCE9 /* Service */,
+				AF91F1AA27E8CC310015CCE9 /* Model */,
+				AF91F1AB27E8CC420015CCE9 /* Util */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
 				AF91F19B27E8C6310015CCE9 /* Preview Content */,
 			);
@@ -65,6 +80,54 @@
 				AF91F19C27E8C6310015CCE9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF91F1A827E8CC080015CCE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+				AF91F1AD27E8CC6A0015CCE9 /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF91F1A927E8CC150015CCE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF91F1AA27E8CC310015CCE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF91F1AB27E8CC420015CCE9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AF91F1AC27E8CC440015CCE9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AF91F1AD27E8CC6A0015CCE9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
+				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
+				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
+				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
+				AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */,
+				AF91F1AF27E8CF0C0015CCE9 /* LogoView.swift in Sources */,
 				AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */,
+				AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */,
+				AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */,
 				AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
