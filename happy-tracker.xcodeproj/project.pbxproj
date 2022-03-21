@@ -16,6 +16,7 @@
 		AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */; };
 		AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */; };
 		AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */; };
+		AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthLabel.swift; sourceTree = "<group>"; };
 		AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
 				AF91F1AD27E8CC6A0015CCE9 /* Component */,
 			);
 			path = View;
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */,
 				AF91F1AF27E8CF0C0015CCE9 /* LogoView.swift in Sources */,
