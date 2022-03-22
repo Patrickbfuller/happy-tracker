@@ -22,7 +22,9 @@ struct RecordSessionView: View {
     @State var showLivePrediction = true
     @State var error = true
     @State var showHint = true
-    @State var isRecording = true
+    @State var isRecording = false
+    
+    @ObservedObject var stopwatch = Stopwatch()
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -34,37 +36,24 @@ struct RecordSessionView: View {
                 .ignoresSafeArea()
             
             VStack {
-                /// Top Tools
-                ZStack {
-                    HStack {
-                        /// Back Button
-                        Button {
-                            /// dismiss view (go back)
-                        } label: {
-                            Text("< back")
+                // Color to influence nav bar background
+                transparentBackground.ignoresSafeArea()
+                    .frame(height: 0)
+                
+                
+                if showLivePrediction {
+                    Button { // action
+                        withAnimation {
+                            showLivePrediction.toggle()
                         }
-                        Spacer()
-                        /// Info Button
-                        Button {
-                            withAnimation {
-                                showHint.toggle()
-                            }
-                        } label: {
-                            Image(systemName: "info.circle")
-                                .foregroundColor(.white)
-                                .font(.system(size: 30))
-                        }
-                    }
-                    
-                    /// Vanishable Prediction
-                    if showLivePrediction {
-                        Spacer()
-                        LivePredictionView(predictionLabel: "happy")
-                        Spacer()
+                    } label: {
+                        Text("Hide prediction")
+                            .foregroundColor(.white)
+                            .padding(5)
+                            .background(Color("medium"))
+                            .cornerRadius(10)
                     }
                 }
-                .padding()
-                .background(transparentBackground)
                 
                 /// Error Box
                 if error {
@@ -85,22 +74,81 @@ struct RecordSessionView: View {
                 /// Bottom Tools
                 
                 ZStack {
-                    StartStopButton(isRecording: $isRecording)
-                        .onTapGesture { isRecording.toggle()}
+                    StartStopButton(isRecording: $isRecording).environmentObject(stopwatch)
                     
                     if isRecording {
                         HStack {
-                            RecordingTimerView()
+                            RecordingTimerView().environmentObject(stopwatch)
+                                .padding(.leading)
                             Spacer()
                         }
                     }
                 }
-                
-                /// Prediction Toggle
-                PredictionToggle(showLivePrediction: $showLivePrediction)
+                Button {
+                    error.toggle()
+                } label: {
+                    Text("show/hide error")
+                }
             }
         }
-        
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            // Vanishable Prediction Label
+            ToolbarItem(placement: .principal) {
+                if showLivePrediction {
+                    LivePredictionView(predictionLabel: "happy")
+                } else {
+                    Button { // action
+                        withAnimation {
+                            showLivePrediction.toggle()
+                        }
+                    } label: {
+                        Text("Show prediction")
+                    }
+                    
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                InfoButton(bindingBool: $showHint)
+            }
+        }
+    }
+}
+
+class Stopwatch: ObservableObject {
+    
+    @Published var time = 0
+    
+    var timer: Timer = Timer.init()
+    
+    func startStop() {
+        if timer.isValid {
+            timer.invalidate()
+        } else {
+            self.time = 0
+            DispatchQueue.main.async {
+                self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+                    self.time += 1
+                }
+            }
+        }
+    }
+}
+
+struct InfoButton: View {
+    
+    @Binding var bindingBool: Bool
+    
+    var body: some View {
+        Button {
+            withAnimation {
+                bindingBool.toggle()
+            }
+        } label: {
+            Image(systemName: "info.circle")
+                .foregroundColor(.white)
+                .font(.system(size: 25))
+        }
     }
 }
 
@@ -109,7 +157,7 @@ struct LivePredictionView: View {
     var predictionLabel: String
     
     var body: some View {
-        Text(predictionLabel)
+        Text(predictionLabel.capitalized)
             .fontWeight(.black)
             .font(.title)
             .foregroundColor( predictionLabel == "happy" ? .green : .white)
@@ -152,12 +200,14 @@ struct HintView: View {
 
 struct RecordingTimerView: View {
     
+    @EnvironmentObject var stopwatch: Stopwatch
+    
     var body: some View {
         ZStack {
             Circle()
                 .foregroundColor(Color.black.opacity(0.5))
                 .frame(width: 50, height: 50)
-            Text("13")
+            Text("\(stopwatch.time)")
                 .foregroundColor(.red)
         }
     }
@@ -165,15 +215,16 @@ struct RecordingTimerView: View {
 
 struct StartStopButton: View {
     
+    @EnvironmentObject var stopwatch: Stopwatch
     
     @Binding var isRecording: Bool
     var buttonLabel: String {
         isRecording ? "Stop" : "Start"
     }
-    
+        
     var body: some View {
-        Button {
-            // action
+        Button { // action
+            stopwatch.startStop()
             withAnimation {
                 isRecording.toggle()
             }
