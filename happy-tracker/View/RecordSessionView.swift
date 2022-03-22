@@ -36,11 +36,12 @@ struct RecordSessionView: View {
                 .ignoresSafeArea()
             
             VStack {
-                // Color to influence nav bar background
+                /// Color to influence nav bar background
                 transparentBackground.ignoresSafeArea()
                     .frame(height: 0)
                 
                 
+                /// Vanishable Button to Hide Live Prediction
                 if showLivePrediction {
                     Button { // action
                         withAnimation {
@@ -59,7 +60,7 @@ struct RecordSessionView: View {
                 if error {
                     CameraErrorView()
                 }
-                /// HintBox
+                /// HintBox - tappable
                 if showHint {
                     HintView()
                         .onTapGesture {
@@ -74,8 +75,10 @@ struct RecordSessionView: View {
                 /// Bottom Tools
                 
                 ZStack {
+                    /// Start/Stop Record Button
                     StartStopButton(isRecording: $isRecording).environmentObject(stopwatch)
                     
+                    /// Vanishable Stopwatch Timer
                     if isRecording {
                         HStack {
                             RecordingTimerView().environmentObject(stopwatch)
@@ -84,6 +87,7 @@ struct RecordSessionView: View {
                         }
                     }
                 }
+                /// Deving Error shower/hider
                 Button {
                     error.toggle()
                 } label: {
