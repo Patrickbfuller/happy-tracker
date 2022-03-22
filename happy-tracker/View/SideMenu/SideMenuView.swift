@@ -27,16 +27,30 @@ struct SideMenuView: View {
             }
             .padding(.leading)
             
-            ForEach(SideMenuViewModel.allCases, id: \.rawValue) { option in
-                HStack(spacing: 16) {
-                    Image(systemName: option.imageName)
+            ForEach(SideMenuViewModel.allCases, id: \.rawValue) { viewModel in
+                if viewModel == .profile {
+                    NavigationLink {
+                        ProfileView()
+                    } label: {
+                        SideMenuOptionRowView(viewModel: viewModel)
+                    }
+                } else if viewModel == .appSettings{
+                    NavigationLink{
+                        AppSettingsView()
+                    } label: {
+                        SideMenuOptionRowView(viewModel: viewModel)
+                    }
+                } else if viewModel == .logout {
+                    Button {
+                        print("Logout here")
+                    } label: {
+                        SideMenuOptionRowView(viewModel: viewModel)
+                    }
                     
-                    Text(option.menuOption)
-                    
-                    Spacer()
+                } else {
+                    SideMenuOptionRowView(viewModel: viewModel)
                 }
-                .frame(height:40)
-                .padding(.horizontal)
+                
             }
             
             Spacer()

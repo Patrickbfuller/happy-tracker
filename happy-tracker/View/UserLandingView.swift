@@ -15,18 +15,23 @@ struct UserLandingView: View {
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 300, height: 200)
                 .padding(.vertical)
+                .foregroundColor(.blue)
             Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
             RoundedRectangle(cornerRadius: 10)
                 .frame(width: 300, height: 200)
                 .padding(.vertical)
+                .foregroundColor(.blue)
             
-            CustomButton(buttonLabel: "Record") {
+            CustomButton(buttonLabel: "Record Session") {
                 // button action
             }
             
         }
+        
+        
     }
+        
 }
 
 struct UserLandingView_Previews: PreviewProvider {

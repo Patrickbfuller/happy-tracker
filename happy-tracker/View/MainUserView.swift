@@ -15,6 +15,10 @@ struct MainUserView: View {
         NavigationView {
             GeometryReader { geo in
             ZStack(alignment: .topLeading) {
+
+                Color("pale")
+                    .ignoresSafeArea(.all)
+                
                 UserLandingView()
                     .frame(width: geo.size.width, height: geo.size.height)
                     .navigationBarHidden(showSideMenu)
@@ -22,7 +26,8 @@ struct MainUserView: View {
                 if showSideMenu {
                     ZStack {
                         Color(.black)
-                            .opacity(0.25)
+                            .opacity(showSideMenu ? 0.25 : 0.0)
+                            .ignoresSafeArea(.all)
                     }.onTapGesture {
                         withAnimation(.easeOut) {
                             showSideMenu = false
@@ -52,6 +57,9 @@ struct MainUserView: View {
                             .foregroundColor(Color("medium"))
                     }
                 }
+            }
+            .onAppear{
+                showSideMenu = false
             }
         }
     }
