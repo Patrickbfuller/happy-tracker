@@ -2,15 +2,35 @@
 //  UserLandingView.swift
 //  happy-tracker
 //
-//  Created by Patrick Fuller on 3/23/22.
+//  Created by Alexander Davila-Wollheim on 3/21/22.
 //
-
 import SwiftUI
 
 struct UserLandingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            //Chart
+            Text("Chart Goes here")
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 300, height: 200)
+                .padding(.vertical)
+                .foregroundColor(.blue)
+            Text("Session list goes here")
+            //List of Dates and Happy/Sad Labels
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 300, height: 200)
+                .padding(.vertical)
+                .foregroundColor(.blue)
+            
+            CustomButton(buttonLabel: "Record Session") {
+                // button action
+            }
+            
+        }
+        
+        
     }
+        
 }
 
 struct UserLandingView_Previews: PreviewProvider {

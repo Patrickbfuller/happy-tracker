@@ -2,19 +2,30 @@
 //  ProfileInfoView.swift
 //  happy-tracker
 //
-//  Created by Patrick Fuller on 3/23/22.
+//  Created by Alexander Davila-Wollheim on 3/22/22.
 //
-
 import SwiftUI
 
 struct ProfileInfoView: View {
+    let text: String
+    let imageName: String?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 25)
+            .fill(Color.white)
+            .frame(height: 50)
+            .overlay(HStack {
+                Image(systemName: imageName ?? "")
+                    .foregroundColor(Color("medium"))
+                Text(text)
+            })
+            .padding(.all)
     }
 }
 
 struct ProfileInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileInfoView()
+        ProfileInfoView(text: "Hello", imageName: "mail.fill")
+            .previewLayout(.sizeThatFits)
     }
 }
