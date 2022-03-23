@@ -22,10 +22,12 @@ struct CustomButton: View {
             
             Text(buttonLabel)
             // styling
+                
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .frame(width: 100, height: 45)
+                .frame(height: 45)
                 .font(.title2)
+                .padding(.horizontal)
                 .background(Color("medium"))
                 .clipShape(Capsule())
         }
