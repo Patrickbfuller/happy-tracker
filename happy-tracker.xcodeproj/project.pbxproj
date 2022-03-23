@@ -16,6 +16,7 @@
 		AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */; };
 		AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */; };
 		AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */; };
+		AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */; };
 		CF0F786227E8F038009965CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786127E8F038009965CE /* RegisterView.swift */; };
 		CF0F786427E8F506009965CE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786327E8F506009965CE /* ChartView.swift */; };
 		CF0F786727E8FD66009965CE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786627E8FD66009965CE /* SwiftUICharts */; };
@@ -35,6 +36,7 @@
 		AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthLabel.swift; sourceTree = "<group>"; };
 		AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionView.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF0F786327E8F506009965CE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		CFCD8CCE27EA128B0069873D /* ChartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
 				CF0F786127E8F038009965CE /* RegisterView.swift */,
 				CFCD8CCE27EA128B0069873D /* ChartPageView.swift */,
 				AF91F1AD27E8CC6A0015CCE9 /* Component */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
 				CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */,
@@ -377,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pbfuid.happy-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -405,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pbfuid.happy-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

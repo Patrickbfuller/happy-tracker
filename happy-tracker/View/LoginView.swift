@@ -17,6 +17,7 @@ struct LoginView: View {
             
             Spacer()
             
+            Text("Happy Tracker??")
             // Logo
             LogoView()
             
