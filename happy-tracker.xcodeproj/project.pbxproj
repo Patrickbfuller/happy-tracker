@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */; };
 		AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */; };
+		AF311ECF27EBA79D00118C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF311ECE27EBA79D00118C9D /* GoogleService-Info.plist */; };
 		AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C627EB972600A96F5E /* FirebaseAuth */; };
 		AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C827EB972600A96F5E /* FirebaseFirestore */; };
 		AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
+		AF311ECE27EBA79D00118C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		AF7F63CE27EB990500A96F5E /* MainUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
 		AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				AF91F1AA27E8CC310015CCE9 /* Model */,
 				AF7F63CB27EB982B00A96F5E /* Util */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
+				AF311ECE27EBA79D00118C9D /* GoogleService-Info.plist */,
 				AF91F19B27E8C6310015CCE9 /* Preview Content */,
 			);
 			path = "happy-tracker";
@@ -256,6 +259,7 @@
 			files = (
 				AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */,
 				AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */,
+				AF311ECF27EBA79D00118C9D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
