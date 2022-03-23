@@ -37,7 +37,7 @@ struct RegisterView: View {
             Spacer()
             
             
-            VStack(alignment: .leading, spacing: 20){
+            VStack(alignment: .leading){
                 
                 //name input
                 CustomAuthLabel(label: "Name")
