@@ -22,8 +22,7 @@ struct LoginView: View {
             LogoView()
             
             Spacer()
-            
-            
+                    
             VStack(alignment: .leading) {
                 
                 Text("Log In")
