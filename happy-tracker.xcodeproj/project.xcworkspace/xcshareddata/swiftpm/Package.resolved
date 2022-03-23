@@ -1,23 +1,25 @@
 {
-  "pins" : [
-    {
-      "identity" : "chartview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppPear/ChartView",
-      "state" : {
-        "revision" : "9115a992c91fa19cbb4f2241084240d38654a1fc",
-        "version" : "1.5.5"
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUICharts",
+        "repositoryURL": "https://github.com/AppPear/ChartView",
+        "state": {
+          "branch": null,
+          "revision": "9115a992c91fa19cbb4f2241084240d38654a1fc",
+          "version": "1.5.5"
+        }
+      },
+      {
+        "package": "LineChartView",
+        "repositoryURL": "https://github.com/Jonathan-Gander/LineChartView",
+        "state": {
+          "branch": null,
+          "revision": "e3ccf86d249378c48710e02c31ce39a4ddd56c10",
+          "version": "1.1.0"
+        }
       }
-    },
-    {
-      "identity" : "linechartview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Jonathan-Gander/LineChartView",
-      "state" : {
-        "revision" : "e3ccf86d249378c48710e02c31ce39a4ddd56c10",
-        "version" : "1.1.0"
-      }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }
