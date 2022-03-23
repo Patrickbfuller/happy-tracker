@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        NavigationView{
-//            MainUserView()
-//        }
         Text("Hello World")
     }
 }

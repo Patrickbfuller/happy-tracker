@@ -17,12 +17,12 @@ struct LoginView: View {
             
             Spacer()
             
+            Text("Happy Tracker??")
             // Logo
             LogoView()
             
             Spacer()
-            
-            
+                    
             VStack(alignment: .leading) {
                 
                 Text("Log In")

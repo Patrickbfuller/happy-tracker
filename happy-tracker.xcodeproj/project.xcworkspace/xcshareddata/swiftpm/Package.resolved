@@ -106,6 +106,21 @@
       "state" : {
         "revision" : "e1499bc69b9040b29184f7f2996f7bab467c1639",
         "version" : "1.19.0"
+      "identity" : "chartview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppPear/ChartView",
+      "state" : {
+        "revision" : "9115a992c91fa19cbb4f2241084240d38654a1fc",
+        "version" : "1.5.5"
+      }
+    },
+    {
+      "identity" : "linechartview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jonathan-Gander/LineChartView",
+      "state" : {
+        "revision" : "e3ccf86d249378c48710e02c31ce39a4ddd56c10",
+        "version" : "1.1.0"
       }
     }
   ],
