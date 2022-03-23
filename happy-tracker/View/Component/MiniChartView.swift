@@ -9,8 +9,7 @@ import SwiftUI
 import SwiftUICharts
 
 struct MiniChartView: View {
-    
-    private let rateValue: Bool = false
+
     var body: some View {
         ZStack(alignment: .leading){
             
@@ -24,15 +23,14 @@ struct MiniChartView: View {
                           //                          legendTextColor: Color.red,
                           //                          dropShadowColor: Color.orange),
                           form: ChartForm.extraLarge,
+                          rateValue: 0,
                           
                           
                           dropShadow: true
                           
             )
             
-            Rectangle()
-                .foregroundColor(.white)
-                .frame(width: 80, height: 75, alignment: .leading)
+     
         }
     }
 }
