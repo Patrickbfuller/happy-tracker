@@ -10,6 +10,12 @@
 		AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */; };
 		AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */; };
 		AF311ED127EBAD9300118C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */; };
+		AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED227EBB45A00118C9D /* LiveFrameView.swift */; };
+		AF311ED527EBB5F700118C9D /* LiveCamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED427EBB5F700118C9D /* LiveCamViewModel.swift */; };
+		AF311ED727EBB66F00118C9D /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED627EBB66F00118C9D /* CameraError.swift */; };
+		AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED827EBB6B600118C9D /* CameraManager.swift */; };
+		AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311EDA27EBBB2000118C9D /* FrameManager.swift */; };
+		AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */; };
 		AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C627EB972600A96F5E /* FirebaseAuth */; };
 		AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C827EB972600A96F5E /* FirebaseFirestore */; };
 		AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */; };
@@ -40,6 +46,12 @@
 		AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
 		AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF311ED227EBB45A00118C9D /* LiveFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFrameView.swift; sourceTree = "<group>"; };
+		AF311ED427EBB5F700118C9D /* LiveCamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamViewModel.swift; sourceTree = "<group>"; };
+		AF311ED627EBB66F00118C9D /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
+		AF311ED827EBB6B600118C9D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		AF311EDA27EBBB2000118C9D /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Ext.swift"; sourceTree = "<group>"; };
 		AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		AF7F63CE27EB990500A96F5E /* MainUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
 		AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
@@ -91,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7F63D627EB999F00A96F5E /* SideMenuViewModel.swift */,
+				AF311ED427EBB5F700118C9D /* LiveCamViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -98,6 +111,10 @@
 		AF7F63CB27EB982B00A96F5E /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				AF311ED627EBB66F00118C9D /* CameraError.swift */,
+				AF311EDA27EBBB2000118C9D /* FrameManager.swift */,
+				AF311ED827EBB6B600118C9D /* CameraManager.swift */,
+				AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -184,6 +201,7 @@
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
 				CFCD8CD927EA27BD0069873D /* MiniChartView.swift */,
+				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -272,6 +290,7 @@
 			files = (
 				AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */,
 				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
+				AF311ED527EBB5F700118C9D /* LiveCamViewModel.swift in Sources */,
 				CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */,
@@ -279,13 +298,18 @@
 				AF7F63D727EB999F00A96F5E /* SideMenuViewModel.swift in Sources */,
 				AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */,
 				AF91F1AF27E8CF0C0015CCE9 /* LogoView.swift in Sources */,
+				AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */,
 				AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */,
 				AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */,
+				AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
+				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,
 				CF0F786427E8F506009965CE /* ChartView.swift in Sources */,
 				AF7F63D127EB991E00A96F5E /* ProfileInfoView.swift in Sources */,
+				AF311ED727EBB66F00118C9D /* CameraError.swift in Sources */,
 				CF0F786227E8F038009965CE /* RegisterView.swift in Sources */,
 				AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */,
+				AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */,
 				CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */,
 				AF7F63D527EB995B00A96F5E /* UserLandingView.swift in Sources */,
 				AF7F63CF27EB990500A96F5E /* MainUserView.swift in Sources */,
@@ -420,8 +444,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,8 +474,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

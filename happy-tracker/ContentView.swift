@@ -10,10 +10,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            NavigationLink {
-                RecordSessionView()
-            } label: {
-                Text("record session view")
+            
+            VStack {
+                NavigationLink {
+                    LoginView()
+                } label: {
+                    Text("Log in view")
+                }
+                
+                NavigationLink {
+                    RecordSessionView()
+                } label: {
+                    Text("record session view")
+                }
             }
         }
     }

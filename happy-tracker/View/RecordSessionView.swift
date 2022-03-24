@@ -20,11 +20,11 @@ struct RecordSessionView: View {
      */
     
     @State var showLivePrediction = true
-    @State var error = true
     @State var showHint = true
     @State var isRecording = false
     
     @ObservedObject var stopwatch = Stopwatch()
+    @ObservedObject var model = LiveCamViewModel()
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -34,6 +34,16 @@ struct RecordSessionView: View {
             /// Placeholder for Camera Feed from viewModel
             Rectangle().foregroundColor(Color(red: 0.11, green: 0.3, blue: 0.3))
                 .ignoresSafeArea()
+            
+            /// Visual Feed
+            LiveFrameView(image: model.frame)
+                .ignoresSafeArea()
+                .onAppear {
+                    model.startCamera()
+                }
+                .onDisappear {
+                    model.stopCamera()
+                }
             
             VStack {
                 /// Color to influence nav bar background
@@ -57,9 +67,13 @@ struct RecordSessionView: View {
                 }
                 
                 /// Error Box
-                if error {
-                    CameraErrorView()
+                if model.cameraError != nil {
+                    CameraErrorView(model.cameraError!)
                 }
+                /// Debug layout with error view
+//                if error {
+//                    CameraErrorView()
+//                }
                 /// HintBox - tappable
                 if showHint {
                     HintView()
@@ -87,12 +101,13 @@ struct RecordSessionView: View {
                         }
                     }
                 }
+                /// Debug layout with error view
                 /// Deving Error shower/hider
-                Button {
-                    error.toggle()
-                } label: {
-                    Text("show/hide error")
-                }
+//                Button {
+//                    error.toggle()
+//                } label: {
+//                    Text("show/hide error")
+//                }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -170,6 +185,12 @@ struct LivePredictionView: View {
 
 struct CameraErrorView: View {
     
+    var cameraError: CameraError
+    
+    init(_ cameraError: CameraError) {
+        self.cameraError = cameraError
+    }
+    
     var body: some View {
         
         HStack {
@@ -177,7 +198,7 @@ struct CameraErrorView: View {
             VStack {
                 Text("error:")
                     .fontWeight(.black)
-                Text("description\nof nerror")
+                Text("\(cameraError.description)")
                     .lineLimit(nil)
             }
             Spacer()
