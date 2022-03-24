@@ -11,6 +11,12 @@ struct LiveFrameView: View {
     
     var image: CGImage?
     
+    init(cvpBuffer: CVPixelBuffer?) {
+        if let cvpBuffer = cvpBuffer {
+            self.image = CGImage.create(from: cvpBuffer)
+        }
+    }
+    
     var body: some View {
         
         if let image = image {
@@ -32,8 +38,8 @@ struct LiveFrameView: View {
     }
 }
 
-struct FrameView_Previews: PreviewProvider {
-    static var previews: some View {
-        LiveFrameView()
-    }
-}
+//struct FrameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LiveFrameView()
+//    }
+//}

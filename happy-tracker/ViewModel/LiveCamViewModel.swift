@@ -13,6 +13,7 @@ class LiveCamViewModel: ObservableObject {
     @Published var frame: CGImage?
     @Published var cameraError: CameraError?
     @Published var cvpBuffer: CVPixelBuffer?
+    @Published var bufferPrediction: BufferPrediction?
     
     private let cameraManager = CameraManager.shared
     private let frameManager = FrameManager.shared

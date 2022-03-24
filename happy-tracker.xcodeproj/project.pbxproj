@@ -16,6 +16,10 @@
 		AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED827EBB6B600118C9D /* CameraManager.swift */; };
 		AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311EDA27EBBB2000118C9D /* FrameManager.swift */; };
 		AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */; };
+		AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */; };
+		AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */; };
+		AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */; };
+		AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */; };
 		AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C627EB972600A96F5E /* FirebaseAuth */; };
 		AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C827EB972600A96F5E /* FirebaseFirestore */; };
 		AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */; };
@@ -52,6 +56,10 @@
 		AF311ED827EBB6B600118C9D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		AF311EDA27EBBB2000118C9D /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Ext.swift"; sourceTree = "<group>"; };
+		AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferPrediction.swift; sourceTree = "<group>"; };
+		AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePredictionView.swift; sourceTree = "<group>"; };
+		AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionRecognitionClassifierHNS.mlmodel; sourceTree = "<group>"; };
+		AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		AF7F63CE27EB990500A96F5E /* MainUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
 		AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
@@ -99,6 +107,15 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		AF4D9AF727ED13C1007ED7FA /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */,
+				AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
 		AF7F63CA27EB981600A96F5E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +161,7 @@
 				AF7F63CA27EB981600A96F5E /* ViewModel */,
 				AF91F1AC27E8CC440015CCE9 /* Service */,
 				AF91F1AA27E8CC310015CCE9 /* Model */,
+				AF4D9AF727ED13C1007ED7FA /* CoreML */,
 				AF7F63CB27EB982B00A96F5E /* Util */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
 				AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */,
@@ -167,6 +185,7 @@
 				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
 				AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */,
 				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
+				AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */,
 				CF0F786127E8F038009965CE /* RegisterView.swift */,
 				CFCD8CCE27EA128B0069873D /* ChartPageView.swift */,
 				AF7F63CE27EB990500A96F5E /* MainUserView.swift */,
@@ -181,6 +200,7 @@
 		AF91F1AA27E8CC310015CCE9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +312,7 @@
 				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
 				AF311ED527EBB5F700118C9D /* LiveCamViewModel.swift in Sources */,
 				CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */,
+				AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */,
 				AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */,
@@ -303,16 +324,19 @@
 				AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */,
 				AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
+				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
 				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,
 				CF0F786427E8F506009965CE /* ChartView.swift in Sources */,
 				AF7F63D127EB991E00A96F5E /* ProfileInfoView.swift in Sources */,
 				AF311ED727EBB66F00118C9D /* CameraError.swift in Sources */,
 				CF0F786227E8F038009965CE /* RegisterView.swift in Sources */,
+				AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */,
 				AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */,
 				AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */,
 				CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */,
 				AF7F63D527EB995B00A96F5E /* UserLandingView.swift in Sources */,
 				AF7F63CF27EB990500A96F5E /* MainUserView.swift in Sources */,
+				AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */,
 				AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,8 @@ struct RecordSessionView: View {
     @State var isRecording = false
     
     @ObservedObject var stopwatch = Stopwatch()
-    @ObservedObject var model = LiveCamViewModel()
+    var cameraManager = CameraManager.shared
+    var frameManager = FrameManager.shared
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -36,13 +37,13 @@ struct RecordSessionView: View {
                 .ignoresSafeArea()
             
             /// Visual Feed
-            LiveFrameView(image: model.frame)
+            LiveFrameView(cvpBuffer: frameManager.current)
                 .ignoresSafeArea()
                 .onAppear {
-                    model.startCamera()
+                    cameraManager.session.startRunning()
                 }
                 .onDisappear {
-                    model.stopCamera()
+                    cameraManager.session.stopRunning()
                 }
             
             VStack {
@@ -67,13 +68,10 @@ struct RecordSessionView: View {
                 }
                 
                 /// Error Box
-                if model.cameraError != nil {
-                    CameraErrorView(model.cameraError!)
+                if cameraManager.error != nil {
+                    CameraErrorView(cameraManager.error!)
                 }
-                /// Debug layout with error view
-//                if error {
-//                    CameraErrorView()
-//                }
+
                 /// HintBox - tappable
                 if showHint {
                     HintView()
@@ -171,17 +169,6 @@ struct InfoButton: View {
     }
 }
 
-struct LivePredictionView: View {
-    
-    var predictionLabel: String
-    
-    var body: some View {
-        Text(predictionLabel.capitalized)
-            .fontWeight(.black)
-            .font(.title)
-            .foregroundColor( predictionLabel == "happy" ? .green : .white)
-    }
-}
 
 struct CameraErrorView: View {
     
