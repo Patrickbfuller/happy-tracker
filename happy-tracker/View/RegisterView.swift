@@ -9,24 +9,26 @@ import SwiftUI
 
 
 struct RegisterView: View {
-    @State var email = ""
-    @State var password = ""
+    
+    @State private var name = ""
+    @State private var email = ""
+    @State private var password = ""
+   
+    @EnvironmentObject var viewModel: AuthViewModel
+    @Environment(\.presentationMode) var presentationMode
+    
+    
     
     var body: some View {
         
         
         VStack {
-            HStack{
-                //arrow
-                Image(systemName: "arrow.backward")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                    .padding()
-                
-                //text
-                Text("back to login")
-                Spacer()
+        
+            Button {
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+         
+        
             }
             .padding(.leading, 20)
             
@@ -38,12 +40,16 @@ struct RegisterView: View {
             
             
             VStack(alignment: .leading){
-                
+                Text("Sign up")
+                    .fontWeight(.black)
+                    .font(.title)
+                    .padding(.bottom)
                 //name input
+      
                 CustomAuthLabel(label: "Name")
                 
                 CustomTextField(placeholder: "enter name",
-                                inputText: $email,
+                                inputText: $name,
                                 isSecure: false)
                 
                 
@@ -64,13 +70,15 @@ struct RegisterView: View {
                                 isSecure: true)
                 
                 
+        
+                
                 //confirm password
                 
-                CustomAuthLabel(label: "Confirm password")
-                
-                CustomTextField(placeholder: "enter password",
-                                inputText: $password,
-                                isSecure: true)
+                //                CustomAuthLabel(label: "Confirm password")
+                //                
+                //                CustomTextField(placeholder: "enter password",
+                //                                inputText: $password,
+                //                                isSecure: true)
                 
                 
             }
@@ -80,6 +88,9 @@ struct RegisterView: View {
             // Login button (roundy Button)
             CustomButton(buttonLabel: "Register") {
                 // button action
+                viewModel.register(withEmail: email,
+                                   password: password,
+                                   name: name)
             } 
             
             Spacer()

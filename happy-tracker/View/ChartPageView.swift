@@ -8,57 +8,28 @@
 import SwiftUI
 
 
-
 struct ChartPageView: View {
     
     var body: some View {
+
+
+
+        VStack{
+            Text("Emotion Tracker")
+             
+                .font(.title2)
+                .fontWeight(.bold)
         
-        VStack(spacing: 20){
-            Text("Home")
-            
-            
-            //Line chart
-            
-            // Image(systemName: "chart.xyaxis.line")
-            
             ChartView()
+             //  .padding(.bottom)
             
-                .frame(width: 390, height: 350)
-                .scaledToFit()
-                .padding()
+            //Spacer()
+             //  Divider()
             
+            MiniListView(miniListRow: MiniListRow())
+             //   .padding(.top,20)
             
-            Spacer()
-            
-            //mini list view
-            Rectangle()
-                .frame(width: 400, height: 200)
-                .cornerRadius(20)
-                .padding()
-                .foregroundColor(.blue)
-            
-            
-            Spacer()
-            Divider()
-            HStack(spacing: 20){
-                //Button "Chart"
-                CustomButton(buttonLabel: "Chart") {
-                    // button action
-                }
-                .padding()
-                
-                
-                Divider()
-                
-                
-                //Button "List"
-                CustomButton(buttonLabel: "List") {
-                    // button action
-                }
-                .padding()
-            }
-            
-            
+        
         }
         .background(Color("pale").opacity(0.2))
     }

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>20713674983-mndbgoh8rur4k5e3139gnbtbgjbefar2.apps.googleusercontent.com</string>
+	<string>713056945049-sqcrkcoc2c8of6ro0q9i68kcpjqatcj4.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.20713674983-mndbgoh8rur4k5e3139gnbtbgjbefar2</string>
+	<string>com.googleusercontent.apps.713056945049-sqcrkcoc2c8of6ro0q9i68kcpjqatcj4</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA8Px8Jzh-sfy5d6NW1LTY9dkqfQUqkfp8</string>
+	<string>AIzaSyCn5AVrtYwMLpK9tx1bcEhDbTHTkBtqwSc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>20713674983</string>
+	<string>713056945049</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.iostrio.happy-tracker</string>
 	<key>PROJECT_ID</key>
-	<string>image-identifier-db</string>
+	<string>happy-tracker-7e47a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>image-identifier-db.appspot.com</string>
+	<string>happy-tracker-7e47a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:20713674983:ios:fb1e07720c15504ff12a42</string>
+	<string>1:713056945049:ios:1900fb2a8a0d66dfa10908</string>
 </dict>
 </plist>

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var email = ""
     @State var password = ""
     
@@ -50,12 +50,29 @@ struct LoginView: View {
             // Login button (roundy Button)
             CustomButton(buttonLabel: "Login") {
                 // button action
+                viewModel.login(withEmail: email, password: password)
             }
             
             Spacer()
             
             // newUser->Register (texty button)
-            Button("new user? register->") {}
+            NavigationLink{
+                RegisterView()
+            
+                    .navigationBarHidden(true)
+            } label: {
+                HStack {
+                    Text("New user?")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    Text("Sign up")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
+            }
+            .padding(.bottom)
+            .foregroundColor(Color(.systemBlue))
+          
         }
         .background(Color("pale").opacity(0.2))
     }
