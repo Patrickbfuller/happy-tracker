@@ -30,7 +30,6 @@ extension FrameManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if let buffer = sampleBuffer.imageBuffer {
             DispatchQueue.main.async {
-                print("Output captured")
                 self.current = buffer
             }
         }

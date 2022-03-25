@@ -19,13 +19,13 @@ struct RecordSessionView: View {
      - have toggle button for live emotion monitoring
      */
     
-    @State var showLivePrediction = true
-    @State var showHint = true
+    @State var showingLivePrediction = true
+    @State var showingHint = true
     @State var isRecording = false
     
     @ObservedObject var stopwatch = Stopwatch()
-    var cameraManager = CameraManager.shared
-    var frameManager = FrameManager.shared
+    @ObservedObject var cameraManager = CameraManager.shared
+    @ObservedObject var frameManager = FrameManager.shared
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -40,6 +40,9 @@ struct RecordSessionView: View {
             LiveFrameView(cvpBuffer: frameManager.current)
                 .ignoresSafeArea()
                 .onAppear {
+                    if cameraManager.status == .unconfigured {
+                        cameraManager.configure()
+                    }
                     cameraManager.session.startRunning()
                 }
                 .onDisappear {
@@ -52,19 +55,9 @@ struct RecordSessionView: View {
                     .frame(height: 0)
                 
                 
-                /// Vanishable Button to Hide Live Prediction
-                if showLivePrediction {
-                    Button { // action
-                        withAnimation {
-                            showLivePrediction.toggle()
-                        }
-                    } label: {
-                        Text("Hide prediction")
-                            .foregroundColor(.white)
-                            .padding(5)
-                            .background(Color("medium"))
-                            .cornerRadius(10)
-                    }
+                /// Vanishable  Live Prediction View
+                if showingLivePrediction {
+                    LivePredictionView().environmentObject(frameManager)
                 }
                 
                 /// Error Box
@@ -73,11 +66,11 @@ struct RecordSessionView: View {
                 }
 
                 /// HintBox - tappable
-                if showHint {
+                if showingHint {
                     HintView()
                         .onTapGesture {
                             withAnimation {
-                                showHint.toggle()
+                                showingHint.toggle()
                             }
                         }
                 }
@@ -99,36 +92,38 @@ struct RecordSessionView: View {
                         }
                     }
                 }
-                /// Debug layout with error view
-                /// Deving Error shower/hider
-//                Button {
-//                    error.toggle()
-//                } label: {
-//                    Text("show/hide error")
-//                }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             // Vanishable Prediction Label
             ToolbarItem(placement: .principal) {
-                if showLivePrediction {
-                    LivePredictionView(predictionLabel: "happy")
-                } else {
-                    Button { // action
-                        withAnimation {
-                            showLivePrediction.toggle()
-                        }
-                    } label: {
-                        Text("Show prediction")
-                    }
-                    
-                }
+                ShowHidePredictionButton(showingPrediction: $showingLivePrediction)
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                InfoButton(bindingBool: $showHint)
+                InfoButton(bindingBool: $showingHint)
             }
         }
+    }
+}
+
+struct ShowHidePredictionButton: View {
+    
+    @Binding var showingPrediction: Bool
+    
+    var body: some View {
+        Button { // action
+            withAnimation {
+                showingPrediction.toggle()
+            }
+        } label: {
+            Text("\(showingPrediction ? "Hide" : "Show") prediction")
+        }
+        .foregroundColor(.white)
+        .padding(5)
+        .background(Color("medium"))
+        .cornerRadius(5)
+        .padding(5)
     }
 }
 

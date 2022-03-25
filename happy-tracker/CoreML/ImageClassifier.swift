@@ -6,6 +6,7 @@
 //
 
 import Vision
+import Combine
 
 class ImageClassifier {
     
@@ -35,5 +36,45 @@ class ImageClassifier {
         }
 
         return imageClassifierVisionModel
+    }
+    
+    static func classifyBuffer(cvpBuffer: CVPixelBuffer?, action: @escaping (BufferPrediction) -> Void) {
+        let imageClassificationRequest = VNCoreMLRequest(model: ImageClassifier.shared) {
+            successfulRequest, error in
+            
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            guard let results = successfulRequest.results as? [VNClassificationObservation]
+            else { return }
+            
+            var happyConf = 0.0
+            var sadConf = 0.0
+            
+            for result in results {
+                if result.identifier == "happy" {
+                    happyConf = Double(result.confidence)
+                } else if result.identifier == "sad" {
+                    sadConf = Double(result.confidence)
+                }
+            }
+            
+            let bufferPred = BufferPrediction(happyConfidence: happyConf, sadConfidence: sadConf)
+            action(bufferPred)
+        }
+        imageClassificationRequest.imageCropAndScaleOption = .centerCrop
+        
+        
+        guard let cvpBuffer = cvpBuffer else {
+            return
+        }
+        let handler = VNImageRequestHandler(cvPixelBuffer: cvpBuffer)
+        
+        do {
+            try handler.perform([imageClassificationRequest])
+        } catch {
+            print(error)
+        }
     }
 }
