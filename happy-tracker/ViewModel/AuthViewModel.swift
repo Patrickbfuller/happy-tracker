@@ -26,9 +26,7 @@ class AuthViewModel: ObservableObject {
             if let error = error {
                 print("DEBUG: Failed to Sign in with error \(error.localizedDescription)")
                 
-                self.authError = error
-                
-                self.isError = true
+                self.setError(error)
                 
                 return
             }
@@ -37,10 +35,27 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func register(withEmail email: String, password: String, name: String) {
+    func register(withEmail email: String, password: String, confirmedPassword: String, name: String) {
+        
+        // Assert name not empty
+        let trimmedName = name.trimmingCharacters(in: .whitespaces)
+        guard trimmedName != "" else {
+            setError(AuthError.emptyName)
+            return
+        }
+        
+        // Assert passwords match
+        guard password == confirmedPassword else {
+            setError(AuthError.passwordConfirmFailure)
+            return
+        }
+        
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("DEBUG: Failed to register with error \(error.localizedDescription)")
+                
+                self.setError(error)
+                
                 return
             }
             
@@ -49,7 +64,7 @@ class AuthViewModel: ObservableObject {
             
             //set up data dictionary to store user in database
             let data = ["email": email,
-                        "name": name,
+                        "name": trimmedName,
                         "uid": user.uid]
             
             Firestore.firestore().collection("users")
@@ -61,10 +76,42 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    func setError(_ error: Error) {
+        self.authError = error
+        self.isError = true
+    }
+    
     func signOut() {
         //logs out on frontend, send us back to login
         userSession = nil
         //logs out on backend
         try? Auth.auth().signOut()
+    }
+}
+
+enum AuthError: Error {
+    
+    case emptyName
+    case passwordConfirmFailure
+        
+}
+
+extension AuthError: LocalizedError {
+    
+    var errorDescription: String? {
+        switch self {
+        case .emptyName:
+
+            return NSLocalizedString(
+                            "The name cannot be empty.",
+                            comment: "Invalid Name"
+                        )
+
+        case .passwordConfirmFailure:
+            return NSLocalizedString(
+                            "Your passwords must match.",
+                            comment: "Passwords Match Error"
+                        )
+        }
     }
 }

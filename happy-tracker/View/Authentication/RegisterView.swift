@@ -13,6 +13,7 @@ struct RegisterView: View {
     @State private var name = ""
     @State private var email = ""
     @State private var password = ""
+    @State private var confirmedPassword = ""
    
     @EnvironmentObject var viewModel: AuthViewModel
     //@Environment(\.presentationMode) var presentationMode
@@ -20,7 +21,6 @@ struct RegisterView: View {
     
     
     var body: some View {
-        
         
         VStack {
             Spacer()
@@ -59,6 +59,14 @@ struct RegisterView: View {
                 CustomTextField(placeholder: "enter password",
                                 inputText: $password,
                                 isSecure: true)
+                
+                // Confirm password
+                CustomAuthLabel(label: "Confirm Password")
+                
+                CustomTextField(placeholder: "enter password",
+                                inputText: $confirmedPassword,
+                                isSecure: true)
+
             }
             .padding(.leading, 20)
             .padding(.bottom, 40)
@@ -68,8 +76,14 @@ struct RegisterView: View {
                 // button action
                 viewModel.register(withEmail: email,
                                    password: password,
+                                   confirmedPassword: confirmedPassword,
                                    name: name)
-            } 
+            }
+            .alert("Cannot Register: \(viewModel.authError?.localizedDescription ?? "yeet")", isPresented: $viewModel.isError) {
+                Button("OK", role: .cancel){
+                    viewModel.isError = false
+                }
+            }
             
             Spacer()
             
