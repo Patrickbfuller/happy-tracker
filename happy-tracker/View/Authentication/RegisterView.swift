@@ -15,7 +15,7 @@ struct RegisterView: View {
     @State private var password = ""
    
     @EnvironmentObject var viewModel: AuthViewModel
-    @Environment(\.presentationMode) var presentationMode
+    //@Environment(\.presentationMode) var presentationMode
     
     
     
@@ -23,15 +23,6 @@ struct RegisterView: View {
         
         
         VStack {
-        
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-         
-        
-            }
-            .padding(.leading, 20)
-            
             Spacer()
             
             LogoView()

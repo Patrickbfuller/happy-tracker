@@ -49,8 +49,14 @@ struct LoginView: View {
             
             // Login button (roundy Button)
             CustomButton(buttonLabel: "Login") {
-                // button action
+                // signin action calls login func
                 viewModel.login(withEmail: email, password: password)
+                
+            }
+            .alert("Cannot Login: \(viewModel.authError?.localizedDescription ?? "yeet")", isPresented: $viewModel.isError) {
+                Button("OK", role: .cancel){
+                    viewModel.isError = false
+                }
             }
             
             Spacer()

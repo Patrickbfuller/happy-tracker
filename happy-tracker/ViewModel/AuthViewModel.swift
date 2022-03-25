@@ -13,6 +13,10 @@ class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
+    var authError: Error?
+    
+    @Published var isError: Bool = false
+    
     init() {
         self.userSession = Auth.auth().currentUser
     }
@@ -21,6 +25,11 @@ class AuthViewModel: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("DEBUG: Failed to Sign in with error \(error.localizedDescription)")
+                
+                self.authError = error
+                
+                self.isError = true
+                
                 return
             }
             guard let user = result?.user else { return }
