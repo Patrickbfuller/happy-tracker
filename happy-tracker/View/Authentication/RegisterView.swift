@@ -68,19 +68,6 @@ struct RegisterView: View {
                 CustomTextField(placeholder: "enter password",
                                 inputText: $password,
                                 isSecure: true)
-                
-                
-        
-                
-                //confirm password
-                
-                //                CustomAuthLabel(label: "Confirm password")
-                //                
-                //                CustomTextField(placeholder: "enter password",
-                //                                inputText: $password,
-                //                                isSecure: true)
-                
-                
             }
             .padding(.leading, 20)
             .padding(.bottom, 40)

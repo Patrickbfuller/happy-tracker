@@ -17,7 +17,7 @@ struct LoginView: View {
             
             Spacer()
             
-            Text("Happy Tracker??")
+            Text("Welcome to Happy Tracker")
             // Logo
             LogoView()
             
@@ -59,7 +59,7 @@ struct LoginView: View {
             NavigationLink{
                 RegisterView()
             
-                    .navigationBarHidden(true)
+                    //.navigationBarHidden(true)
             } label: {
                 HStack {
                     Text("New user?")

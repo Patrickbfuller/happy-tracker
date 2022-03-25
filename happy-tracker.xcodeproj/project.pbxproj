@@ -37,7 +37,6 @@
 		CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170B27EC94C00047EC87 /* MiniListRow.swift */; };
 		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
 		CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */; };
-		CF58173227ECB1740047EC87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58173127ECB1740047EC87 /* User.swift */; };
 		CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CCE27EA128B0069873D /* ChartPageView.swift */; };
 		CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CD927EA27BD0069873D /* MiniChartView.swift */; };
 /* End PBXBuildFile section */
@@ -69,7 +68,6 @@
 		CF58170927EC94A40047EC87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Service/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
-		CF58173127ECB1740047EC87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../User.swift; sourceTree = "<group>"; };
 		CFCD8CCE27EA128B0069873D /* ChartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageView.swift; sourceTree = "<group>"; };
 		CFCD8CD927EA27BD0069873D /* MiniChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,10 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				AF311EC927EB9B4300118C9D /* SideMenu */,
-				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+				F12A714D27ED08B70083A112 /* Authentication */,
 				AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */,
 				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
-				CF0F786127E8F038009965CE /* RegisterView.swift */,
 				CFCD8CCE27EA128B0069873D /* ChartPageView.swift */,
 				AF7F63CE27EB990500A96F5E /* MainUserView.swift */,
 				AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */,
@@ -179,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
-				CF58173127ECB1740047EC87 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +199,15 @@
 				CFCD8CD927EA27BD0069873D /* MiniChartView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		F12A714D27ED08B70083A112 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CF0F786127E8F038009965CE /* RegisterView.swift */,
+				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +296,6 @@
 				AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */,
 				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
 				CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */,
-				CF58173227ECB1740047EC87 /* User.swift in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */,
 				CF58170A27EC94A40047EC87 /* UserService.swift in Sources */,

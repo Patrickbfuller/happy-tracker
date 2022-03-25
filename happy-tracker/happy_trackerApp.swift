@@ -12,6 +12,7 @@ import Firebase
 struct happy_trackerApp: App {
 
     @StateObject var viewModel = AuthViewModel()
+    
     init() {
 
         FirebaseApp.configure()
@@ -21,10 +22,9 @@ struct happy_trackerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                ChartPageView()
-             //  ContentView()
+             ContentView()
+                    //.environmentObject(viewModel)
             }
-          
             .environmentObject(viewModel)
         }
     }
