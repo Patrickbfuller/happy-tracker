@@ -202,7 +202,6 @@
 				AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */,
 				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
 				AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */,
-				CF0F786127E8F038009965CE /* RegisterView.swift */,
 				CFCD8CCE27EA128B0069873D /* ChartPageView.swift */,
 				AF7F63CE27EB990500A96F5E /* MainUserView.swift */,
 				AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */,
@@ -249,8 +248,8 @@
 		F12A714D27ED08B70083A112 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				CF0F786127E8F038009965CE /* RegisterView.swift */,
 				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+				CF0F786127E8F038009965CE /* RegisterView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
