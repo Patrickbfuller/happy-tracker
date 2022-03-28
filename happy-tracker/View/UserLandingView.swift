@@ -18,10 +18,14 @@ struct UserLandingView: View {
             //List of Dates and Happy/Sad Labels
             MiniListView(miniListRow: MiniListRow())
             
-            CustomButton(buttonLabel: "Record Session") {
-                // button action
+//            CustomButton(buttonLabel: "Record Session") {
+//                // button action
+//            }
+            NavigationLink { // destination
+                RecordSessionView()
+            } label: {
+                CustomButtonLabel(buttonLabel: "Record Session")
             }
-            
         }
         
         
