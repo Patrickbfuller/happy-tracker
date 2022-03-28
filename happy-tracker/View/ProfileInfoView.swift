@@ -12,7 +12,7 @@ struct ProfileInfoView: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 25)
-            .fill(Color.white)
+            .fill(Color("light"))
             .frame(height: 50)
             .overlay(HStack {
                 Image(systemName: imageName ?? "")
