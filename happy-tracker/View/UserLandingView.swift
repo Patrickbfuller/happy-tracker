@@ -24,6 +24,7 @@ struct UserLandingView: View {
             
             CustomButton(buttonLabel: "Record Session") {
                 // button action
+                
             }
             
         }

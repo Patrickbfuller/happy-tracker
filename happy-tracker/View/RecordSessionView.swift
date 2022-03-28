@@ -22,10 +22,12 @@ struct RecordSessionView: View {
     @State var showingLivePrediction = true
     @State var showingHint = true
     @State var isRecording = false
+   
     
     @ObservedObject var stopwatch = Stopwatch()
     @ObservedObject var cameraManager = CameraManager.shared
     @ObservedObject var frameManager = FrameManager.shared
+   
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -221,8 +223,11 @@ struct RecordingTimerView: View {
 }
 
 struct StartStopButton: View {
+    @State var caption = ""
     
     @EnvironmentObject var stopwatch: Stopwatch
+    @ObservedObject var viewModel = UploadSessionViewModel()
+    
     
     @Binding var isRecording: Bool
     var buttonLabel: String {
@@ -231,7 +236,9 @@ struct StartStopButton: View {
         
     var body: some View {
         Button { // action
+            
             stopwatch.startStop()
+            viewModel.uploadSession(withCaption: caption)
             withAnimation {
                 isRecording.toggle()
             }
