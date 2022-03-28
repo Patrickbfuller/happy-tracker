@@ -19,13 +19,17 @@ struct RecordSessionView: View {
      - have toggle button for live emotion monitoring
      */
     
-    @State var showingLivePrediction = true
     @State var showingHint = true
-    @State var isRecording = false
+    @State var showingLivePrediction = true
     
-    @ObservedObject var stopwatch = Stopwatch()
+    @ObservedObject var sessionViewModel = SessionViewModel()
+    
     @ObservedObject var cameraManager = CameraManager.shared
     @ObservedObject var frameManager = FrameManager.shared
+    
+    var viewShowingTimer: Bool {
+        sessionViewModel.status == .isRecording
+    }
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -37,17 +41,17 @@ struct RecordSessionView: View {
                 .ignoresSafeArea()
             
             /// Visual Feed
-            LiveFrameView(cvpBuffer: frameManager.current)
-                .ignoresSafeArea()
-                .onAppear {
-                    if cameraManager.status == .unconfigured {
-                        cameraManager.configure()
-                    }
-                    cameraManager.session.startRunning()
-                }
-                .onDisappear {
-                    cameraManager.session.stopRunning()
-                }
+//            LiveFrameView(cvpBuffer: frameManager.current)
+//                .ignoresSafeArea()
+//                .onAppear {
+//                    if cameraManager.status == .unconfigured {
+//                        cameraManager.configure()
+//                    }
+//                    cameraManager.session.startRunning()
+//                }
+//                .onDisappear {
+//                    cameraManager.session.stopRunning()
+//                }
             
             VStack {
                 /// Color to influence nav bar background
@@ -81,17 +85,24 @@ struct RecordSessionView: View {
                 
                 ZStack {
                     /// Start/Stop Record Button
-                    StartStopButton(isRecording: $isRecording).environmentObject(stopwatch)
+                    
+                    StartStopButton().environmentObject(sessionViewModel)
                     
                     /// Vanishable Stopwatch Timer
-                    if isRecording {
+                    if sessionViewModel.status == .isRecording {
                         HStack {
-                            RecordingTimerView().environmentObject(stopwatch)
+                            RecordingTimerView().environmentObject(sessionViewModel.stopwatch)
                                 .padding(.leading)
                             Spacer()
                         }
                     }
                 }
+            }
+            if sessionViewModel.status == .gettingText {
+                RecordingDoneView().environmentObject(sessionViewModel)
+            }
+            if sessionViewModel.status == .done {
+                SessionDoneView()
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -103,6 +114,9 @@ struct RecordSessionView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 InfoButton(bindingBool: $showingHint)
             }
+        }
+        .onDisappear {
+            sessionViewModel.stopSession()
         }
     }
 }
@@ -222,18 +236,22 @@ struct RecordingTimerView: View {
 
 struct StartStopButton: View {
     
-    @EnvironmentObject var stopwatch: Stopwatch
-    
-    @Binding var isRecording: Bool
+    @EnvironmentObject var sessionViewModel: SessionViewModel
+        
     var buttonLabel: String {
-        isRecording ? "Stop" : "Start"
+        sessionViewModel.status == .notStarted ? "Start" : "Stop"
     }
         
     var body: some View {
         Button { // action
-            stopwatch.startStop()
-            withAnimation {
-                isRecording.toggle()
+            if sessionViewModel.status == .notStarted {
+                withAnimation {
+                    sessionViewModel.startSession()
+                }
+            } else {
+                withAnimation {
+                    sessionViewModel.stopSession()
+                }
             }
         } label: {
             // label
