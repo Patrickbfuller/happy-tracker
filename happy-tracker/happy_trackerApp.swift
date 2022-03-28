@@ -10,14 +10,23 @@ import Firebase
 
 @main
 struct happy_trackerApp: App {
+
+    @StateObject var viewModel = AuthViewModel()
     
     init() {
+
         FirebaseApp.configure()
+        
     }
-    
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+             ContentView()
+                    //.environmentObject(viewModel)
+            }
+            .environmentObject(viewModel)
         }
     }
 }
+

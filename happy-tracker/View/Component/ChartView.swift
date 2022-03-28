@@ -14,15 +14,19 @@ struct ChartView: View {
     
     var body: some View {
         
-        VStack {
-            
-                
-            // Main Line chart
-         
-            LineView(data: [0,30,40,50,45,20,90,100],
-                     title: "Emotion tracker",
-                     legend: "Happy")
-        } .padding(.horizontal, 20)
+        
+        
+        
+        // Main Line chart
+        
+        
+        
+        LineView(data: [0,30,40,50,45,20,90,100],
+                // title: "Emotion tracker",
+                 legend: "Happy")
+        
+        
+        .padding(.horizontal, 20)
         
     }
 }
@@ -30,5 +34,6 @@ struct ChartView: View {
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
         ChartView()
+         .previewLayout(.sizeThatFits)
     }
 }

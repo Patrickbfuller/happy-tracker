@@ -7,6 +7,9 @@
 import SwiftUI
 
 struct SideMenuView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
+    @State var logoutAlert: Bool = false
     
     var body: some View {
         
@@ -41,9 +44,17 @@ struct SideMenuView: View {
                     }
                 } else if viewModel == .logout {
                     Button {
-                        print("Logout here")
+                        logoutAlert = true
+                        //authViewModel.signOut()
                     } label: {
                         SideMenuOptionRowView(viewModel: viewModel)
+                    }
+                    .alert(isPresented: $logoutAlert) {
+                        Alert(
+                            title: Text("Confirm Log Out"),
+                            message: Text("Are you sure you want to Log Out?"), primaryButton: .destructive(Text("Logout"), action: {
+                                authViewModel.signOut()
+                            }), secondaryButton: .cancel())
                     }
                     
                 } else {

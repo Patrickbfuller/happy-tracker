@@ -8,23 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        NavigationView {
-            
-            VStack {
-                NavigationLink {
-                    LoginView()
-                } label: {
-                    Text("Log in view")
-                }
-                
-                NavigationLink {
-                    RecordSessionView()
-                } label: {
-                    Text("record session view")
-                }
+ 
+        Group {
+            //no user logged in
+            if viewModel.userSession == nil {
+                LoginView()
+            } else {
+                //have a logged in user
+                MainUserView()
             }
         }
+        
     }
 }
 

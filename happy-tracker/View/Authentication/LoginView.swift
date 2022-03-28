@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var email = ""
     @State var password = ""
     
@@ -17,7 +17,7 @@ struct LoginView: View {
             
             Spacer()
             
-            Text("Happy Tracker??")
+            Text("Welcome to Happy Tracker")
             // Logo
             LogoView()
             
@@ -49,13 +49,36 @@ struct LoginView: View {
             
             // Login button (roundy Button)
             CustomButton(buttonLabel: "Login") {
-                // button action
+                // signin action calls login func
+                viewModel.login(withEmail: email, password: password)
+                
+            }
+            .alert("Cannot Login: \(viewModel.authError?.localizedDescription ?? "yeet")", isPresented: $viewModel.isError) {
+                Button("OK", role: .cancel){
+                    viewModel.isError = false
+                }
             }
             
             Spacer()
             
             // newUser->Register (texty button)
-            Button("new user? register->") {}
+            NavigationLink{
+                RegisterView()
+            
+                    //.navigationBarHidden(true)
+            } label: {
+                HStack {
+                    Text("New user?")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                    Text("Sign up")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
+            }
+            .padding(.bottom)
+            .foregroundColor(Color(.systemBlue))
+          
         }
         .background(Color("pale").opacity(0.2))
     }

@@ -43,6 +43,12 @@
 		CF0F786427E8F506009965CE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786327E8F506009965CE /* ChartView.swift */; };
 		CF0F786727E8FD66009965CE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786627E8FD66009965CE /* SwiftUICharts */; };
 		CF0F786D27E905C1009965CE /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786C27E905C1009965CE /* LineChartView */; };
+		CF2E79CE27ECCCF700C4B27E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */; };
+		CF58170827EC946C0047EC87 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170727EC946C0047EC87 /* AuthViewModel.swift */; };
+		CF58170A27EC94A40047EC87 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170927EC94A40047EC87 /* UserService.swift */; };
+		CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170B27EC94C00047EC87 /* MiniListRow.swift */; };
+		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
+		CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */; };
 		CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CCE27EA128B0069873D /* ChartPageView.swift */; };
 		CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CD927EA27BD0069873D /* MiniChartView.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +87,11 @@
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF0F786327E8F506009965CE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CF58170927EC94A40047EC87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Service/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
+		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
 		CFCD8CCE27EA128B0069873D /* ChartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageView.swift; sourceTree = "<group>"; };
 		CFCD8CD927EA27BD0069873D /* MiniChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +103,7 @@
 			files = (
 				CF0F786727E8FD66009965CE /* SwiftUICharts in Frameworks */,
 				AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */,
+				CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */,
 				CF0F786D27E905C1009965CE /* LineChartView in Frameworks */,
 			);
@@ -123,6 +135,7 @@
 			children = (
 				AF7F63D627EB999F00A96F5E /* SideMenuViewModel.swift */,
 				AF311ED427EBB5F700118C9D /* LiveCamViewModel.swift */,
+				CF58170727EC946C0047EC87 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 				AF7F63CB27EB982B00A96F5E /* Util */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
 				AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */,
+				CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */,
 				AF91F19B27E8C6310015CCE9 /* Preview Content */,
 			);
 			path = "happy-tracker";
@@ -184,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				AF311EC927EB9B4300118C9D /* SideMenu */,
-				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+				F12A714D27ED08B70083A112 /* Authentication */,
 				AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */,
 				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
 				AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */,
@@ -195,6 +209,7 @@
 				AF7F63D227EB994300A96F5E /* ProfileView.swift */,
 				AF7F63D427EB995B00A96F5E /* UserLandingView.swift */,
 				AF91F1AD27E8CC6A0015CCE9 /* Component */,
+				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +219,7 @@
 			children = (
 				AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */,
 				AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */,
+				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 		AF91F1AC27E8CC440015CCE9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CF58170927EC94A40047EC87 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -227,6 +244,15 @@
 				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		F12A714D27ED08B70083A112 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CF0F786127E8F038009965CE /* RegisterView.swift */,
+				AF91F1A627E8CBF90015CCE9 /* LoginView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +276,7 @@
 				CF0F786C27E905C1009965CE /* LineChartView */,
 				AF7F63C627EB972600A96F5E /* FirebaseAuth */,
 				AF7F63C827EB972600A96F5E /* FirebaseFirestore */,
+				CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = "happy-tracker";
 			productReference = AF91F19227E8C62F0015CCE9 /* happy-tracker.app */;
@@ -301,6 +328,7 @@
 				AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */,
 				AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */,
 				AF311ED127EBAD9300118C9D /* GoogleService-Info.plist in Resources */,
+				CF2E79CE27ECCCF700C4B27E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +347,7 @@
 				AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */,
+				CF58170A27EC94A40047EC87 /* UserService.swift in Sources */,
 				AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */,
 				AF7F63D727EB999F00A96F5E /* SideMenuViewModel.swift in Sources */,
 				AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */,
@@ -337,8 +366,11 @@
 				AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */,
 				AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */,
 				AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */,
+				CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */,
 				CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */,
+				CF58170827EC946C0047EC87 /* AuthViewModel.swift in Sources */,
 				AF7F63D527EB995B00A96F5E /* UserLandingView.swift in Sources */,
+				CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */,
 				AF7F63CF27EB990500A96F5E /* MainUserView.swift in Sources */,
 				AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */,
 				AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */,
@@ -594,6 +626,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CF0F786B27E905C1009965CE /* XCRemoteSwiftPackageReference "LineChartView" */;
 			productName = LineChartView;
+		};
+		CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF7F63C527EB972600A96F5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
