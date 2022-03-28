@@ -19,17 +19,23 @@ struct CustomButton: View {
             action()
             
         } label: {
-            
-            Text(buttonLabel)
-            // styling
-                
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .frame(height: 45)
-                .font(.title2)
-                .padding(.horizontal)
-                .background(Color("medium"))
-                .clipShape(Capsule())
+            CustomButtonLabel(buttonLabel: buttonLabel)
         }
+    }
+}
+
+struct CustomButtonLabel: View {
+     
+    var buttonLabel: String
+    
+    var body: some View {
+        Text(buttonLabel)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .frame(height: 45)
+            .font(.title2)
+            .padding(.horizontal)
+            .background(Color("medium"))
+            .clipShape(Capsule())
     }
 }

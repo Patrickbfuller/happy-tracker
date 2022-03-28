@@ -22,10 +22,14 @@ struct UserLandingView: View {
                 .padding(.vertical)
                 .foregroundColor(.blue)
             
-            CustomButton(buttonLabel: "Record Session") {
-                // button action
+//            CustomButton(buttonLabel: "Record Session") {
+//                // button action
+//            }
+            NavigationLink { // destination
+                RecordSessionView()
+            } label: {
+                CustomButtonLabel(buttonLabel: "Record Session")
             }
-            
         }
         
         
