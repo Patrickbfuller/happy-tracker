@@ -12,7 +12,7 @@ struct UserLandingView: View {
             //Chart
             //Text("Chart Goes here")
             MiniChartView()
-                .padding(.top)
+                .padding(.vertical)
             
             //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
