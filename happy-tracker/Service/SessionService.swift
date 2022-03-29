@@ -32,6 +32,16 @@ struct SessionService {
                 }
             }
     }
+    
+    static func uploadSession(session: RecordModel) {
+        let sessionDocumentRef: DocumentReference?
+        do {
+            sessionDocumentRef = try Firestore.firestore().collection("session").addDocument(from: session)
+            print("successfully uploaded document: \(sessionDocumentRef!)")
+        } catch {
+            print(error)
+        }
+    }
 }
 
 

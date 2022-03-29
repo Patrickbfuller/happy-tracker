@@ -5,9 +5,9 @@
 //  Created by Patrick Fuller on 3/28/22.
 //
 
-import Foundation
-import Combine
 import SwiftUI
+import Combine
+import Firebase
 
 class SessionViewModel: ObservableObject {
     
@@ -64,12 +64,24 @@ class SessionViewModel: ObservableObject {
         self.status = .gettingText
     }
     
-    func submitSession() {
+    func submitSession(comment: String) {
         // view will hide text window & show thank you done window
         self.status = .done
         // persist sessionEntry
         
-            // Create Record Model and do firestore upload recordModel
+        // Create Record Model and do firestore upload recordModel
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        
+        let (hConf, sConf) = predictionCounter.getTotalHappyAndSad()
+        
+        let sessionRecord = RecordModel(
+            userID: userID,
+            timestamp: Timestamp(date: .now),
+            happyConf: hConf,
+            sadConf: sConf,
+            comment: comment)
+        
+        SessionService.uploadSession(session: sessionRecord)
     }
     
     func resetSession() {

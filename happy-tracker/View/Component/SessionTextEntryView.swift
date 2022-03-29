@@ -34,7 +34,7 @@ struct SessionTextEntryView: View {
                     .background(.white)
                 
                 Button { // action
-                    sessionViewModel.submitSession()
+                    sessionViewModel.submitSession(comment: description)
                 } label: {
                     Text("Submit Entry")
                         .fontWeight(.semibold)
