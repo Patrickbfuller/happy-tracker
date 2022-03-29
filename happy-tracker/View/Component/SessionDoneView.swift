@@ -10,10 +10,12 @@ import SwiftUI
 struct SessionDoneView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var sessionViewModel: SessionViewModel
 
     var body: some View {
         ZStack {
             Color.black.opacity(0.5)
+                .ignoresSafeArea()
             VStack(spacing: 20) {
 
                 Text("Thank You!")
@@ -22,6 +24,7 @@ struct SessionDoneView: View {
                 
                 Button {
                     // action
+                    sessionViewModel.resetSession()
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Return Home")

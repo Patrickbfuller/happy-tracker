@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecordingDoneView: View {
+struct SessionTextEntryView: View {
     
     @EnvironmentObject var sessionViewModel: SessionViewModel
     
@@ -15,11 +15,12 @@ struct RecordingDoneView: View {
     var body: some View {
         ZStack {
             Color.black.opacity(0.5)
+                .ignoresSafeArea()
             VStack(spacing: 0) {
                 
                 HStack {
                     Button { // action
-                        sessionViewModel.cancelSession()
+                        sessionViewModel.resetSession()
                     } label: {
                         Text("Cancel Entry")
                             .padding()
@@ -57,7 +58,7 @@ struct RecordingDoneView: View {
 
 struct RecordingDoneView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordingDoneView()
+        SessionTextEntryView()
             .environmentObject(SessionViewModel())
     }
 }

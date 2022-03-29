@@ -11,14 +11,17 @@ import SwiftUI
 
 class SessionViewModel: ObservableObject {
     
-    var stopwatch = Stopwatch()
+    @Published var frame: CGImage?
+    @Published var cameraError: CameraError?
     @Published var stopwatchCounter = 0
     
-    private var frameCount = 0
-    private var sumHappyConfidence = 0.0
-    private var sumSadConfidence = 0.0
+    var frameManager = FrameManager.shared
+    var cameraManager = CameraManager.shared
+    var stopwatch = Stopwatch()
     
-    private var cancellables = [AnyCancellable]()
+    var predictionCounter = PredictionCounter()
+    
+    private var cancellables = Set<AnyCancellable>()
     
     @Published var status = Status.notStarted
     
@@ -29,17 +32,25 @@ class SessionViewModel: ObservableObject {
         case done
     }
     
+    
     init() {
-        // set up stopwatch subscription
-        stopwatch.$time
-            .assign(to: &$stopwatchCounter)
-        
+        setUpBaseSubscriptions()
     }
+    
+    // MARK: - Session activity
     
     func startSession() {
         // view will show timerView
         self.status = .isRecording
         // start adding / set up subscription
+        
+        frameManager.$current
+            .sink { cvpBuffer in
+                // send cvpBuffer to predictionCounter
+                self.predictionCounter.addBuffer(cvpBuffer: cvpBuffer)
+            }
+            // STORE SUBSCRIPTION IN CANCELLABLES
+            .store(in: &cancellables)
         // start stopwatch
         stopwatch.startStop()
     }
@@ -47,7 +58,8 @@ class SessionViewModel: ObservableObject {
     func stopSession() {
         // stop stopwatch
         stopwatch.startStop()
-        // stop adding / cancel subscription
+        // stop adding / cancel subscriptions by removing old reference
+        cancellables = Set<AnyCancellable>()
         // view will show text window
         self.status = .gettingText
     }
@@ -57,19 +69,47 @@ class SessionViewModel: ObservableObject {
         self.status = .done
         // persist sessionEntry
         
-        // Reset session
-        self.frameCount = 0
-        self.sumHappyConfidence = 0.0
-        self.sumSadConfidence = 0.0
+            // Create Record Model and do firestore upload recordModel
     }
     
-    func cancelSession() {
+    func resetSession() {
         // View will revert to beginnig
         self.status = .notStarted
         
         // Reset session
-        self.frameCount = 0
-        self.sumHappyConfidence = 0.0
-        self.sumSadConfidence = 0.0
+        self.predictionCounter = PredictionCounter()
+    }
+    
+    // MARK: - Visual Activity
+    
+    func startCamera() {
+        if cameraManager.status == .unconfigured {
+            cameraManager.configure()
+        }
+        cameraManager.session.startRunning()
+    }
+    
+    func stopCamera() {
+        cameraManager.session.stopRunning()
+    }
+    
+    func setUpBaseSubscriptions() {
+        
+        /// set up stopwatch subscription
+        stopwatch.$time
+            .assign(to: &$stopwatchCounter)
+        
+        /// Pass along any camera errors from camera manager
+        cameraManager.$error
+            .receive(on: RunLoop.main)
+            .assign(to: &$cameraError)
+        
+        /// Pass along visual stream as cgimage for frame view
+        frameManager.$current
+            .receive(on: RunLoop.main)
+            .compactMap { cvpBuffer in
+                return CGImage.create(from: cvpBuffer)
+            }
+            .assign(to: &$frame)
     }
 }

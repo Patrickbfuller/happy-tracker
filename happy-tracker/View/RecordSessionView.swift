@@ -19,17 +19,10 @@ struct RecordSessionView: View {
      - have toggle button for live emotion monitoring
      */
     
-    @State var showingHint = true
-    @State var showingLivePrediction = true
+    @State var showingHint = false
+    @State var showingLivePrediction = false
     
     @ObservedObject var sessionViewModel = SessionViewModel()
-    
-    @ObservedObject var cameraManager = CameraManager.shared
-    @ObservedObject var frameManager = FrameManager.shared
-    
-    var viewShowingTimer: Bool {
-        sessionViewModel.status == .isRecording
-    }
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -41,17 +34,8 @@ struct RecordSessionView: View {
                 .ignoresSafeArea()
             
             /// Visual Feed
-//            LiveFrameView(cvpBuffer: frameManager.current)
-//                .ignoresSafeArea()
-//                .onAppear {
-//                    if cameraManager.status == .unconfigured {
-//                        cameraManager.configure()
-//                    }
-//                    cameraManager.session.startRunning()
-//                }
-//                .onDisappear {
-//                    cameraManager.session.stopRunning()
-//                }
+            LiveFrameView().environmentObject(sessionViewModel)
+
             
             VStack {
                 /// Color to influence nav bar background
@@ -61,15 +45,15 @@ struct RecordSessionView: View {
                 
                 /// Vanishable  Live Prediction View
                 if showingLivePrediction {
-                    LivePredictionView().environmentObject(frameManager)
+                    LivePredictionView().environmentObject(sessionViewModel)
                 }
                 
-                /// Error Box
-                if cameraManager.error != nil {
-                    CameraErrorView(cameraManager.error!)
+                /// Vanished Error Box - unless is error
+                if sessionViewModel.cameraError != nil {
+                    CameraErrorView(sessionViewModel.cameraError!)
                 }
 
-                /// HintBox - tappable
+                /// Vanishable  HintBox - tappable
                 if showingHint {
                     HintView()
                         .onTapGesture {
@@ -85,8 +69,9 @@ struct RecordSessionView: View {
                 
                 ZStack {
                     /// Start/Stop Record Button
-                    
-                    StartStopButton().environmentObject(sessionViewModel)
+                    StartStopButton()
+                        .environmentObject(sessionViewModel)
+                        .disabled(sessionViewModel.cameraError != nil)
                     
                     /// Vanishable Stopwatch Timer
                     if sessionViewModel.status == .isRecording {
@@ -98,11 +83,13 @@ struct RecordSessionView: View {
                     }
                 }
             }
+            /// Getting text after recording
             if sessionViewModel.status == .gettingText {
-                RecordingDoneView().environmentObject(sessionViewModel)
+                SessionTextEntryView().environmentObject(sessionViewModel)
             }
+            /// Thank you banner
             if sessionViewModel.status == .done {
-                SessionDoneView()
+                SessionDoneView().environmentObject(sessionViewModel)
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -111,12 +98,17 @@ struct RecordSessionView: View {
             ToolbarItem(placement: .principal) {
                 ShowHidePredictionButton(showingPrediction: $showingLivePrediction)
             }
+            // Hint button
             ToolbarItem(placement: .navigationBarTrailing) {
                 InfoButton(bindingBool: $showingHint)
             }
         }
-        .onDisappear {
-            sessionViewModel.stopSession()
+        .onDisappear { // Handle session flow interrupts
+            if sessionViewModel.status == .isRecording {
+                sessionViewModel.stopSession()
+            } else if sessionViewModel.status == .done {
+                sessionViewModel.resetSession()
+            }
         }
     }
 }
