@@ -13,6 +13,8 @@ struct happy_trackerApp: App {
 
     @StateObject var viewModel = AuthViewModel()
     
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
     init() {
 
         FirebaseApp.configure()
@@ -26,6 +28,7 @@ struct happy_trackerApp: App {
                     //.environmentObject(viewModel)
             }
             .environmentObject(viewModel)
+            .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

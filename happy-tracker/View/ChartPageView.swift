@@ -26,7 +26,7 @@ struct ChartPageView: View {
             //Spacer()
              //  Divider()
             
-            MiniListView(miniListRow: MiniListRow())
+//            MiniListView(miniListRow: MiniListRow())
              //   .padding(.top,20)
             
         

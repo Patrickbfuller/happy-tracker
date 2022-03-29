@@ -10,17 +10,13 @@ struct UserLandingView: View {
     var body: some View {
         VStack{
             //Chart
-            Text("Chart Goes here")
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 300, height: 200)
+            //Text("Chart Goes here")
+            MiniChartView()
                 .padding(.vertical)
-                .foregroundColor(.blue)
-            Text("Session list goes here")
+            
+            //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 300, height: 200)
-                .padding(.vertical)
-                .foregroundColor(.blue)
+            MiniListView(miniListRow: MiniListRow())
             
 
 //            CustomButton(buttonLabel: "Record Session") {
