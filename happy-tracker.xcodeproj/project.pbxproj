@@ -20,6 +20,9 @@
 		AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */; };
 		AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */; };
 		AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */; };
+		AF6B87DC27F22279004D749E /* SessionTextEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */; };
+		AF6B87DE27F23664004D749E /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DD27F23664004D749E /* SessionViewModel.swift */; };
+		AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DF27F260A2004D749E /* SessionDoneView.swift */; };
 		AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C627EB972600A96F5E /* FirebaseAuth */; };
 		AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C827EB972600A96F5E /* FirebaseFirestore */; };
 		AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */; };
@@ -39,6 +42,7 @@
 		AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */; };
 		AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */; };
 		AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */; };
+		AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */; };
 		CF0F786227E8F038009965CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786127E8F038009965CE /* RegisterView.swift */; };
 		CF0F786427E8F506009965CE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786327E8F506009965CE /* ChartView.swift */; };
 		CF0F786727E8FD66009965CE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786627E8FD66009965CE /* SwiftUICharts */; };
@@ -70,6 +74,9 @@
 		AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePredictionView.swift; sourceTree = "<group>"; };
 		AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionRecognitionClassifierHNS.mlmodel; sourceTree = "<group>"; };
 		AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTextEntryView.swift; sourceTree = "<group>"; };
+		AF6B87DD27F23664004D749E /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		AF6B87DF27F260A2004D749E /* SessionDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDoneView.swift; sourceTree = "<group>"; };
 		AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		AF7F63CE27EB990500A96F5E /* MainUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
 		AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 		AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionView.swift; sourceTree = "<group>"; };
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
+		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF0F786327E8F506009965CE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 				CFDB39BF27F21E14001CF008 /* UploadSessionViewModel.swift */,
 				AF311ED427EBB5F700118C9D /* LiveCamViewModel.swift */,
 				CF58170727EC946C0047EC87 /* AuthViewModel.swift */,
+				AF6B87DD27F23664004D749E /* SessionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
 				CFDB39BB27F21490001CF008 /* RecordModel.swift */,
 				CF8BDE4A27F348C6005071FD /* UserModel.swift */,
+				AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				CF0F786327E8F506009965CE /* ChartView.swift */,
+				AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */,
+				AF6B87DF27F260A2004D749E /* SessionDoneView.swift */,
 				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
 				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
@@ -362,6 +374,8 @@
 				AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */,
 				AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */,
 				AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */,
+				AF6B87DE27F23664004D749E /* SessionViewModel.swift in Sources */,
+				AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */,
 				AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
@@ -373,6 +387,7 @@
 				CF0F786227E8F038009965CE /* RegisterView.swift in Sources */,
 				CFDB39C027F21E14001CF008 /* UploadSessionViewModel.swift in Sources */,
 				CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */,
+				AF6B87DC27F22279004D749E /* SessionTextEntryView.swift in Sources */,
 				AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */,
 				AF91F1B327E8D38F0015CCE9 /* CustomTextField.swift in Sources */,
 				AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */,
@@ -383,6 +398,7 @@
 				CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */,
 				CF8BDE4B27F348C6005071FD /* UserModel.swift in Sources */,
 				AF7F63CF27EB990500A96F5E /* MainUserView.swift in Sources */,
+				AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */,
 				AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */,
 				AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */,
 			);
