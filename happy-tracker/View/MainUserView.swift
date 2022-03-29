@@ -7,12 +7,10 @@
 import SwiftUI
 
 struct MainUserView: View {
-    
     @State var showSideMenu: Bool = false
     
     var body: some View {
-        //bugg that creates two navbars because there is a navview in app.swift as well
-        //NavigationView {
+
             GeometryReader { geo in
             ZStack(alignment: .topLeading) {
 
@@ -63,7 +61,6 @@ struct MainUserView: View {
             }
         }
     }
-//}
 
 struct MainUserView_Previews: PreviewProvider {
     static var previews: some View {

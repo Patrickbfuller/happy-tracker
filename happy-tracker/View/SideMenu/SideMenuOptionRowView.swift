@@ -14,7 +14,7 @@ struct SideMenuOptionRowView: View {
             Image(systemName: viewModel.imageName)
             
             Text(viewModel.menuOption)
-                .foregroundColor(.black)
+                //.foregroundColor(.black)
             
             Spacer()
         }

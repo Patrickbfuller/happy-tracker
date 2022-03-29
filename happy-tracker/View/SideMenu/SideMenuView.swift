@@ -65,6 +65,7 @@ struct SideMenuView: View {
             
             Spacer()
         }
+        .background(Color(UIColor.systemBackground))
     }
 }
 
