@@ -14,5 +14,11 @@ class UploadSessionViewModel: ObservableObject {
     
     func uploadSession(withCaption caption: String) {
         service.uploadSession(caption: caption)
+        
+        
     }
 }
+
+
+
+

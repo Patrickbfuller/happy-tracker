@@ -11,11 +11,14 @@ import FirebaseFirestore
 struct SessionService {
     
     func uploadSession(caption: String) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+     //   guard let uid = Auth.auth().currentUser?.uid else { return }
+
         
-        let data = ["uid": uid,
+        let data = ["userID": "lksfdafihdfhhuwifhrf",
+                  //  "uid": uid,
                     "caption": caption,
-                    "timestamo": Timestamp(date: Date()),
+                    "timestamp": Timestamp(date: Date()),
                     "happyConf": 0.00,
                     "sadConf": 0.00,
                     "comment": "Tell us more about you"] as [String : Any]
@@ -30,6 +33,8 @@ struct SessionService {
             }
     }
 }
+
+
 
 
 

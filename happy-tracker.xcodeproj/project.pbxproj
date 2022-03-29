@@ -48,6 +48,7 @@
 		CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170B27EC94C00047EC87 /* MiniListRow.swift */; };
 		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
 		CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */; };
+		CF8BDE4B27F348C6005071FD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8BDE4A27F348C6005071FD /* UserModel.swift */; };
 		CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CCE27EA128B0069873D /* ChartPageView.swift */; };
 		CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CD927EA27BD0069873D /* MiniChartView.swift */; };
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
@@ -93,6 +94,7 @@
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Service/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
+		CF8BDE4A27F348C6005071FD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CFCD8CCE27EA128B0069873D /* ChartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageView.swift; sourceTree = "<group>"; };
 		CFCD8CD927EA27BD0069873D /* MiniChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChartView.swift; sourceTree = "<group>"; };
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */,
 				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
 				CFDB39BB27F21490001CF008 /* RecordModel.swift */,
+				CF8BDE4A27F348C6005071FD /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				CF58170827EC946C0047EC87 /* AuthViewModel.swift in Sources */,
 				AF7F63D527EB995B00A96F5E /* UserLandingView.swift in Sources */,
 				CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */,
+				CF8BDE4B27F348C6005071FD /* UserModel.swift in Sources */,
 				AF7F63CF27EB990500A96F5E /* MainUserView.swift in Sources */,
 				AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */,
 				AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */,

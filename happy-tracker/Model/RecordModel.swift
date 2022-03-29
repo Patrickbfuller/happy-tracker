@@ -14,11 +14,12 @@ import FirebaseFirestore
 struct RecordModel: Identifiable {
     @DocumentID var id: String?
     
- //   let uid: String
-    let user: String
+    let uid: String //author of the seesion
+    let caption: String
+    let userID: String
     let timestamp: Timestamp
-    let happyConf: Double
-    let sadConf: Double
+    var happyConf: Double
+    var sadConf: Double
     let comment: String
     
    
