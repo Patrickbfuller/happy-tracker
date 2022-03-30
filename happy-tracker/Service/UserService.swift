@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 struct UserService {
     
-    func fetchUser(withUid uid: String){
+    func fetchUser(withUid uid: String, completeSettingUser: @escaping(UserModel)->Void){
         //print("FETCH user with id")
         Firestore.firestore().collection("users").document(uid).getDocument{snapshot, _ in
             guard let snapshot = snapshot else {return}
@@ -19,6 +19,8 @@ struct UserService {
             guard let user = try? snapshot.data(as: UserModel.self) else {return}
             print("Users name is : \(user.name)")
             print("Users email is : \(user.email)")
+            
+            completeSettingUser(user)
         }
     }
 }

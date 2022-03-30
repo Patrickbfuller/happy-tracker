@@ -13,7 +13,7 @@ import FirebaseAuth
 
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: User?
+    @Published var currentUser: UserModel?
     
     private let userService = UserService()
     var authError: Error?
@@ -23,7 +23,9 @@ class AuthViewModel: ObservableObject {
     init() {
         self.userSession = Auth.auth().currentUser
         //self.authFetchUser()
-        userService.fetchUser(withUid: self.userSession!.uid)
+        userService.fetchUser(withUid: self.userSession!.uid) { user in
+            self.currentUser = user
+        }
     }
     
     func login(withEmail email: String, password: String) {
@@ -38,7 +40,9 @@ class AuthViewModel: ObservableObject {
             guard let user = result?.user else { return }
             self.userSession = user
             
-            self.userService.fetchUser(withUid: user.uid)
+            self.userService.fetchUser(withUid: user.uid) { user in
+                self.currentUser = user
+            }
         }
     }
     
@@ -68,7 +72,9 @@ class AuthViewModel: ObservableObject {
             
             guard let user = result?.user else { return }
             self.userSession = user
-            self.userService.fetchUser(withUid: user.uid)
+            self.userService.fetchUser(withUid: user.uid) { user in
+                self.currentUser = user
+            }
             
             //set up data dictionary to store user in database
             let data = ["email": email,
