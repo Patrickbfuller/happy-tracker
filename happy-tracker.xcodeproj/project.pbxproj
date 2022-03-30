@@ -58,6 +58,7 @@
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
 		CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BD27F21A25001CF008 /* SessionService.swift */; };
 		CFDB39C027F21E14001CF008 /* UploadSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BF27F21E14001CF008 /* UploadSessionViewModel.swift */; };
+		F1E03DB927F4C31800530B7F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E03DB827F4C31800530B7F /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		CFDB39BD27F21A25001CF008 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		CFDB39BF27F21E14001CF008 /* UploadSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSessionViewModel.swift; sourceTree = "<group>"; };
+		F1E03DB827F4C31800530B7F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				CFDB39BD27F21A25001CF008 /* SessionService.swift */,
+				F1E03DB827F4C31800530B7F /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				AF6B87DE27F23664004D749E /* SessionViewModel.swift in Sources */,
 				AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */,
 				AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */,
+				F1E03DB927F4C31800530B7F /* UserService.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
 				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,

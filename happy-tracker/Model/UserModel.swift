@@ -9,9 +9,10 @@
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-struct UserModel {
+struct UserModel: Identifiable, Decodable {
+    @DocumentID var id: String?
     let email: String
     let name: String
-    let userID: String
+    //let userID: String
    
 }

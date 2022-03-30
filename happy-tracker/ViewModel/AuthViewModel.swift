@@ -15,12 +15,15 @@ class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
+    private let userService = UserService()
     var authError: Error?
     
     @Published var isError: Bool = false
     
     init() {
         self.userSession = Auth.auth().currentUser
+        //self.authFetchUser()
+        userService.fetchUser(withUid: self.userSession!.uid)
     }
     
     func login(withEmail email: String, password: String) {
@@ -34,6 +37,8 @@ class AuthViewModel: ObservableObject {
             }
             guard let user = result?.user else { return }
             self.userSession = user
+            
+            self.userService.fetchUser(withUid: user.uid)
         }
     }
     
@@ -63,6 +68,7 @@ class AuthViewModel: ObservableObject {
             
             guard let user = result?.user else { return }
             self.userSession = user
+            self.userService.fetchUser(withUid: user.uid)
             
             //set up data dictionary to store user in database
             let data = ["email": email,
@@ -89,6 +95,11 @@ class AuthViewModel: ObservableObject {
         //logs out on backend
         try? Auth.auth().signOut()
     }
+    
+//    func authFetchUser() {
+//        guard let userId = self.userSession?.uid else {return}
+//        userService.fetchUser(withUid: userId)
+//    }
 }
 
 enum AuthError: Error {
