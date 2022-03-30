@@ -9,31 +9,36 @@ import SwiftUI
 
 struct LiveFrameView: View {
     
-    var image: CGImage?
+    @EnvironmentObject var sessionViewModel: SessionViewModel
     
-    init(cvpBuffer: CVPixelBuffer?) {
-        if let cvpBuffer = cvpBuffer {
-            self.image = CGImage.create(from: cvpBuffer)
-        }
-    }
+//    var image: CGImage?
     
     var body: some View {
         
-        if let image = image {
-            GeometryReader { geo in
-                Image(
-                    decorative: image,
-                    scale: 1.0,
-                    orientation: .upMirrored
-                ).resizable()
-                    .scaledToFill()
-                    .frame(
-                        width: geo.size.width,
-                        height: geo.size.height)
-                    .clipped()
+        Group {
+            if let image = sessionViewModel.frame {
+                GeometryReader { geo in
+                    Image(
+                        decorative: image,
+                        scale: 1.0,
+                        orientation: .upMirrored
+                    ).resizable()
+                        .scaledToFill()
+                        .frame(
+                            width: geo.size.width,
+                            height: geo.size.height)
+                        .clipped()
+                }
+            } else {
+                Color.black
             }
-        } else {
-            Color.black
+        }
+        .ignoresSafeArea()
+        .onAppear {
+            sessionViewModel.startCamera()
+        }
+        .onDisappear {
+            sessionViewModel.stopCamera()
         }
     }
 }

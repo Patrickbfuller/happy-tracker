@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LivePredictionView: View {
     
-    @EnvironmentObject var frameManager: FrameManager
+    @EnvironmentObject var sessionViewModel: SessionViewModel
     
     @State var predictionLabel = ""
     
@@ -17,7 +17,7 @@ struct LivePredictionView: View {
     var body: some View {
         
         PredictionLabelBox(label: predictionLabel)
-            .onReceive(frameManager.$current) { cvpBuffer in
+            .onReceive(sessionViewModel.frameManager.$current) { cvpBuffer in
                 updatePredLabel(cvpBuffer: cvpBuffer)
             }
     }
