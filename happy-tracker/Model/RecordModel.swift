@@ -11,11 +11,8 @@ import FirebaseFirestore
 
 
 
-struct RecordModel: Identifiable {
-    @DocumentID var id: String?
-    
-    let uid: String //author of the seesion
-    let caption: String
+struct RecordModel: Codable{
+
     let userID: String
     let timestamp: Timestamp
     var happyConf: Double

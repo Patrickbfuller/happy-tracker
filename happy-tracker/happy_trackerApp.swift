@@ -27,9 +27,9 @@ struct happy_trackerApp: App {
              ContentView()
                     //.environmentObject(viewModel)
             }
+            .navigationViewStyle(.stack)
             .environmentObject(viewModel)
             .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }
-
