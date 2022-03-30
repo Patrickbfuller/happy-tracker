@@ -11,8 +11,7 @@ import FirebaseFirestore
 
 
 
-struct RecordModel: Identifiable, Codable{
-    @DocumentID var id: String?
+struct RecordModel: Codable{
 
     let userID: String
     let timestamp: Timestamp
