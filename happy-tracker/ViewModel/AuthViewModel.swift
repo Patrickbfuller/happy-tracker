@@ -22,10 +22,12 @@ class AuthViewModel: ObservableObject {
     
     init() {
         self.userSession = Auth.auth().currentUser
-        //self.authFetchUser()
-        userService.fetchUser(withUid: self.userSession!.uid) { user in
-            self.currentUser = user
-        }
+        
+        self.authFetchUser()
+        
+//        userService.fetchUser(withUid: self.userSession!.uid) { user in
+//            self.currentUser = user
+//        }
     }
     
     func login(withEmail email: String, password: String) {
@@ -40,9 +42,12 @@ class AuthViewModel: ObservableObject {
             guard let user = result?.user else { return }
             self.userSession = user
             
-            self.userService.fetchUser(withUid: user.uid) { user in
-                self.currentUser = user
-            }
+//            self.userService.fetchUser(withUid: user.uid) { user in
+//                self.currentUser = user
+//            }
+            
+            self.authFetchUser()
+            
         }
     }
     
@@ -72,9 +77,12 @@ class AuthViewModel: ObservableObject {
             
             guard let user = result?.user else { return }
             self.userSession = user
-            self.userService.fetchUser(withUid: user.uid) { user in
-                self.currentUser = user
-            }
+            
+//            self.userService.fetchUser(withUid: user.uid) { user in
+//                self.currentUser = user
+//            }
+            
+            self.authFetchUser()
             
             //set up data dictionary to store user in database
             let data = ["email": email,
@@ -106,10 +114,12 @@ class AuthViewModel: ObservableObject {
         try? Auth.auth().signOut()
     }
     
-//    func authFetchUser() {
-//        guard let userId = self.userSession?.uid else {return}
-//        userService.fetchUser(withUid: userId)
-//    }
+    func authFetchUser() {
+        guard let userId = self.userSession?.uid else {return}
+        userService.fetchUser(withUid: userId) { user in
+            self.currentUser = user
+        }
+    }
 }
 
 enum AuthError: Error {
