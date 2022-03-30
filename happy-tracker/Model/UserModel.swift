@@ -9,9 +9,9 @@
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-struct UserModel {
+struct UserModel:Codable {
     let email: String
     let name: String
     let userID: String
-   
 }
+
