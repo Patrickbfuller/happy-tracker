@@ -19,22 +19,21 @@ struct RecordSessionView: View {
      - have toggle button for live emotion monitoring
      */
     
-//<<<<<<< HEAD
-//    @State var showingLivePrediction = true
-//    @State var showingHint = true
-//    @State var isRecording = false
-//
-//
-//    @ObservedObject var stopwatch = Stopwatch()
-//    @ObservedObject var cameraManager = CameraManager.shared
-//    @ObservedObject var frameManager = FrameManager.shared
-//
-//=======
     @State var showingHint = false
     @State var showingLivePrediction = false
     
     @ObservedObject var sessionViewModel = SessionViewModel()
-//>>>>>>> session-done-w-options
+    
+    var blurRadius: CGFloat {
+        switch sessionViewModel.status {
+        case .notStarted:
+            return 0
+        case .isRecording:
+            return 0
+        default:
+            return 15
+        }
+    }
     
     var transparentBackground = Color.black.opacity(0.5)
     
@@ -47,7 +46,7 @@ struct RecordSessionView: View {
             
             /// Visual Feed
             LiveFrameView().environmentObject(sessionViewModel)
-
+                .blur(radius: blurRadius)
             
             VStack {
                 /// Color to influence nav bar background
@@ -241,29 +240,14 @@ struct RecordingTimerView: View {
 struct StartStopButton: View {
     @State var caption = ""
     
-//<<<<<<< HEAD
-//    @EnvironmentObject var stopwatch: Stopwatch
-//    @ObservedObject var viewModel = UploadSessionViewModel()
-//
-//
-//    @Binding var isRecording: Bool
-//=======
     @EnvironmentObject var sessionViewModel: SessionViewModel
         
-//>>>>>>> session-done-w-options
     var buttonLabel: String {
         sessionViewModel.status == .notStarted ? "Start" : "Stop"
     }
         
     var body: some View {
         Button { // action
-//<<<<<<< HEAD
-//
-//            stopwatch.startStop()
-//            viewModel.uploadSession(withCaption: caption)
-//            withAnimation {
-//                isRecording.toggle()
-//=======
             if sessionViewModel.status == .notStarted {
                 withAnimation {
                     sessionViewModel.startSession()
@@ -272,7 +256,6 @@ struct StartStopButton: View {
                 withAnimation {
                     sessionViewModel.stopSession()
                 }
-//>>>>>>> session-done-w-options
             }
         } label: {
             // label

@@ -75,6 +75,10 @@ class AuthViewModel: ObservableObject {
                         "name": trimmedName,
                         "uid": user.uid]
             
+//            let userModel = UserModel(email: email, name: trimmedName, userID: user.uid)
+//
+//            let data = try? JSONEncoder().encode(userModel)
+            
             Firestore.firestore().collection("users")
                 .document(user.uid)
                 .setData(data) { _ in
