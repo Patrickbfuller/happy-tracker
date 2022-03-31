@@ -85,8 +85,8 @@ class AuthViewModel: ObservableObject {
             
             
             let data = ["email": email,
-                        "name": trimmedName,
-                        "uid": user.uid]
+                        "name": trimmedName]
+            //took away "uid": user.uid as a third parameter in data
             
             
             Firestore.firestore().collection("users")

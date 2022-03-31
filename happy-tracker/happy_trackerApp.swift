@@ -19,6 +19,7 @@ struct happy_trackerApp: App {
 
         FirebaseApp.configure()
         
+       //try? Auth.auth().signOut()
     }
 
     var body: some Scene {

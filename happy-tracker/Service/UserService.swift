@@ -20,6 +20,8 @@ struct UserService {
             print("Users name is : \(user.name)")
             print("Users email is : \(user.email)")
             
+            print("DEBUG: Users uid is: \(user.id)")
+            
             completeSettingUser(user)
         }
     }
