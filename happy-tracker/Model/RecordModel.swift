@@ -12,13 +12,13 @@ import FirebaseFirestore
 
 
 struct RecordModel: Codable{
+    
+    @DocumentID
+    var id: String?
 
     let userID: String
     let timestamp: Timestamp
     var happyConf: Double
     var sadConf: Double
     let comment: String
-    
-   
 }
-

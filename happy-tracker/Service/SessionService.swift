@@ -13,9 +13,9 @@ struct SessionService {
     static func uploadSession(session: RecordModel) {
         let sessionDocumentRef: DocumentReference?
         
-        if let sessionDict = session.toDict(){
-            sessionDocumentRef = Firestore.firestore().collection("session").addDocument(data: sessionDict)
-            print("successfully uploaded document: \(sessionDocumentRef!.documentID)")
+        sessionDocumentRef = try? Firestore.firestore().collection("session").addDocument(from: session)
+        if let sessionDocumentRef = sessionDocumentRef {
+            print("SESSION SERVICE - successfully uploaded document: \(sessionDocumentRef.documentID)")
         } else {
             print("Error handling session entry")
         }
