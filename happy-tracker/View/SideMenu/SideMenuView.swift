@@ -17,7 +17,6 @@ struct SideMenuView: View {
     var body: some View {
         
         if let user = authViewModel.currentUser {
-            
             VStack(alignment: .leading, spacing: 35) {
                 VStack(alignment: .leading){
                     Button{
