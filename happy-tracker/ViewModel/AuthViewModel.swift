@@ -28,7 +28,6 @@ class AuthViewModel: ObservableObject {
                 self.currentUser = user
             }
         }
-        //print("DEBUG: AUTHVIEW MODEL IS INITING")
     }
     
     func login(withEmail email: String, password: String) {
@@ -69,32 +68,22 @@ class AuthViewModel: ObservableObject {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("DEBUG: Failed to register with error \(error.localizedDescription)")
-                
                 self.setError(error)
-                
                 return
             }
             
             guard let user = result?.user else { return }
             self.userSession = user
             
-            //FETCH USER::::::::::::::::
+            // Set Current user with userModelObj and then use obj to set data for document w docId = uid
             self.currentUser = UserModel(email: email, name: name)
             
-            //set up data dictionary to store user in database
-            
-            
-            let data = ["email": email,
-                        "name": trimmedName]
-            //took away "uid": user.uid as a third parameter in data
-            
-            
-            Firestore.firestore().collection("users")
-                .document(user.uid)
-                .setData(data) { _ in
-                    print("DEBUG: did upload user data")
-                }
-            
+            do {
+                try Firestore.firestore().collection("users").document(user.uid).setData(from: self.currentUser!)
+                print("Successfully stored user account with document reference")
+            } catch {
+                print("Error storing user account: \(error)")
+            }
         }
     }
     
