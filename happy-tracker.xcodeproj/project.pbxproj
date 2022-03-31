@@ -57,7 +57,6 @@
 		CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CD927EA27BD0069873D /* MiniChartView.swift */; };
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
 		CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BD27F21A25001CF008 /* SessionService.swift */; };
-		CFDB39C027F21E14001CF008 /* UploadSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BF27F21E14001CF008 /* UploadSessionViewModel.swift */; };
 		F1E03DB927F4C31800530B7F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E03DB827F4C31800530B7F /* UserService.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +107,6 @@
 		CFCD8CD927EA27BD0069873D /* MiniChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChartView.swift; sourceTree = "<group>"; };
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		CFDB39BD27F21A25001CF008 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
-		CFDB39BF27F21E14001CF008 /* UploadSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSessionViewModel.swift; sourceTree = "<group>"; };
 		F1E03DB827F4C31800530B7F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -533,8 +531,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Z7CPB7B7NY;
-				DEVELOPMENT_TEAM = HD55Y7F67X;
 				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -549,8 +545,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrioalex.happy-tracker";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.happy-tracker";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -567,8 +561,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Z7CPB7B7NY;
-				DEVELOPMENT_TEAM = HD55Y7F67X;
 				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -583,8 +575,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrioalex.happy-tracker";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.happy-tracker";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -621,8 +611,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.10.0;
 			};
 		};
 		CF0F786527E8FD66009965CE /* XCRemoteSwiftPackageReference "ChartView" */ = {
