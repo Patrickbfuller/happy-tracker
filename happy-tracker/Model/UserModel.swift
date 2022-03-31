@@ -9,16 +9,9 @@
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-struct UserModel: Identifiable, Decodable {
+struct UserModel: Identifiable, Codable {
+    
     @DocumentID var id: String?
     let email: String
     let name: String
-    //let userID: String
-    
-    //struct UserModel:Codable {
-    //    let email: String
-    //    let name: String
-    //    let userID: String
-    
 }
-
