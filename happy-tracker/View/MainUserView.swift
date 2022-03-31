@@ -8,6 +8,7 @@ import SwiftUI
 
 struct MainUserView: View {
     @State var showSideMenu: Bool = false
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
 
@@ -58,6 +59,7 @@ struct MainUserView: View {
             }
             .onAppear{
                 showSideMenu = false
+                print(viewModel.currentUser)
             }
         }
     }

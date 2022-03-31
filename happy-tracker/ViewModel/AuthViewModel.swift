@@ -23,11 +23,12 @@ class AuthViewModel: ObservableObject {
     init() {
         self.userSession = Auth.auth().currentUser
         
-        self.authFetchUser()
-        
-//        userService.fetchUser(withUid: self.userSession!.uid) { user in
-//            self.currentUser = user
-//        }
+        if let userSessionId = userSession?.uid {
+            self.userService.fetchUser(withUid: userSessionId) { user in
+                self.currentUser = user
+            }
+        }
+        //print("DEBUG: AUTHVIEW MODEL IS INITING")
     }
     
     func login(withEmail email: String, password: String) {
@@ -42,12 +43,11 @@ class AuthViewModel: ObservableObject {
             guard let user = result?.user else { return }
             self.userSession = user
             
-//            self.userService.fetchUser(withUid: user.uid) { user in
-//                self.currentUser = user
-//            }
-            
-            self.authFetchUser()
-            
+            //FETCH USER:::::::::::::::::::::::::::
+            self.userService.fetchUser(withUid: user.uid) { user in
+                self.currentUser = user
+            }
+            //self.authFetchUser()
         }
     }
     
@@ -78,20 +78,16 @@ class AuthViewModel: ObservableObject {
             guard let user = result?.user else { return }
             self.userSession = user
             
-//            self.userService.fetchUser(withUid: user.uid) { user in
-//                self.currentUser = user
-//            }
-            
-            self.authFetchUser()
+            //FETCH USER::::::::::::::::
+            self.currentUser = UserModel(email: email, name: name)
             
             //set up data dictionary to store user in database
+            
+            
             let data = ["email": email,
                         "name": trimmedName,
                         "uid": user.uid]
             
-//            let userModel = UserModel(email: email, name: trimmedName, userID: user.uid)
-//
-//            let data = try? JSONEncoder().encode(userModel)
             
             Firestore.firestore().collection("users")
                 .document(user.uid)
@@ -114,19 +110,19 @@ class AuthViewModel: ObservableObject {
         try? Auth.auth().signOut()
     }
     
-    func authFetchUser() {
-        guard let userId = self.userSession?.uid else {return}
-        userService.fetchUser(withUid: userId) { user in
-            self.currentUser = user
-        }
-    }
+    //    func authFetchUser() {
+    //        guard let userId = self.userSession?.uid else {return}
+    //        userService.fetchUser(withUid: userId) { user in
+    //            self.currentUser = user
+    //        }
+    //    }
 }
 
 enum AuthError: Error {
     
     case emptyName
     case passwordConfirmFailure
-        
+    
 }
 
 extension AuthError: LocalizedError {
@@ -134,17 +130,17 @@ extension AuthError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .emptyName:
-
+            
             return NSLocalizedString(
-                            "The name cannot be empty.",
-                            comment: "Invalid Name"
-                        )
-
+                "The name cannot be empty.",
+                comment: "Invalid Name"
+            )
+            
         case .passwordConfirmFailure:
             return NSLocalizedString(
-                            "Your passwords must match.",
-                            comment: "Passwords Match Error"
-                        )
+                "Your passwords must match.",
+                comment: "Passwords Match Error"
+            )
         }
     }
 }
