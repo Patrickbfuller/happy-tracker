@@ -34,7 +34,7 @@ struct MainUserView: View {
                     }
                 }
                 
-                SideMenuView()
+                SideMenuView(showThis: $showSideMenu)
                     .frame(width: 300)
                     .offset(x: showSideMenu ? 0 : -300, y: 0)
                     .background(showSideMenu ? Color.white : Color.clear)
@@ -59,7 +59,7 @@ struct MainUserView: View {
             }
             .onAppear{
                 showSideMenu = false
-                print(viewModel.currentUser)
+                //print(viewModel.currentUser)
             }
         }
     }
@@ -67,5 +67,6 @@ struct MainUserView: View {
 struct MainUserView_Previews: PreviewProvider {
     static var previews: some View {
         MainUserView()
+            .environmentObject(AuthViewModel())
     }
 }

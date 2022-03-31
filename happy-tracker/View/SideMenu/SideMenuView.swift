@@ -11,21 +11,38 @@ struct SideMenuView: View {
     
     @State var logoutAlert: Bool = false
     
+    @Binding var showThis: Bool
+    
     var body: some View {
         
         if let user = authViewModel.currentUser {
             
             VStack(alignment: .leading, spacing: 35) {
                 VStack(alignment: .leading){
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(Color("medium"))
+//                    Image(systemName: "person.circle")
+//                        .resizable()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(Color("medium"))
+                    
+                    Button{
+                        
+                        withAnimation(.easeIn){
+                            showThis.toggle()
+                        }
+                        
+                    } label: {
+                        Image(systemName: "person.circle")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(Color("medium"))
+                    }
                     
                     Text(user.name)
+                    //Text("user name")
                         .font(.headline)
                     
                     Text(user.email)
+                    //Text("user email")
                         .font(.caption)
                         .foregroundColor(.gray)
                 }
@@ -73,8 +90,10 @@ struct SideMenuView: View {
     }
 }
 
-struct SideMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        SideMenuView()
-    }
-}
+//struct SideMenuView_Previews: PreviewProvider {
+//    @State var previewBindingBool = true
+//    static var previews: some View {
+//        SideMenuView(showThis: $previewBindingBool)
+//            //.environmentObject(AuthViewModel())
+//    }
+//}
