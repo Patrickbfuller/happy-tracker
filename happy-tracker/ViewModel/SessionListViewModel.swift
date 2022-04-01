@@ -25,9 +25,16 @@ class SessionListViewModel: ObservableObject {
                 if let err = err {
                     print("Error getting sessions: \(err)")
                 } else {
-                    for document in snapshot!.documents {
-//                        print("Document id: \(document.documentID)")
-                    }
+                    self.sessions = snapshot!.documents
+                        .compactMap({ docSnapshot -> RecordModel? in
+                            var session: RecordModel? = nil
+                            do {
+                                session = try docSnapshot.data(as: RecordModel.self)
+                            } catch {
+                                print("LOGGING Error retreiving session w document id, \(docSnapshot.documentID), error: \(error.localizedDescription)")
+                            }
+                            return session
+                        })
                 }
             }
     }

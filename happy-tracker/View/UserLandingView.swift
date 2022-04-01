@@ -22,10 +22,9 @@ struct UserLandingView: View {
             MiniListView(miniListRow: MiniListRow())
             
 
-//            CustomButton(buttonLabel: "Record Session") {
-//                // button action
-//            }
-            
+            CustomButton(buttonLabel: "Print sessions") {
+                print(sessionListViewModel.sessions)
+            }
             
             NavigationLink { // destination
                 RecordSessionView()
