@@ -16,7 +16,9 @@ struct MiniListView: View {
             
             ScrollView(showsIndicators: true) {
                 VStack {
-                    
+                    Text("Your Checkups")
+                        .padding()
+                        .font(.headline)
                     ForEach(0 ... 10, id: \.self) { list in
                         MiniListRow()
                         

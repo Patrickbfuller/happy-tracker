@@ -13,14 +13,13 @@ struct LoginView: View {
     @State var password = ""
     
     var body: some View {
+        ScrollView(showsIndicators: true) {
         VStack {
-            
             Spacer()
-            
             Text("Emotional Check-up")
                 .font(.title)
                 .fontWeight(.bold)
-                
+        
             // Logo
             LogoView()
             
@@ -32,6 +31,8 @@ struct LoginView: View {
                     .fontWeight(.semibold)
                     .font(.title2)
                     .padding(.bottom)
+                   
+
                 
                 // Email and pass section
                 // email label
@@ -39,23 +40,27 @@ struct LoginView: View {
                 
                 // email input
                 CustomTextField(placeholder: "enter email", inputText: $email, isSecure: false)
+                 
                 
                 // Pass label
                 CustomAuthLabel(label: "Password")
                 
                 // Pass input
                 CustomTextField(placeholder: "enter password", inputText: $password, isSecure: true)
+                    .onSubmit {viewModel.login(withEmail: email, password: password)
+                       }
                 
             }
             .padding(.leading, 20)
             .padding(.bottom, 40)
-            
+        }
             // Login button (roundy Button)
             CustomButton(buttonLabel: "Login") {
                 // signin action calls login func
                 viewModel.login(withEmail: email, password: password)
                 
             }
+           
             .alert("Cannot Login: \(viewModel.authError?.localizedDescription ?? "yeet")", isPresented: $viewModel.isError) {
                 Button("OK", role: .cancel){
                     viewModel.isError = false

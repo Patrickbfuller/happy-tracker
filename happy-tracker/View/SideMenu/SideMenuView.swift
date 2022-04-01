@@ -30,7 +30,7 @@ struct SideMenuView: View {
                             .foregroundColor(Color("medium"))
                     }
                     
-                    Text(user.name)
+                    Text(user.name.capitalized)
                     //Text("user name")
                         .font(.headline)
                     

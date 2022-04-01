@@ -15,7 +15,7 @@ struct ChartPageView: View {
 
 
         VStack{
-            Text("Emotion Tracker")
+            Text("Emotion Record")
              
                 .font(.title2)
                 .fontWeight(.bold)
