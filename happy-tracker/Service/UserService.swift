@@ -43,3 +43,17 @@ struct UserService {
 enum UserServiceError: Error {
     case snapshotError
 }
+
+extension UserServiceError: LocalizedError {
+    
+    var errorDescription: String? {
+        switch self {
+        case .snapshotError:
+            
+            return NSLocalizedString(
+                "Unable to retreive snapshot of user data.",
+                comment: "Snapshot error"
+            )
+        }
+    }
+}

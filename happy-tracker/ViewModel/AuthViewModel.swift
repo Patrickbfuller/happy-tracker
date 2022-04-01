@@ -62,16 +62,6 @@ class AuthViewModel: ObservableObject {
                 print("2")
                 self.currentUser = user
             }
-            
-            
-//            //quick and dirty no user model data protection
-//            //TO BE FIXED L8R
-//            if self.currentUser == nil {
-//                self.isDisabled = true
-//            }
-            print("3")
-            print("DEBUG LOGIN AuthVM: isdisabled is =  \(self.isDisabled)")
-            
         }
     }
     
@@ -123,13 +113,6 @@ class AuthViewModel: ObservableObject {
         //logs out on backend
         try? Auth.auth().signOut()
     }
-    
-    //    func authFetchUser() {
-    //        guard let userId = self.userSession?.uid else {return}
-    //        userService.fetchUser(withUid: userId) { user in
-    //            self.currentUser = user
-    //        }
-    //    }
 }
 
 enum AuthError: Error {
