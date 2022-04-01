@@ -29,6 +29,8 @@ class AuthViewModel: ObservableObject {
                 self.currentUser = user
             }
         }
+        
+        print("DEBUG: isdisabled is =  \(self.isDisabled)")
     }
     
     func login(withEmail email: String, password: String) {
@@ -47,19 +49,16 @@ class AuthViewModel: ObservableObject {
             
             //FETCH USER:::::::::::::::::::::::::::
             self.userService.fetchUser(withUid: user.uid) { user in
-                //if user is nil, set isDisabled to true and exit
-//                guard user != nil else{
-//                    isDisabled = true
-//                    return
-//                }
-                
-                //user was not nil assigning current user data to user
+               
                 self.currentUser = user
+                
             }
-            //quick and dirty
+            //quick and dirty no user model data protection
+            //TO BE FIXED L8R
             if self.currentUser == nil {
                 self.isDisabled = true
             }
+            print("DEBUG: isdisabled is =  \(self.isDisabled)")
             
         }
     }

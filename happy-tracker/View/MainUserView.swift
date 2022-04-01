@@ -38,8 +38,11 @@ struct MainUserView: View {
                     .frame(width: 300)
                     .offset(x: showSideMenu ? 0 : -300, y: 0)
                     .background(showSideMenu ? Color.white : Color.clear)
-                    .alert(isPresented: $viewModel.isDisabled) {
-                        Alert(title: <#T##SwiftUI.Text#>, message: <#T##SwiftUI.Text?#>, dismissButton: <#T##SwiftUI.Alert.Button?#>)
+                    .alert("Error loading your user data. Please logout.", isPresented: $viewModel.isDisabled) {
+                        Button("Logout") {
+                            //print(viewModel.currentUser)
+                            viewModel.signOut()
+                        }
                     }
                 
                 
