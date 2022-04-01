@@ -11,18 +11,35 @@ struct SessionTextEntryView: View {
     
     @EnvironmentObject var sessionViewModel: SessionViewModel
     
-    @State var description = "5-20 words describing your feelings"
+    @State var description = ""
+    var placeholder = "5-20 words describing your feelings"
+    
     var body: some View {
         ZStack {
             Color.black.opacity(0.5)
                 .ignoresSafeArea()
             VStack(spacing: 0) {
                 
-                ZStack {
+                ZStack(alignment: .topLeading) {
+                    
+                    Color(UIColor.systemBackground)
+                    
+                    // Vanishing placeholder
+                    if description == "" {
+                        Text(placeholder)
+                            .foregroundColor(.secondary)
+                            .padding()
+                    }
+                    
                     TextEditor(text: $description)
                         .padding(8)
                         .foregroundColor(Color.primary)
-                        .background(Color(UIColor.systemBackground))
+                }
+                .onAppear {
+                    UITextView.appearance().backgroundColor = .clear
+                }
+                .onDisappear {
+                    UITextView.appearance().backgroundColor = nil
                 }
                 
                 HStack {
