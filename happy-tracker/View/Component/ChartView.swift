@@ -13,14 +13,9 @@ import SwiftUICharts
 struct ChartView: View {
     
     var body: some View {
-        
-        
-        
-        
+
         // Main Line chart
-        
-        
-        
+   
         LineView(data: [0,30,40,50,45,20,90,100],
                 // title: "Emotion tracker",
                  legend: "Happy")

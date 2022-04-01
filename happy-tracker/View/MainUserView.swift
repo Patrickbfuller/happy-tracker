@@ -50,7 +50,7 @@ struct MainUserView: View {
                             showSideMenu.toggle()
                         }
                     } label: {
-                        Image(systemName: "person.circle")
+                        Image(systemName: "line.3.horizontal")
                             .frame(width: 30, height: 30)
                             .font(.system(size: 35))
                             .foregroundColor(Color("medium"))

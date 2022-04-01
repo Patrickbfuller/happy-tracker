@@ -17,7 +17,10 @@ struct LoginView: View {
             
             Spacer()
             
-            Text("Welcome to Happy Tracker")
+            Text("Emotional Check-up")
+                .font(.title)
+                .fontWeight(.bold)
+                
             // Logo
             LogoView()
             
@@ -26,8 +29,8 @@ struct LoginView: View {
             VStack(alignment: .leading) {
                 
                 Text("Log In")
-                    .fontWeight(.black)
-                    .font(.title)
+                    .fontWeight(.semibold)
+                    .font(.title2)
                     .padding(.bottom)
                 
                 // Email and pass section
@@ -85,7 +88,10 @@ struct LoginView: View {
 }
 
 struct LoginView_Previews: PreviewProvider {
+    
+    
     static var previews: some View {
         LoginView()
+            .environmentObject(AuthViewModel())
     }
 }

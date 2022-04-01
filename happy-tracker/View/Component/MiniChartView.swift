@@ -14,7 +14,7 @@ struct MiniChartView: View {
         ZStack(alignment: .leading){
             
             LineChartView(data: [0,10,20,30,100],
-                          title: "Emotion tracker",
+                          title: "Emotion Checkup",
                           legend: "Happy",
                           // style:
                           //                      ChartStyle(backgroundColor: Color.blue, accentColor: Color.red,
