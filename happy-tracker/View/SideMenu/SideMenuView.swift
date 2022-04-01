@@ -31,7 +31,7 @@ struct SideMenuView: View {
                             .foregroundColor(Color("medium"))
                     }
                     if authViewModel.currentUser != nil {
-                        Text(authViewModel.currentUser!.name)
+                        Text(authViewModel.currentUser!.name.capitalized)
                             .font(.headline)
                     }else{
                         Text("ERROR")
