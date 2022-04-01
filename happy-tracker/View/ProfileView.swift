@@ -7,7 +7,10 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
     var body: some View {
+        if let user = authViewModel.currentUser {
         VStack {
             Spacer()
             
@@ -16,18 +19,20 @@ struct ProfileView: View {
                 .font(.system(size: 100))
                 .foregroundColor(Color("medium"))
             
-            Text("User Profile")
+            Text("\(user.name.capitalized)'s Profile")
                 .font(.system(size: 40))
             
-            ProfileInfoView(text: "User Name Here", imageName: nil)
+            ProfileInfoView(text: "\(user.name.capitalized)", imageName: nil)
             
-            ProfileInfoView(text: "User email", imageName: "envelope.fill")
+            ProfileInfoView(text: "\(user.email)", imageName: "envelope.fill")
             
             Button("Edit Profile") {}
             
             Spacer()
         }
         .background(Color("pale"))
+            
+        }
     }
 }
 
