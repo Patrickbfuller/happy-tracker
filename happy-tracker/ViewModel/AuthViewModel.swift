@@ -14,6 +14,7 @@ import FirebaseAuth
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserModel?
+    @Published var isDisabled: Bool = false
     
     private let userService = UserService()
     var authError: Error?
@@ -28,6 +29,8 @@ class AuthViewModel: ObservableObject {
                 self.currentUser = user
             }
         }
+        
+        print("DEBUG: isdisabled is =  \(self.isDisabled)")
     }
     
     func login(withEmail email: String, password: String) {
@@ -36,17 +39,27 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG: Failed to Sign in with error \(error.localizedDescription)")
                 
                 self.setError(error)
+                self.isDisabled = true
                 
                 return
             }
+            
             guard let user = result?.user else { return }
             self.userSession = user
             
             //FETCH USER:::::::::::::::::::::::::::
             self.userService.fetchUser(withUid: user.uid) { user in
+               
                 self.currentUser = user
+                
             }
-            //self.authFetchUser()
+            //quick and dirty no user model data protection
+            //TO BE FIXED L8R
+            if self.currentUser == nil {
+                self.isDisabled = true
+            }
+            print("DEBUG: isdisabled is =  \(self.isDisabled)")
+            
         }
     }
     
