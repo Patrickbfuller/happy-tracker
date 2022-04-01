@@ -14,6 +14,7 @@ import FirebaseAuth
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserModel?
+    @Published var isDisabled: Bool = false
     
     private let userService = UserService()
     var authError: Error?
@@ -36,17 +37,30 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG: Failed to Sign in with error \(error.localizedDescription)")
                 
                 self.setError(error)
+                self.isDisabled = true
                 
                 return
             }
+            
             guard let user = result?.user else { return }
             self.userSession = user
             
             //FETCH USER:::::::::::::::::::::::::::
             self.userService.fetchUser(withUid: user.uid) { user in
+                //if user is nil, set isDisabled to true and exit
+//                guard user != nil else{
+//                    isDisabled = true
+//                    return
+//                }
+                
+                //user was not nil assigning current user data to user
                 self.currentUser = user
             }
-            //self.authFetchUser()
+            //quick and dirty
+            if self.currentUser == nil {
+                self.isDisabled = true
+            }
+            
         }
     }
     

@@ -11,10 +11,10 @@ struct MainUserView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-
-            GeometryReader { geo in
+        
+        GeometryReader { geo in
             ZStack(alignment: .topLeading) {
-
+                
                 Color("pale")
                     .ignoresSafeArea(.all)
                 
@@ -38,31 +38,35 @@ struct MainUserView: View {
                     .frame(width: 300)
                     .offset(x: showSideMenu ? 0 : -300, y: 0)
                     .background(showSideMenu ? Color.white : Color.clear)
+                    .alert(isPresented: $viewModel.isDisabled) {
+                        Alert(title: <#T##SwiftUI.Text#>, message: <#T##SwiftUI.Text?#>, dismissButton: <#T##SwiftUI.Alert.Button?#>)
+                    }
+                
                 
             }
-            }
-            .navigationTitle("Dashboard")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        withAnimation(.easeOut){
-                            showSideMenu.toggle()
-                        }
-                    } label: {
-                        Image(systemName: "line.3.horizontal")
-                            .frame(width: 30, height: 30)
-                            .font(.system(size: 35))
-                            .foregroundColor(Color("medium"))
+        }
+        .navigationTitle("Dashboard")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    withAnimation(.easeOut){
+                        showSideMenu.toggle()
                     }
+                } label: {
+                    Image(systemName: "line.3.horizontal")
+                        .frame(width: 30, height: 30)
+                        .font(.system(size: 35))
+                        .foregroundColor(Color("medium"))
                 }
             }
-            .onAppear{
-                showSideMenu = false
-                //print(viewModel.currentUser)
-            }
+        }
+        .onAppear{
+            showSideMenu = false
+            //print(viewModel.currentUser)
         }
     }
+}
 
 struct MainUserView_Previews: PreviewProvider {
     static var previews: some View {
