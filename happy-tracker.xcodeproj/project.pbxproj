@@ -188,6 +188,7 @@
 				AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */,
 				AF91F19727E8C62F0015CCE9 /* ContentView.swift */,
 				AF91F1A827E8CC080015CCE9 /* View */,
+				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
 				AF7F63CA27EB981600A96F5E /* ViewModel */,
 				AF91F1AC27E8CC440015CCE9 /* Service */,
 				AF91F1AA27E8CC310015CCE9 /* Model */,
@@ -223,7 +224,6 @@
 				AF7F63D227EB994300A96F5E /* ProfileView.swift */,
 				AF7F63D427EB995B00A96F5E /* UserLandingView.swift */,
 				AF91F1AD27E8CC6A0015CCE9 /* Component */,
-				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,7 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HWYFX3H97P;
+				DEVELOPMENT_TEAM = HD55Y7F67X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -561,7 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HWYFX3H97P;
+				DEVELOPMENT_TEAM = HD55Y7F67X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";

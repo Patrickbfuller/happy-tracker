@@ -19,8 +19,12 @@ struct CustomTextField: View {
         Group {
             if isSecure {
                 SecureField(placeholder, text: $inputText)
+                    
+                
             } else {
                 TextField(placeholder, text: $inputText)
+                
+                 
             }
         }
         .padding()

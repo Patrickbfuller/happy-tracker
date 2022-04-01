@@ -37,7 +37,7 @@ struct AppSettingsView: View {
                 VStack(alignment: .leading) {
                     Text("Toggle Color Scheme")
                         .font(.system(size: 25))
-                    
+                        .padding()
 //                    Toggle("Change Color Theme", isOn: $isDarkMode)
 //                        .padding()
                     Picker("Color Mode", selection: $isDarkMode) {

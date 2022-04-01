@@ -21,29 +21,32 @@ struct RegisterView: View {
     
     
     var body: some View {
-        
+        ScrollView(showsIndicators: true) {
         VStack {
             Spacer()
-            
+            Text("Emotional Check-up")
+                .font(.title)
+                .fontWeight(.bold)
+        
+            // Logo
             LogoView()
             
             Spacer()
-            
-            
-            VStack(alignment: .leading){
+                    
+            VStack(alignment: .leading) {
                 Text("Sign up")
-                    .fontWeight(.black)
-                    .font(.title)
+                    .fontWeight(.semibold)
+                    .font(.title2)
                     .padding(.bottom)
+                    .padding(.leading)
                 //name input
-      
+    
+                VStack(alignment: .leading){
                 CustomAuthLabel(label: "Name")
-                
                 CustomTextField(placeholder: "enter name",
                                 inputText: $name,
                                 isSecure: false)
-                
-                
+                                
                 //email input
                 CustomAuthLabel(label: "Email")
                 
@@ -66,10 +69,13 @@ struct RegisterView: View {
                 CustomTextField(placeholder: "enter password",
                                 inputText: $confirmedPassword,
                                 isSecure: true)
+                .onSubmit {viewModel.register(withEmail: email, password: password, confirmedPassword: confirmedPassword, name: name)
+                   }
 
             }
             .padding(.leading, 20)
             .padding(.bottom, 40)
+            }
             
             // Login button (roundy Button)
             CustomButton(buttonLabel: "Register") {
@@ -79,11 +85,14 @@ struct RegisterView: View {
                                    confirmedPassword: confirmedPassword,
                                    name: name)
             }
+            }
+            
             .alert("Cannot Register: \(viewModel.authError?.localizedDescription ?? "yeet")", isPresented: $viewModel.isError) {
                 Button("OK", role: .cancel){
                     viewModel.isError = false
                 }
             }
+            
             
             Spacer()
             
