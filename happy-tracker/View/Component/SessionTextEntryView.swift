@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SessionTextEntryView: View {
     
-    @EnvironmentObject var sessionViewModel: SessionViewModel
+    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
     @State var description = ""
     var placeholder = "5-20 words describing your feelings"
@@ -76,6 +76,6 @@ struct SessionTextEntryView: View {
 struct RecordingDoneView_Previews: PreviewProvider {
     static var previews: some View {
         SessionTextEntryView()
-            .environmentObject(SessionViewModel())
+            .environmentObject(RecordSessionViewModel())
     }
 }

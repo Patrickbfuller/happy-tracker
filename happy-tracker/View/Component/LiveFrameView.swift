@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LiveFrameView: View {
     
-    @EnvironmentObject var sessionViewModel: SessionViewModel
+    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
 //    var image: CGImage?
     

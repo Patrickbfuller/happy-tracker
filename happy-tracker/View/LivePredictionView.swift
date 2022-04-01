@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LivePredictionView: View {
     
-    @EnvironmentObject var sessionViewModel: SessionViewModel
+    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
     @State var predictionLabel = ""
     

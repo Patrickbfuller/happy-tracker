@@ -10,7 +10,7 @@ import SwiftUI
 struct SessionDoneView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var sessionViewModel: SessionViewModel
+    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
 
     var body: some View {
         ZStack {

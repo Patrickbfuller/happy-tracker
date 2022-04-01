@@ -22,7 +22,7 @@ struct RecordSessionView: View {
     @State var showingHint = false
     @State var showingLivePrediction = false
     
-    @ObservedObject var sessionViewModel = SessionViewModel()
+    @ObservedObject var sessionViewModel = RecordSessionViewModel()
     
     var blurRadius: CGFloat {
         switch sessionViewModel.status {
@@ -240,7 +240,7 @@ struct RecordingTimerView: View {
 struct StartStopButton: View {
     @State var caption = ""
     
-    @EnvironmentObject var sessionViewModel: SessionViewModel
+    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
         
     var buttonLabel: String {
         sessionViewModel.status == .notStarted ? "Start" : "Stop"

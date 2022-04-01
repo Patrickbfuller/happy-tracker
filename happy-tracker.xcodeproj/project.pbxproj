@@ -19,8 +19,9 @@
 		AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */; };
 		AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */; };
 		AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */; };
+		AF69191827F7809300D9BCDB /* SessionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69191727F7809300D9BCDB /* SessionListViewModel.swift */; };
 		AF6B87DC27F22279004D749E /* SessionTextEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */; };
-		AF6B87DE27F23664004D749E /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DD27F23664004D749E /* SessionViewModel.swift */; };
+		AF6B87DE27F23664004D749E /* RecordSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */; };
 		AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DF27F260A2004D749E /* SessionDoneView.swift */; };
 		AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C627EB972600A96F5E /* FirebaseAuth */; };
 		AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C827EB972600A96F5E /* FirebaseFirestore */; };
@@ -73,8 +74,9 @@
 		AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePredictionView.swift; sourceTree = "<group>"; };
 		AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionRecognitionClassifierHNS.mlmodel; sourceTree = "<group>"; };
 		AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		AF69191727F7809300D9BCDB /* SessionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListViewModel.swift; sourceTree = "<group>"; };
 		AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTextEntryView.swift; sourceTree = "<group>"; };
-		AF6B87DD27F23664004D749E /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
+		AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModel.swift; sourceTree = "<group>"; };
 		AF6B87DF27F260A2004D749E /* SessionDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDoneView.swift; sourceTree = "<group>"; };
 		AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		AF7F63CE27EB990500A96F5E /* MainUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
@@ -149,7 +151,8 @@
 			children = (
 				AF7F63D627EB999F00A96F5E /* SideMenuViewModel.swift */,
 				CF58170727EC946C0047EC87 /* AuthViewModel.swift */,
-				AF6B87DD27F23664004D749E /* SessionViewModel.swift */,
+				AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */,
+				AF69191727F7809300D9BCDB /* SessionListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */,
 				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
 				CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */,
+				AF69191827F7809300D9BCDB /* SessionListViewModel.swift in Sources */,
 				AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */,
 				AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
@@ -373,7 +377,7 @@
 				AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */,
 				AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */,
 				AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */,
-				AF6B87DE27F23664004D749E /* SessionViewModel.swift in Sources */,
+				AF6B87DE27F23664004D749E /* RecordSessionViewModel.swift in Sources */,
 				AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */,
 				AFA6ADF427F4A152006C9352 /* Codable+Ext.swift in Sources */,
 				AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */,

@@ -11,19 +11,35 @@ import FirebaseFirestoreSwift
 
 struct UserService {
     
-    func fetchUser(withUid uid: String, completeSettingUser: @escaping(UserModel)->Void){
-
+    func fetchUser(withUid uid: String, completeSettingUser: @escaping(UserModel?, Error?)->Void){
+        
+        var fetchError: Error?
+        var user: UserModel?
+        
         Firestore.firestore().collection("users").document(uid).getDocument{snapshot, _ in
             
-            guard let snapshot = snapshot else {return}
-
-            guard let user = try? snapshot.data(as: UserModel.self) else {return}
-            
-            print("Users name is : \(user.name)")
-            print("Users email is : \(user.email)")
-            print("DEBUG: Users uid is: \(user.id)")
-            
-            completeSettingUser(user)
+            if let snapshot = snapshot  {
+                //            guard let user = try? snapshot.data(as: UserModel.self) else {return}
+                //            let user = try? snapshot.data(as: UserModel.self)
+                do {
+                    user = try snapshot.data(as: UserModel.self)
+                } catch {
+                    fetchError = error
+                }
+                
+                if let user = user {
+                    print("Users name is : \(user.name)")
+                    print("Users email is : \(user.email)")
+                    print("DEBUG: Users uid is: \(user.id)")
+                }
+            } else {
+                fetchError = UserServiceError.snapshotError
+            }
+            completeSettingUser(user, fetchError)
         }
     }
+}
+
+enum UserServiceError: Error {
+    case snapshotError
 }

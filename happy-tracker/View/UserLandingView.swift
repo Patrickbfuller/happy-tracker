@@ -7,6 +7,9 @@
 import SwiftUI
 
 struct UserLandingView: View {
+    
+    @StateObject var sessionListViewModel = SessionListViewModel()
+    
     var body: some View {
         VStack{
             //Chart

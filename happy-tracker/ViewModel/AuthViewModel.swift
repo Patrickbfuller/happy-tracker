@@ -25,12 +25,16 @@ class AuthViewModel: ObservableObject {
         self.userSession = Auth.auth().currentUser
         
         if let userSessionId = userSession?.uid {
-            self.userService.fetchUser(withUid: userSessionId) { user in
+            self.userService.fetchUser(withUid: userSessionId) { user, error in
+                if let error = error {
+                    self.isDisabled = true
+                    print("Error getting user in init: \(error.localizedDescription)")
+                }
                 self.currentUser = user
             }
         }
         
-        print("DEBUG: isdisabled is =  \(self.isDisabled)")
+        print("DEBUG INIT AuthVM: isdisabled is =  \(self.isDisabled)")
     }
     
     func login(withEmail email: String, password: String) {
@@ -48,17 +52,25 @@ class AuthViewModel: ObservableObject {
             self.userSession = user
             
             //FETCH USER:::::::::::::::::::::::::::
-            self.userService.fetchUser(withUid: user.uid) { user in
-               
+            self.userService.fetchUser(withUid: user.uid) { user, error in
+               print("1")
+                // This closure will still happen even user nil
+                if let error = error {
+                    print("Error getting user on login: \(error.localizedDescription)")
+                    self.isDisabled = true
+                }
+                print("2")
                 self.currentUser = user
-                
             }
-            //quick and dirty no user model data protection
-            //TO BE FIXED L8R
-            if self.currentUser == nil {
-                self.isDisabled = true
-            }
-            print("DEBUG: isdisabled is =  \(self.isDisabled)")
+            
+            
+//            //quick and dirty no user model data protection
+//            //TO BE FIXED L8R
+//            if self.currentUser == nil {
+//                self.isDisabled = true
+//            }
+            print("3")
+            print("DEBUG LOGIN AuthVM: isdisabled is =  \(self.isDisabled)")
             
         }
     }
