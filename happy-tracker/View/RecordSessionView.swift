@@ -22,7 +22,7 @@ struct RecordSessionView: View {
     @State var showingHint = false
     @State var showingLivePrediction = false
     
-    @ObservedObject var sessionViewModel = RecordSessionViewModel()
+    @StateObject var sessionViewModel = RecordSessionViewModel()
     
     var blurRadius: CGFloat {
         switch sessionViewModel.status {
@@ -83,7 +83,7 @@ struct RecordSessionView: View {
                     StartStopButton()
                         .environmentObject(sessionViewModel)
                         .disabled(sessionViewModel.cameraError != nil)
-                    
+
                     /// Vanishable Stopwatch Timer
                     if sessionViewModel.status == .isRecording {
                         HStack {

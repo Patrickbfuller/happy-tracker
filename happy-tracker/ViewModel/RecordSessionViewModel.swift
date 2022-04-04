@@ -44,15 +44,17 @@ class RecordSessionViewModel: ObservableObject {
         self.status = .isRecording
         // start adding / set up subscription
         
-        frameManager.$current
-            .sink { cvpBuffer in
-                // send cvpBuffer to predictionCounter
-                self.predictionCounter.addBuffer(cvpBuffer: cvpBuffer)
-            }
+        DispatchQueue.main.async {
+            self.frameManager.$current
+                .sink { cvpBuffer in
+                    // send cvpBuffer to predictionCounter
+                    self.predictionCounter.addBuffer(cvpBuffer: cvpBuffer)
+                }
             // STORE SUBSCRIPTION IN CANCELLABLES
-            .store(in: &cancellables)
-        // start stopwatch
-        stopwatch.startStop()
+                .store(in: &self.cancellables)
+            // start stopwatch
+            self.stopwatch.startStop()
+        }
     }
     
     func stopSession() {
