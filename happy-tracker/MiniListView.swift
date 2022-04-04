@@ -9,18 +9,22 @@ import SwiftUI
 
 struct MiniListView: View {
     
-    var miniListRow: MiniListRow
+    var sessions: [RecordModel]
     
     var body: some View {
         ZStack(alignment: .bottom){
             
-            ScrollView(showsIndicators: true) {
-                VStack {
-                    Text("Your Checkups")
-                        .padding()
-                        .font(.headline)
-                    ForEach(0 ... 10, id: \.self) { list in
-                        MiniListRow()
+            VStack(spacing: 0) {
+                Text("Your Checkups")
+                    .padding()
+                    .font(.headline)
+                ScrollView(showsIndicators: true) {
+                    
+                    ForEach(Array(zip(sessions.indices, sessions)), id: \.0) {index, listedSession in
+                        
+                        MiniListRow(
+                            session: listedSession,
+                            backgroundOpacity: index % 2 == 0 ? 0.1 : 0.3)
                         
                     }
                 }
@@ -43,6 +47,6 @@ struct MiniListView: View {
 
 struct MiniListView_Previews: PreviewProvider {
     static var previews: some View {
-        MiniListView(miniListRow: MiniListRow())
+        MiniListView(sessions: [])
     }
 }

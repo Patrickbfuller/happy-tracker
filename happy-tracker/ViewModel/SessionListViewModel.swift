@@ -14,13 +14,17 @@ class SessionListViewModel: ObservableObject {
     var sessions: [RecordModel] = []
     
     init() {
-        addSnapshotListener()
-        print("session view model init-ing")
+        if let userID = Auth.auth().currentUser?.uid {
+            addSnapshotListener(userID: userID)
+        } else {
+            print("ERROR LOGGING: could not access current user id for fetching sessions.")
+        }
     }
     
-    
-    func addSnapshotListener() {
-        Firestore.firestore().collection("session")
+    func addSnapshotListener(userID: String) {
+        Firestore.firestore()
+            .collection("session")
+            .whereField("userID", isEqualTo: userID)
             .addSnapshotListener { snapshot, err in
                 if let err = err {
                     print("Error getting sessions: \(err)")

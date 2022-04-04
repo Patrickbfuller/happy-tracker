@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 
 
-struct RecordModel: Codable{
+struct RecordModel: Identifiable, Codable{
     
     @DocumentID var id: String?
     let userID: String

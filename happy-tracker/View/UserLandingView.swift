@@ -7,9 +7,9 @@
 import SwiftUI
 
 struct UserLandingView: View {
-    
+        
     @StateObject var sessionListViewModel = SessionListViewModel()
-    
+        
     var body: some View {
         VStack{
             //Chart
@@ -19,7 +19,7 @@ struct UserLandingView: View {
             
             //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
-            MiniListView(miniListRow: MiniListRow())
+            MiniListView(sessions: sessionListViewModel.sessions)
             
 
             CustomButton(buttonLabel: "Print sessions") {
@@ -30,13 +30,9 @@ struct UserLandingView: View {
                 RecordSessionView()
             } label: {
                 CustomButtonLabel(buttonLabel: "Record Session")
-
             }
         }
-        
-        
     }
-        
 }
 
 struct UserLandingView_Previews: PreviewProvider {
