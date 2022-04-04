@@ -33,9 +33,7 @@ class AuthViewModel: ObservableObject {
                 self.currentUser = user
             }
         }
-        
-        print("DEBUG INIT AuthVM: isdisabled is =  \(self.isDisabled)")
-    }
+}
     
     func login(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
@@ -53,13 +51,12 @@ class AuthViewModel: ObservableObject {
             
             //FETCH USER:::::::::::::::::::::::::::
             self.userService.fetchUser(withUid: user.uid) { user, error in
-               print("1")
+                
                 // This closure will still happen even user nil
                 if let error = error {
                     print("Error getting user on login: \(error.localizedDescription)")
                     self.isDisabled = true
                 }
-                print("2")
                 self.currentUser = user
             }
         }

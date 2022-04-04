@@ -8,7 +8,7 @@ import SwiftUI
 
 struct UserLandingView: View {
         
-    @StateObject var sessionListViewModel = SessionListViewModel()
+    @ObservedObject var sessionListViewModel = SessionListViewModel()
         
     var body: some View {
         VStack{
@@ -23,7 +23,11 @@ struct UserLandingView: View {
             
 
             CustomButton(buttonLabel: "Print sessions") {
-                print(sessionListViewModel.sessions)
+                print("\nDEBUG\n")
+                sessionListViewModel.sessions.forEach { session in
+                    print(session.comment)
+                }
+                print("\nDEBUG\n")
             }
             
             NavigationLink { // destination

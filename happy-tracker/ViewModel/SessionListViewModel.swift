@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class SessionListViewModel: ObservableObject {
     
-    var sessions: [RecordModel] = []
+    @Published var sessions: [RecordModel] = []
     
     init() {
         if let userID = Auth.auth().currentUser?.uid {
@@ -25,6 +25,7 @@ class SessionListViewModel: ObservableObject {
         Firestore.firestore()
             .collection("session")
             .whereField("userID", isEqualTo: userID)
+            .order(by: "timestamp", descending: true)
             .addSnapshotListener { snapshot, err in
                 if let err = err {
                     print("Error getting sessions: \(err)")

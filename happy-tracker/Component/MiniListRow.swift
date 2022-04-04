@@ -32,14 +32,23 @@ struct MiniListRow: View {
             Color.mint.opacity(backgroundOpacity)
             HStack(alignment: .top, spacing: 0.0) {
                 
-                Text(formatter.format(date: session.timestamp.dateValue()))
-                    .frame(width: 110, alignment: .leading)
-                    .padding(.leading)
-                
-                Text(emotionLabel)
-                    .frame(width: 70, alignment: .leading)
+                VStack(alignment: .leading) {
+                    Text(formatter.format(date: session.timestamp.dateValue()))
+                        .fontWeight(.thin)
+                        .frame(width: 110, alignment: .leading)
+                    
+                    Text(emotionLabel)
+                        .fontWeight(.bold)
+                        .frame(width: 70, alignment: .leading)
+                }
+                .padding(.leading)
+
+                Rectangle()
+                    .frame(width: 0.5)
+                    .foregroundColor(.primary.opacity(0.5))
                 
                 Text(session.comment)
+                    .padding(.horizontal)
                 
                 Spacer()
                 

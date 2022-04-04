@@ -102,7 +102,7 @@
 		CF0F786327E8F506009965CE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Service/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
+		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
 		CF8BDE4A27F348C6005071FD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CFCD8CCE27EA128B0069873D /* ChartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageView.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */,
 				AF91F19727E8C62F0015CCE9 /* ContentView.swift */,
 				AF91F1A827E8CC080015CCE9 /* View */,
-				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
+				AF91F1AD27E8CC6A0015CCE9 /* Component */,
 				AF7F63CA27EB981600A96F5E /* ViewModel */,
 				AF91F1AC27E8CC440015CCE9 /* Service */,
 				AF91F1AA27E8CC310015CCE9 /* Model */,
@@ -226,7 +226,6 @@
 				AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */,
 				AF7F63D227EB994300A96F5E /* ProfileView.swift */,
 				AF7F63D427EB995B00A96F5E /* UserLandingView.swift */,
-				AF91F1AD27E8CC6A0015CCE9 /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,7 +235,6 @@
 			children = (
 				AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */,
 				AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */,
-				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
 				CFDB39BB27F21490001CF008 /* RecordModel.swift */,
 				CF8BDE4A27F348C6005071FD /* UserModel.swift */,
 				AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */,
@@ -264,6 +262,8 @@
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
 				CFCD8CD927EA27BD0069873D /* MiniChartView.swift */,
+				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
+				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
 				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
 			);
 			path = Component;
