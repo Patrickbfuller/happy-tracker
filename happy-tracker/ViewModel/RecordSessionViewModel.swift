@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 import Firebase
 
-class SessionViewModel: ObservableObject {
+class RecordSessionViewModel: ObservableObject {
     
     @Published var frame: CGImage?
     @Published var cameraError: CameraError?
