@@ -12,6 +12,8 @@ import FirebaseAuth
 class SessionListViewModel: ObservableObject {
     
     @Published var sessions: [RecordModel] = []
+    //@Published var emotionData: [Double] = []
+    //var emotionData: [Double] = []
     
     init() {
         if let userID = Auth.auth().currentUser?.uid {
@@ -43,4 +45,6 @@ class SessionListViewModel: ObservableObject {
                 }
             }
     }
+    
+    
 }

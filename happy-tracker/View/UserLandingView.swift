@@ -9,12 +9,13 @@ import SwiftUI
 struct UserLandingView: View {
         
     @ObservedObject var sessionListViewModel = SessionListViewModel()
+    //@ObservedObject var miniCharDataViewModel = MiniChartDataViewModel()
         
     var body: some View {
         VStack{
             //Chart
             //Text("Chart Goes here")
-            MiniChartView()
+            MiniChartView(sessions: sessionListViewModel.sessions)
                 .padding(.vertical)
             
             //Text("Session list goes here")
@@ -22,13 +23,13 @@ struct UserLandingView: View {
             MiniListView(sessions: sessionListViewModel.sessions)
             
 
-            CustomButton(buttonLabel: "Print sessions") {
-                print("\nDEBUG\n")
-                sessionListViewModel.sessions.forEach { session in
-                    print(session.comment)
-                }
-                print("\nDEBUG\n")
-            }
+//            CustomButton(buttonLabel: "Print sessions") {
+//                print("\nDEBUG\n")
+//                sessionListViewModel.sessions.forEach { session in
+//                    print(session.comment)
+//                }
+//                print("\nDEBUG\n")
+//            }
             
             NavigationLink { // destination
                 RecordSessionView()

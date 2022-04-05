@@ -20,11 +20,14 @@ struct MiniListRow: View {
     
     var emotionLabel: String
     
+    var emotionIndexLabel: String
+    
     init(session: RecordModel, backgroundOpacity: Double) {
         self.session = session
         self.backgroundOpacity = backgroundOpacity
         let emotion = EmotionPrediction(happyConf: session.happyConf, sadConf: session.sadConf)
         emotionLabel = emotion.emotionIndex > 0.5 ? "Happy" : "Sad"
+        emotionIndexLabel = String(format: "( %.0f )", emotion.emotionIndex*100)
     }
     
     var body: some View {
@@ -37,11 +40,22 @@ struct MiniListRow: View {
                         .fontWeight(.thin)
                         .frame(width: 110, alignment: .leading)
                     
-                    Text(emotionLabel)
-                        .fontWeight(.bold)
-                        .frame(width: 70, alignment: .leading)
+                    HStack {
+                        Text(emotionLabel)
+                            .fontWeight(.bold)
+                            //.frame(width: 70, alignment: .leading)
+                        
+                        //Spacer()
+                        
+                        Text(emotionIndexLabel)
+                            .fontWeight(.thin)
+                            //.frame(alignment: .trailing)
+                        
+                        Spacer()
+                    }
+                    .frame(width:110)
                 }
-                .padding(.leading)
+                .padding(.horizontal)
 
                 Rectangle()
                     .frame(width: 0.5)
@@ -62,9 +76,9 @@ struct MiniListRow_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             
-            MiniListRow(session: RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date()), happyConf: 8.0, sadConf: 0.0, comment: "This is a really long com ment without intentional line breaks"), backgroundOpacity: 0.2)
+            MiniListRow(session: RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date()), happyConf: 0.8, sadConf: 0.0, comment: "This is a really long com ment without intentional line breaks"), backgroundOpacity: 0.2)
             MiniListRow(session: RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date()), happyConf: 0.0, sadConf: 0.0, comment: "This is a shorter comment"), backgroundOpacity: 0.1)
-            MiniListRow(session: RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date()), happyConf: 6.0, sadConf: 0.0, comment: "This is a really long comment without intentional line breaks"), backgroundOpacity: 0.2)
+            MiniListRow(session: RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date()), happyConf: 0.6, sadConf: 0.0, comment: "This is a really long comment without intentional line breaks"), backgroundOpacity: 0.2)
         }
     }
 }
