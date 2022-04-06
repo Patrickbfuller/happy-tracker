@@ -42,7 +42,6 @@ class AuthViewModel: ObservableObject {
                 print("DEBUG: Failed to Sign in with error \(error.localizedDescription)")
                 
                 self.setError(error)
-                self.isDisabled = true
                 
                 return
             }
