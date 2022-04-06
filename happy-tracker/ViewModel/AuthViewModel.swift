@@ -20,8 +20,9 @@ class AuthViewModel: ObservableObject {
     var authError: Error?
     
     @Published var isError: Bool = false
-    
-    init() {
+
+   init() {
+
         self.userSession = Auth.auth().currentUser
         
         if let userSessionId = userSession?.uid {
