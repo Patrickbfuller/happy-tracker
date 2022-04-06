@@ -8,7 +8,7 @@
 
 
 import SwiftUI
-import Firebase
+import FirebaseFirestore
 
 struct MiniListRow: View {
     

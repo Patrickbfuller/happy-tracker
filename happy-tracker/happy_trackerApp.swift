@@ -11,7 +11,8 @@ import Firebase
 @main
 struct happy_trackerApp: App {
 
-    @StateObject var viewModel = AuthViewModel()
+ @StateObject var viewModel = AuthViewModel()
+   
     
     @AppStorage("isDarkMode") private var isDarkMode = false
     
