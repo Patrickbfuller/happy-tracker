@@ -56,6 +56,7 @@ struct MiniListView_Previews: PreviewProvider {
             RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date()), happyConf: 6.0, sadConf: 0.0, comment: "This is a really long comment without intentional line breaks")]
         MiniListView(sessions: sessions)
             
+            
         //            .preferredColorScheme(.dark)
     }
 }
