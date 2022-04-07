@@ -30,6 +30,7 @@ class AuthViewModelTests: XCTestCase {
         
      
         XCTAssertFalse(vm.isError)
+        XCTAssertNil(vm.authError)
     }
     
 
@@ -42,12 +43,14 @@ class AuthViewModelTests: XCTestCase {
     // Given
         let vm = AuthViewModel()
         
+        let randomError = [AuthError.emptyName, AuthError.passwordConfirmFailure].randomElement()!
         
      // When
-        vm.setError(AuthError.emptyName)
+        vm.setError(randomError)
     
         
      // Then
+        XCTAssert(vm.authError = AuthError.emptyName)
         XCTAssertTrue(vm.isError)
     }
     
