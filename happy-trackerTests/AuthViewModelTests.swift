@@ -22,41 +22,28 @@ class AuthViewModelTests: XCTestCase {
     
     
     func test_AuthViewModel_isError_shouldBeFalse() {
-   
-     //   let isError: Bool = Bool.random()
-
+        
+        //   let isError: Bool = Bool.random()
+        
         
         let vm = AuthViewModel()
         
-        
-     
         XCTAssertFalse(vm.isError)
         XCTAssertNil(vm.authError)
     }
     
-
-    
-    
     func test_AuthViewModel_setError_isErrorShouldBeTrue() {
-   
-     //   let isError: Bool = Bool.random()
-
-    // Given
+        
+        //   let isError: Bool = Bool.random()
+        
+        // Given
         let vm = AuthViewModel()
         
-        let randomError = [AuthError.emptyName, AuthError.passwordConfirmFailure].randomElement()!
+        // When
+        vm.setError(AuthError.emptyName)
         
-     // When
-        vm.setError(randomError)
-    
-        
-     // Then
-        XCTAssert(vm.authError = AuthError.emptyName)
+        // Then
+        XCTAssertNotNil(vm.authError)
         XCTAssertTrue(vm.isError)
     }
-    
-    
-    
 }
-
-

@@ -19,68 +19,55 @@ class RecordSessionViewModelTests: XCTestCase {
     }
 
     
+    func test_RecordSessionViewModel_init_status_should_equal_notStarted() {
+        
+        // Given
+        let vm = RecordSessionViewModel()
+        
+        // Then
+        XCTAssertEqual(vm.status, RecordSessionViewModel.Status.notStarted)
+    }
+    
+    func test_RecordSessionViewModel_status_should_equal_isRecording() {
+        
+        // Given
+        let vm = RecordSessionViewModel()
+        
+        vm.startSession()
+        
+        // Then
+        XCTAssertEqual(vm.status, RecordSessionViewModel.Status.isRecording)
+    }
     
 
     func test_RecordSessionViewModel_submitSession_statusShoulEqualToDone() {
         //Given
-        for _ in 0..<30 {
         let vm = RecordSessionViewModel()
-        }
-
+        
         //When
-        let vm = RecordSessionViewModel()
-
+        vm.startSession()
+        vm.submitSession(comment: "")
+        
         //Then
-
         XCTAssertTrue(vm.self.status == .done)
     }
     
     
     
+    
+    
 
-    func test_RecordSessionViewModel_status_shouldEqualToisRecording() {
+    func test_RecordSessionViewModel_status_shouldBeReset_notStarted() {
         //Given
-
-
-        //When
         let vm = RecordSessionViewModel()
         
-        //Then
-
-        XCTAssertTrue(vm.self.status  == .isRecording)
-
-    }
-    
-    
-    
-    func test_RecordSessionViewModel_status_shouldNotEqualToisRecording() {
-        //Given
-      
-        
         //When
-        let vm = RecordSessionViewModel()
+        vm.startSession()
+        vm.resetSession()
         
         //Then
-   
-        XCTAssertFalse(vm.self.status  == .isRecording)
-    
-    }
-    
-    
-    func test_RecordSessionViewModel_stopwatchCounter_shouldStartAsZero() {
-        //Given
-        for _ in 0..<20 {
-            let vm = RecordSessionViewModel()
-        }
-        
-        //When
-        let vm = RecordSessionViewModel()
-        
-        //Then
-        XCTAssertTrue(vm.stopwatchCounter == 0)
+        XCTAssertTrue(vm.self.status  == .notStarted)
 
     }
-    
-
 
 }

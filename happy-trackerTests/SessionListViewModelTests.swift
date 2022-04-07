@@ -17,15 +17,9 @@ class SessionListViewModelTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    
     
     func testSessionListViewModel_RecordModel_shouldBeEmpty() {
         let vm = SessionListViewModel()
         XCTAssert(vm.sessions.isEmpty)
-
     }
-
-
-
 }

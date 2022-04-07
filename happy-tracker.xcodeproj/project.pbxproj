@@ -23,6 +23,7 @@
 		AF6B87DC27F22279004D749E /* SessionTextEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */; };
 		AF6B87DE27F23664004D749E /* RecordSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */; };
 		AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DF27F260A2004D749E /* SessionDoneView.swift */; };
+		AF6DDD0427FF618A00566640 /* StopwatchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6DDD0327FF618A00566640 /* StopwatchTest.swift */; };
 		AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C627EB972600A96F5E /* FirebaseAuth */; };
 		AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF7F63C827EB972600A96F5E /* FirebaseFirestore */; };
 		AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */; };
@@ -92,6 +93,7 @@
 		AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTextEntryView.swift; sourceTree = "<group>"; };
 		AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModel.swift; sourceTree = "<group>"; };
 		AF6B87DF27F260A2004D749E /* SessionDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDoneView.swift; sourceTree = "<group>"; };
+		AF6DDD0327FF618A00566640 /* StopwatchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchTest.swift; sourceTree = "<group>"; };
 		AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 		AF7F63CE27EB990500A96F5E /* MainUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
 		AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */,
 				CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */,
 				CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */,
+				AF6DDD0327FF618A00566640 /* StopwatchTest.swift */,
 				CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */,
 			);
 			path = "happy-trackerTests";
@@ -485,6 +488,7 @@
 			files = (
 				CFB9F0BB27FF413E005F8257 /* AuthViewModelTests.swift in Sources */,
 				CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */,
+				AF6DDD0427FF618A00566640 /* StopwatchTest.swift in Sources */,
 				CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */,
 				CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */,
 			);
