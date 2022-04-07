@@ -43,4 +43,6 @@ class SessionListViewModel: ObservableObject {
                 }
             }
     }
+    
+    
 }

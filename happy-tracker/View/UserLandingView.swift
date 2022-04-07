@@ -10,26 +10,16 @@ struct UserLandingView: View {
         
     @EnvironmentObject var sessionListViewModel: SessionListViewModel
     
-        
     var body: some View {
         VStack{
             //Chart
             //Text("Chart Goes here")
-            MiniChartView()
+            MiniChartView(sessions: sessionListViewModel.sessions)
                 .padding(.vertical)
             
             //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
             MiniListView(sessions: sessionListViewModel.sessions)
-            
-
-            CustomButton(buttonLabel: "Print sessions") {
-                print("\nDEBUG\n")
-                sessionListViewModel.sessions.forEach { session in
-                    print(session.comment)
-                }
-                print("\nDEBUG\n")
-            }
             
             NavigationLink { // destination
                 RecordSessionView()
