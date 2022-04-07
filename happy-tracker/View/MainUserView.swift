@@ -21,6 +21,7 @@ struct MainUserView: View {
                 
                 if sessionListViewModel.sessions.isEmpty {
                     GetStartedView()
+                        .navigationBarHidden(showSideMenu)
                 } else {
                 UserLandingView()
                     .environmentObject(sessionListViewModel)
