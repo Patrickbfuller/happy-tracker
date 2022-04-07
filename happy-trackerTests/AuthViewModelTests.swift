@@ -25,8 +25,9 @@ class AuthViewModelTests: XCTestCase {
    
      //   let isError: Bool = Bool.random()
 
-    
+        
         let vm = AuthViewModel()
+        
         
      
         XCTAssertFalse(vm.isError)
