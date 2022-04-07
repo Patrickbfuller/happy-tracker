@@ -2,7 +2,7 @@
 //  happy_trackerTests.swift
 //  happy-trackerTests
 //
-//  Created by Mirna Helmy on 4/5/22.
+//  Created by Mirna Helmy on 4/7/22.
 //
 
 import XCTest
@@ -25,7 +25,7 @@ class happy_trackerTests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
 
-    func testPerformancehappy_tracker() throws {
+    func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
             // Put the code you want to measure the time of here.

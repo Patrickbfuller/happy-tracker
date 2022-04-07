@@ -54,12 +54,26 @@
 		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
 		CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */; };
 		CF8BDE4B27F348C6005071FD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8BDE4A27F348C6005071FD /* UserModel.swift */; };
+		CFB9F0BB27FF413E005F8257 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */; };
+		CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */; };
+		CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */; };
+		CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */; };
 		CFCD8CCF27EA128B0069873D /* ChartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CCE27EA128B0069873D /* ChartPageView.swift */; };
 		CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CD927EA27BD0069873D /* MiniChartView.swift */; };
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
 		CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BD27F21A25001CF008 /* SessionService.swift */; };
 		F1E03DB927F4C31800530B7F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E03DB827F4C31800530B7F /* UserService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFB9F0B227FF40D6005F8257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF91F18A27E8C62F0015CCE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF91F19127E8C62F0015CCE9;
+			remoteInfo = "happy-tracker";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -106,6 +120,11 @@
 		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
 		CF8BDE4A27F348C6005071FD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "happy-trackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModelTests.swift; sourceTree = "<group>"; };
+		CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = happy_trackerTests.swift; sourceTree = "<group>"; };
+		CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewModelTests.swift; sourceTree = "<group>"; };
 		CFCD8CCE27EA128B0069873D /* ChartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPageView.swift; sourceTree = "<group>"; };
 		CFCD8CD927EA27BD0069873D /* MiniChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChartView.swift; sourceTree = "<group>"; };
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
@@ -123,6 +142,13 @@
 				CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */,
 				CF0F786D27E905C1009965CE /* LineChartView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB9F0AB27FF40D6005F8257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				AF91F19427E8C62F0015CCE9 /* happy-tracker */,
+				CFB9F0AF27FF40D6005F8257 /* happy-trackerTests */,
 				AF91F19327E8C62F0015CCE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				AF91F19227E8C62F0015CCE9 /* happy-tracker.app */,
+				CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +299,17 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		CFB9F0AF27FF40D6005F8257 /* happy-trackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */,
+				CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */,
+				CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */,
+				CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */,
+			);
+			path = "happy-trackerTests";
+			sourceTree = "<group>";
+		};
 		F12A714D27ED08B70083A112 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +346,24 @@
 			productReference = AF91F19227E8C62F0015CCE9 /* happy-tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CFB9F0AD27FF40D6005F8257 /* happy-trackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "happy-trackerTests" */;
+			buildPhases = (
+				CFB9F0AA27FF40D6005F8257 /* Sources */,
+				CFB9F0AB27FF40D6005F8257 /* Frameworks */,
+				CFB9F0AC27FF40D6005F8257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFB9F0B327FF40D6005F8257 /* PBXTargetDependency */,
+			);
+			name = "happy-trackerTests";
+			productName = "happy-trackerTests";
+			productReference = CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -319,6 +376,10 @@
 				TargetAttributes = {
 					AF91F19127E8C62F0015CCE9 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					CFB9F0AD27FF40D6005F8257 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = AF91F19127E8C62F0015CCE9;
 					};
 				};
 			};
@@ -341,6 +402,7 @@
 			projectRoot = "";
 			targets = (
 				AF91F19127E8C62F0015CCE9 /* happy-tracker */,
+				CFB9F0AD27FF40D6005F8257 /* happy-trackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -353,6 +415,13 @@
 				AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */,
 				AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */,
 				AF311ED127EBAD9300118C9D /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB9F0AC27FF40D6005F8257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +479,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFB9F0AA27FF40D6005F8257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFB9F0BB27FF413E005F8257 /* AuthViewModelTests.swift in Sources */,
+				CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */,
+				CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */,
+				CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFB9F0B327FF40D6005F8257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF91F19127E8C62F0015CCE9 /* happy-tracker */;
+			targetProxy = CFB9F0B227FF40D6005F8257 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF91F19E27E8C6310015CCE9 /* Debug */ = {
@@ -589,6 +677,42 @@
 			};
 			name = Release;
 		};
+		CFB9F0B427FF40D6005F8257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.happy-trackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happy-tracker.app/happy-tracker";
+			};
+			name = Debug;
+		};
+		CFB9F0B527FF40D6005F8257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.happy-trackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happy-tracker.app/happy-tracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -606,6 +730,15 @@
 			buildConfigurations = (
 				AF91F1A127E8C6310015CCE9 /* Debug */,
 				AF91F1A227E8C6310015CCE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "happy-trackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFB9F0B427FF40D6005F8257 /* Debug */,
+				CFB9F0B527FF40D6005F8257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
