@@ -8,7 +8,8 @@ import SwiftUI
 
 struct UserLandingView: View {
         
-    @ObservedObject var sessionListViewModel = SessionListViewModel()
+    @EnvironmentObject var sessionListViewModel: SessionListViewModel
+    
         
     var body: some View {
         VStack{

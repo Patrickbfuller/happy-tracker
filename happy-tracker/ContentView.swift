@@ -16,9 +16,11 @@ struct ContentView: View {
         Group {
             //no user logged in
             if viewModel.userSession == nil {
+                
                 LoginView()
             } else {
                 //have a logged in user
+               
                 MainUserView()
                     //.preferredColorScheme(isDarkMode ? .dark : .light)
             }

@@ -9,6 +9,7 @@ import SwiftUI
 struct MainUserView: View {
     @State var showSideMenu: Bool = false
     @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var sessionListViewModel = SessionListViewModel()
     
     var body: some View {
         
@@ -18,10 +19,14 @@ struct MainUserView: View {
                 Color("pale")
                     .ignoresSafeArea(.all)
                 
+                if sessionListViewModel.sessions.isEmpty {
+                    GetStartedView()
+                } else {
                 UserLandingView()
+                    .environmentObject(sessionListViewModel)
                     .frame(width: geo.size.width, height: geo.size.height)
                     .navigationBarHidden(showSideMenu)
-                
+                }
                 if showSideMenu {
                     ZStack {
                         Color(.black)

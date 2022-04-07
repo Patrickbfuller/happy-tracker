@@ -23,15 +23,17 @@ struct GetStartedView: View {
                 .font(.title)
                 .fontWeight(.bold)
                
-                
+                Spacer()
 
             Image("Logo")
                 .resizable()
-                .frame(width: 150, height: 150)
-                .padding(.top,140)
+                .frame(width: 100, height: 100)
+                .cornerRadius(10)
+  
        
-                
+      
             Text("Emotional Check-up detects your \n emotions through facial expressions")
+                 //   .lineLimit(nil)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .padding(.bottom,140)
@@ -44,6 +46,7 @@ struct GetStartedView: View {
                 } label: {
                     CustomButtonLabel(buttonLabel: "Record Session")
                 }
+            
                 Spacer()
             }
         }
