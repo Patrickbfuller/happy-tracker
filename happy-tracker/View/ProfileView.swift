@@ -30,7 +30,7 @@ struct ProfileView: View {
             
             Spacer()
         }
-        .background(Color("pale"))
+        .background(Color("pale").opacity(0.2))
             
         }
     }
