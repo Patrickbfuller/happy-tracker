@@ -3,18 +3,27 @@
 workflows:
   happy-tracker-workflow:
     name: Happy Tracker Pipeline
+    environment:
+      xcode: latest
+      vars:
+          PROJECT: "happy-tracker.xcodeproj"
+          SCHEME: "happy-tracker"
     scripts:
       - name: CICD Started
         script: echo "Welcome to happy tracker CI CD setup!"
-      - name: iOS Test
+      - name: iOS Run Test
         script: |
           xcode-project run-tests \
-              --project happy-tracker.xcodeproj \
-              --scheme happy-tracker \
+              --project "$PROJECT" \
+              --scheme "$SCHEME" \
               --device "iPhone 11"
+              clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         test_report: build/ios/test/*.xml
-      - name: build happy-tracker
-        script: xcodebuild build -project "happy-tracker.xcodeproj" -scheme "happy-tracker" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+      - name: Build happy-tracker
+        script: |
+          xcodebuild build -project "$PROJECT" \
+          -scheme "$SCHEME" \
+          CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
       email:
         recipients:
