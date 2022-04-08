@@ -23,7 +23,7 @@ struct MainUserView: View {
                     GetStartedView()
                         .navigationBarHidden(showSideMenu)
                 } else {
-                UserLandingView()
+                    UserLandingView()
                     .environmentObject(sessionListViewModel)
                     .frame(width: geo.size.width, height: geo.size.height)
                     .navigationBarHidden(showSideMenu)
