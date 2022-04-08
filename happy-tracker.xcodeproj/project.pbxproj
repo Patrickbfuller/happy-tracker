@@ -42,6 +42,9 @@
 		AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */; };
 		AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */; };
 		AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */; };
+		AFA6ADF427F4A152006C9352 /* Codable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6ADF327F4A152006C9352 /* Codable+Ext.swift */; };
+		AFB6DB9E27FCDBF6004E2EE8 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */; };
+		AFB89FFB27FCC92B00AE38F8 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */; };
 		AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */; };
 		AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */; };
 		CF0F786227E8F038009965CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786127E8F038009965CE /* RegisterView.swift */; };
@@ -109,6 +112,9 @@
 		AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthLabel.swift; sourceTree = "<group>"; };
 		AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionView.swift; sourceTree = "<group>"; };
+		AFA6ADF327F4A152006C9352 /* Codable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Ext.swift"; sourceTree = "<group>"; };
+		AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
+		AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
 		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -188,6 +194,8 @@
 				AF311EDA27EBBB2000118C9D /* FrameManager.swift */,
 				AF311ED827EBB6B600118C9D /* CameraManager.swift */,
 				AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */,
+				AFA6ADF327F4A152006C9352 /* Codable+Ext.swift */,
+				AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
+				AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */,
 				CFCD8CD927EA27BD0069873D /* MiniChartView.swift */,
 				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
 				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
@@ -440,6 +449,7 @@
 				AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */,
 				AF7F63D727EB999F00A96F5E /* SideMenuOption.swift in Sources */,
 				AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */,
+				AFB89FFB27FCC92B00AE38F8 /* TimeLineView.swift in Sources */,
 				AF91F1AF27E8CF0C0015CCE9 /* LogoView.swift in Sources */,
 				AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */,
 				AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */,
@@ -447,6 +457,7 @@
 				AF6B87DE27F23664004D749E /* RecordSessionViewModel.swift in Sources */,
 				AF6B87E027F260A2004D749E /* SessionDoneView.swift in Sources */,
 				AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */,
+				AFB6DB9E27FCDBF6004E2EE8 /* CustomDateFormatter.swift in Sources */,
 				F1E03DB927F4C31800530B7F /* UserService.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,

@@ -15,7 +15,7 @@ struct UserLandingView: View {
         VStack{
             //Chart
             //Text("Chart Goes here")
-            MiniChartView(sessions: sessionListViewModel.sessions)
+            TimeLineView(sessions: sessionListViewModel.sessions)
                 .padding(.vertical)
             
             //Text("Session list goes here")
