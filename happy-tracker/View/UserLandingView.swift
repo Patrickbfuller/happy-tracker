@@ -16,7 +16,8 @@ struct UserLandingView: View {
             //Chart
             //Text("Chart Goes here")
             TimeLineView(sessions: sessionListViewModel.sessions)
-                .padding(.vertical)
+                .padding(.horizontal, 8)
+                .padding(.top, 5)
             
             //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
