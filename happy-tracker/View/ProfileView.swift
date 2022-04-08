@@ -26,8 +26,6 @@ struct ProfileView: View {
             
             ProfileInfoView(text: "\(user.email)", imageName: "envelope.fill")
             
-            Button("Edit Profile") {}
-            
             Spacer()
         }
         .background(Color("pale").opacity(0.2))
