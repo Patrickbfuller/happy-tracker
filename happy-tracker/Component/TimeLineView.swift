@@ -56,30 +56,46 @@ struct TimeLineView: View {
     
     var body: some View {
         
-        LineChartView(
-            lineChartParameters: LineChartParameters(
-                data: values,
-                dataTimestamps: dates,
-                dataLabels: labels,
-                labelColor: .indigo,
-                secondaryLabelColor: .secondary,
-                labelsAlignment: .left,
-                dataPrecisionLength: 0,
-                indicatorPointColor: .mint,
-                indicatorPointSize: 10,
-                lineColor: .purple.opacity(0.7),
-                lineSecondColor: .mint,
-                lineWidth: 4,
-                dotsWidth: 3,
-                dragGesture: true,
-                hapticFeedback: true)
-        )
-            .background(Color(UIColor.systemBackground))
-            .overlay(Rectangle().stroke())
-            .aspectRatio(1.5, contentMode: .fit)
-            .padding(.horizontal)
-        
-        
+        ZStack(alignment: .topTrailing) {
+            LineChartView(
+                lineChartParameters: LineChartParameters(
+                    data: values,
+                    dataTimestamps: dates,
+                    dataLabels: labels,
+                    labelColor: .mint.opacity(0.7),
+                    secondaryLabelColor: .secondary,
+                    labelsAlignment: .left,
+                    dataPrecisionLength: 0,
+                    indicatorPointColor: .mint,
+                    indicatorPointSize: 10,
+                    lineColor: .purple.opacity(0.7),
+                    lineSecondColor: .mint,
+                    lineWidth: 4,
+                    dotsWidth: 3,
+                    dragGesture: true,
+                    hapticFeedback: true)
+            )
+                .background(.gray.opacity(0.01))
+                .background(.white)
+                .cornerRadius(20)
+                .shadow(color: .gray.opacity(0.4), radius: 8, x: 0, y: 0)
+                .aspectRatio(1.5, contentMode: .fit)
+            
+            VStack(alignment: .trailing) {
+                Text("Emotional Record")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .padding(16)
+                    .foregroundColor(.indigo)
+                Button { // action
+                    
+                } label: {
+                    Image(systemName: "info.circle")
+                        .padding(.trailing)
+                        .foregroundColor(.gray)
+                }
+            }
+        }
     }
 }
 
@@ -90,10 +106,12 @@ struct TimeLineView_Previews: PreviewProvider {
         
         let sessions = [
             RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date.now), happyConf: 0.8, sadConf: 0.0, comment: "This is a really long com ment without intentional line breaks"),
-            RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date.now + 1), happyConf: 0.0, sadConf: 0.0, comment: "This is a shorter comment"),
-            RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date.now + 3600 * 10), happyConf: 0.5, sadConf: 0.0, comment: "This is a really long comment without intentional line breaks")]
+            RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date.now + 3600 * 10), happyConf: 0.5, sadConf: 0.0, comment: "This is a really long comment without intentional line breaks"),
+            RecordModel(id: "id", userID: "uid", timestamp: Timestamp(date: Date.now + 360_000), happyConf: 0.0, sadConf: 0.0, comment: "This is a shorter comment"),
+        ]
         
         TimeLineView(sessions: sessions)
+            .padding()
         
     }
 }

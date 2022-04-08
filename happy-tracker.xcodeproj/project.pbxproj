@@ -42,14 +42,11 @@
 		AF91F1B527E8D8EB0015CCE9 /* CustomAuthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */; };
 		AF91F1B727E8DBF60015CCE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */; };
 		AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */; };
-		AFA6ADF427F4A152006C9352 /* Codable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA6ADF327F4A152006C9352 /* Codable+Ext.swift */; };
 		AFB6DB9E27FCDBF6004E2EE8 /* CustomDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */; };
 		AFB89FFB27FCC92B00AE38F8 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */; };
 		AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */; };
 		AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */; };
 		CF0F786227E8F038009965CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786127E8F038009965CE /* RegisterView.swift */; };
-		CF0F786427E8F506009965CE /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786327E8F506009965CE /* ChartView.swift */; };
-		CF0F786727E8FD66009965CE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786627E8FD66009965CE /* SwiftUICharts */; };
 		CF0F786D27E905C1009965CE /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786C27E905C1009965CE /* LineChartView */; };
 		CF49441C27FE0AA100FA5F72 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */; };
 		CF58170827EC946C0047EC87 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170727EC946C0047EC87 /* AuthViewModel.swift */; };
@@ -61,7 +58,6 @@
 		CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */; };
 		CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */; };
 		CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */; };
-		CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD8CD927EA27BD0069873D /* MiniChartView.swift */; };
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
 		CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BD27F21A25001CF008 /* SessionService.swift */; };
 		F1E03DB927F4C31800530B7F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E03DB827F4C31800530B7F /* UserService.swift */; };
@@ -112,13 +108,11 @@
 		AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthLabel.swift; sourceTree = "<group>"; };
 		AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionView.swift; sourceTree = "<group>"; };
-		AFA6ADF327F4A152006C9352 /* Codable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Ext.swift"; sourceTree = "<group>"; };
 		AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateFormatter.swift; sourceTree = "<group>"; };
 		AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
 		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		CF0F786327E8F506009965CE /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -130,7 +124,6 @@
 		CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModelTests.swift; sourceTree = "<group>"; };
 		CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = happy_trackerTests.swift; sourceTree = "<group>"; };
 		CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewModelTests.swift; sourceTree = "<group>"; };
-		CFCD8CD927EA27BD0069873D /* MiniChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChartView.swift; sourceTree = "<group>"; };
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		CFDB39BD27F21A25001CF008 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		F1E03DB827F4C31800530B7F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -141,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF0F786727E8FD66009965CE /* SwiftUICharts in Frameworks */,
 				AF7F63C927EB972600A96F5E /* FirebaseFirestore in Frameworks */,
 				CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */,
@@ -194,7 +186,6 @@
 				AF311EDA27EBBB2000118C9D /* FrameManager.swift */,
 				AF311ED827EBB6B600118C9D /* CameraManager.swift */,
 				AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */,
-				AFA6ADF327F4A152006C9352 /* Codable+Ext.swift */,
 				AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */,
 			);
 			path = Util;
@@ -286,7 +277,6 @@
 		AF91F1AD27E8CC6A0015CCE9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				CF0F786327E8F506009965CE /* ChartView.swift */,
 				AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */,
 				AF6B87DF27F260A2004D749E /* SessionDoneView.swift */,
 				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
@@ -294,7 +284,6 @@
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
 				AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */,
-				CFCD8CD927EA27BD0069873D /* MiniChartView.swift */,
 				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
 				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
 				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
@@ -342,7 +331,6 @@
 			);
 			name = "happy-tracker";
 			packageProductDependencies = (
-				CF0F786627E8FD66009965CE /* SwiftUICharts */,
 				CF0F786C27E905C1009965CE /* LineChartView */,
 				AF7F63C627EB972600A96F5E /* FirebaseAuth */,
 				AF7F63C827EB972600A96F5E /* FirebaseFirestore */,
@@ -399,7 +387,6 @@
 			);
 			mainGroup = AF91F18927E8C62F0015CCE9;
 			packageReferences = (
-				CF0F786527E8FD66009965CE /* XCRemoteSwiftPackageReference "ChartView" */,
 				CF0F786B27E905C1009965CE /* XCRemoteSwiftPackageReference "LineChartView" */,
 				AF7F63C527EB972600A96F5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
@@ -440,7 +427,6 @@
 			files = (
 				AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */,
 				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
-				CFCD8CDA27EA27BD0069873D /* MiniChartView.swift in Sources */,
 				AF69191827F7809300D9BCDB /* SessionListViewModel.swift in Sources */,
 				AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */,
 				AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */,
@@ -463,7 +449,6 @@
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
 				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,
 				CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */,
-				CF0F786427E8F506009965CE /* ChartView.swift in Sources */,
 				CF49441C27FE0AA100FA5F72 /* GetStartedView.swift in Sources */,
 				AF7F63D127EB991E00A96F5E /* ProfileInfoView.swift in Sources */,
 				AF311ED727EBB66F00118C9D /* CameraError.swift in Sources */,
@@ -763,14 +748,6 @@
 				minimumVersion = 8.10.0;
 			};
 		};
-		CF0F786527E8FD66009965CE /* XCRemoteSwiftPackageReference "ChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		CF0F786B27E905C1009965CE /* XCRemoteSwiftPackageReference "LineChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jonathan-Gander/LineChartView";
@@ -791,11 +768,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF7F63C527EB972600A96F5E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		CF0F786627E8FD66009965CE /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CF0F786527E8FD66009965CE /* XCRemoteSwiftPackageReference "ChartView" */;
-			productName = SwiftUICharts;
 		};
 		CF0F786C27E905C1009965CE /* LineChartView */ = {
 			isa = XCSwiftPackageProductDependency;
