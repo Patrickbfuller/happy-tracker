@@ -49,6 +49,17 @@ struct SessionTextEntryView: View {
                         Text("Cancel Entry")
                             .padding()
                     }
+                    
+                    Rectangle()
+                        .frame(
+                            minWidth: 1,
+                            idealWidth: 1,
+                            maxWidth: 1,
+                            minHeight: 20,
+                            idealHeight: 20,
+                            maxHeight: 40)
+                        .foregroundColor(.white.opacity(0.5))
+                    
                     Button { // action
                         sessionViewModel.submitSession(comment: description)
                     } label: {
@@ -60,7 +71,7 @@ struct SessionTextEntryView: View {
             }
             
             .background(Color("medium"))
-            .foregroundColor(Color(UIColor.systemBackground))
+            .foregroundColor(.white)
             
             .frame(minHeight: 200, idealHeight: 400, maxHeight: 400)
             .cornerRadius(20)
@@ -76,6 +87,7 @@ struct SessionTextEntryView: View {
 struct RecordingDoneView_Previews: PreviewProvider {
     static var previews: some View {
         SessionTextEntryView()
+            .preferredColorScheme(.dark)
             .environmentObject(RecordSessionViewModel())
     }
 }

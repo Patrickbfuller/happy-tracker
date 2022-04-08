@@ -32,7 +32,8 @@ struct MiniListRow: View {
     
     var body: some View {
         ZStack {
-            Color.mint.opacity(backgroundOpacity)
+//            Color.mint.opacity(backgroundOpacity)
+            Color("customMint").opacity(backgroundOpacity)
             HStack(alignment: .top, spacing: 0.0) {
                 
                 VStack(alignment: .leading) {

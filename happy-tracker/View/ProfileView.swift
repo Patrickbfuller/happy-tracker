@@ -22,7 +22,7 @@ struct ProfileView: View {
             Text("\(user.name.capitalized)'s Profile")
                 .font(.system(size: 40))
             
-            ProfileInfoView(text: "\(user.name.capitalized)", imageName: nil)
+            ProfileInfoView(text: "\(user.name.capitalized)", imageName: "figure.walk")
             
             ProfileInfoView(text: "\(user.email)", imageName: "envelope.fill")
             
