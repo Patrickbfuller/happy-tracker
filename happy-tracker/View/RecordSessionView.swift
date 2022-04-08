@@ -138,7 +138,7 @@ struct ShowHidePredictionButton: View {
         }
         .foregroundColor(.white)
         .padding(5)
-        .background(Color("medium"))
+        .background(Color("customMint"))
         .cornerRadius(5)
         .padding(5)
     }
@@ -218,7 +218,7 @@ struct HintView: View {
         }
         .padding()
         .foregroundColor(.white)
-        .background(Color("light"))
+        .background(Color("customMint"))
     }
 }
 
@@ -269,23 +269,23 @@ struct StartStopButton: View {
     }
 }
 
-struct PredictionToggle: View {
-    
-    @Binding var showLivePrediction: Bool
-    
-    var body: some View {
-        Toggle(isOn: $showLivePrediction) {
-            // Label
-            Text("Show Prediction")
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
-                .padding(.leading)
-        }
-        .tint(Color("light"))
-        .padding(12)
-        .background(Color.black.opacity(0.5))
-    }
-}
+//struct PredictionToggle: View {
+//
+//    @Binding var showLivePrediction: Bool
+//
+//    var body: some View {
+//        Toggle(isOn: $showLivePrediction) {
+//            // Label
+//            Text("Show Prediction")
+//                .fontWeight(.semibold)
+//                .foregroundColor(.white)
+//                .padding(.leading)
+//        }
+//        .tint(Color("light"))
+//        .padding(12)
+//        .background(Color.black.opacity(0.5))
+//    }
+//}
 
 struct RecordSessionView_Previews: PreviewProvider {
     static var previews: some View {
