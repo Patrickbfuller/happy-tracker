@@ -15,6 +15,9 @@ struct TimeLineView: View {
     
     let dateFormatter = CustomDateFormatter.shared
     
+    @State var showingHint = true
+    var blurValue: Double {showingHint ? 3.0 : 0.0}
+    
     var dates: [Date] = []
     var values: [Double] = []
     var labels: [String] = []
@@ -55,44 +58,54 @@ struct TimeLineView: View {
     }
     
     var body: some View {
-        
         ZStack(alignment: .topTrailing) {
-            LineChartView(
-                lineChartParameters: LineChartParameters(
-                    data: values,
-                    dataTimestamps: dates,
-                    dataLabels: labels,
-                    labelColor: .mint.opacity(0.7),
-                    secondaryLabelColor: .secondary,
-                    labelsAlignment: .left,
-                    dataPrecisionLength: 0,
-                    indicatorPointColor: .mint,
-                    indicatorPointSize: 10,
-                    lineColor: .purple.opacity(0.7),
-                    lineSecondColor: .mint,
-                    lineWidth: 4,
-                    dotsWidth: 3,
-                    dragGesture: true,
-                    hapticFeedback: true)
-            )
-                .background(.gray.opacity(0.01))
-                .background(.white)
-                .cornerRadius(20)
-                .shadow(color: .gray.opacity(0.4), radius: 8, x: 0, y: 0)
-                .aspectRatio(1.5, contentMode: .fit)
-            
-            VStack(alignment: .trailing) {
-                Text("Emotional Record")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding(16)
-                    .foregroundColor(.indigo)
-                Button { // action
-                    
-                } label: {
-                    Image(systemName: "info.circle")
-                        .padding(.trailing)
-                        .foregroundColor(.gray)
+            Group {
+                LineChartView(
+                    lineChartParameters: LineChartParameters(
+                        data: values,
+                        dataTimestamps: dates,
+                        dataLabels: labels,
+                        labelColor: .mint.opacity(0.7),
+                        secondaryLabelColor: .secondary,
+                        labelsAlignment: .left,
+                        dataPrecisionLength: 0,
+                        indicatorPointColor: .mint,
+                        indicatorPointSize: 10,
+                        lineColor: .purple.opacity(0.7),
+                        lineSecondColor: .mint,
+                        lineWidth: 4,
+                        dotsWidth: 3,
+                        dragGesture: true,
+                        hapticFeedback: true)
+                )
+                    .background(.gray.opacity(0.01))
+                    .background(.white)
+                    .cornerRadius(20)
+                    .shadow(color: .gray.opacity(0.4), radius: 8, x: 0, y: 0)
+                    .aspectRatio(1.5, contentMode: .fit)
+                    .blur(radius: blurValue)
+                
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text("Emotional Record")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding([.top, .trailing], 16)
+                        .foregroundColor(.indigo)
+                        .blur(radius: blurValue)
+                    Button { // action
+                        withAnimation() {
+                            showingHint.toggle()
+                        }
+                    } label: {
+                        ZStack(alignment: .topTrailing) {
+                            Image(systemName: "info.circle")
+                                .padding()
+                                .foregroundColor(.gray)
+                            if showingHint {
+                                HintBoxView()
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -113,5 +126,19 @@ struct TimeLineView_Previews: PreviewProvider {
         TimeLineView(sessions: sessions)
             .padding()
         
+    }
+}
+
+struct HintBoxView: View {
+    
+    var body: some View {
+        HStack {
+            Text("Try dragging across the line!\n( Tap to close )")
+                .foregroundColor(.white)
+                .padding(30)
+                .frame(maxWidth: .infinity)
+                .background(.gray.opacity(0.25))
+                .background(Color("customMint").opacity(0.5))
+        }
     }
 }
