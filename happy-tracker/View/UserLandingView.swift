@@ -9,6 +9,7 @@ import SwiftUI
 struct UserLandingView: View {
         
     @EnvironmentObject var sessionListViewModel: SessionListViewModel
+
     
     var body: some View {
         VStack{
@@ -19,7 +20,9 @@ struct UserLandingView: View {
             
             //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels
-            MiniListView(sessions: sessionListViewModel.sessions)
+
+            MiniListView()
+                .environmentObject(sessionListViewModel)
             
             NavigationLink { // destination
                 RecordSessionView()
@@ -30,8 +33,8 @@ struct UserLandingView: View {
     }
 }
 
-struct UserLandingView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserLandingView()
-    }
-}
+//struct UserLandingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserLandingView()
+//    }
+//}

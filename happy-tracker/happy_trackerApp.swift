@@ -15,6 +15,7 @@ struct happy_trackerApp: App {
    
     
     @AppStorage("isDarkMode") private var isDarkMode = false
+    @AppStorage("inOrder") private var inOrder = true
     
     init() {
 
