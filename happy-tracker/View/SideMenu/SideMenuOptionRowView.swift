@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct SideMenuOptionRowView: View {
-    let viewModel: SideMenuViewModel
+    let viewModel: SideMenuOption
     
     var body: some View {
         HStack(spacing: 16) {

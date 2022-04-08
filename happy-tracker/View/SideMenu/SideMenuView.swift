@@ -51,7 +51,7 @@ struct SideMenuView: View {
                 }
                 .padding(.leading)
                 
-                ForEach(SideMenuViewModel.allCases, id: \.rawValue) { viewModel in
+                ForEach(SideMenuOption.allCases, id: \.rawValue) { viewModel in
                     if viewModel == .profile {
                         NavigationLink {
                             ProfileView()

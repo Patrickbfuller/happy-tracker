@@ -1,5 +1,5 @@
 //
-//  SideMenuViewModel.swift
+//  SideMenuOption.swift
 //  happy-tracker
 //
 //  Created by Alexander Davila-Wollheim on 3/21/22.
@@ -7,7 +7,7 @@
 import Foundation
 import IOSurface
 
-enum SideMenuViewModel: Int, CaseIterable {
+enum SideMenuOption: Int, CaseIterable {
     case profile
     case appSettings
     case logout
