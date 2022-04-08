@@ -17,7 +17,7 @@ workflows:
               --project "$PROJECT" \
               --scheme "$SCHEME" \
               --device "iPhone 11"
-              clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+    #clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         test_report: build/ios/test/*.xml
       - name: Build happy-tracker
         script: |
