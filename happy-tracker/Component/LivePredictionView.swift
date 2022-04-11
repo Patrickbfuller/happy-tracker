@@ -35,7 +35,7 @@ struct LivePredictionView: View {
 
 struct Box_Previews: PreviewProvider {
     static var previews: some View {
-        PredictionLabelBox(label: "neutral")
+        PredictionLabelBox(label: "happy")
     }
 }
 
@@ -48,7 +48,6 @@ struct PredictionLabelBox: View {
     
     let emotionColor: [String: Color] = [
         "happy": .green,
-        "neutral": .white,
         "sad": .blue
     ]
     
