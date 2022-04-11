@@ -7,7 +7,7 @@
 
 import SwiftUI
 import LineChartView
-import Firebase
+import FirebaseFirestore
 
 struct TimeLineView: View {
     
@@ -60,6 +60,36 @@ struct TimeLineView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Group {
+                
+                // MARK: - Fixed White Background
+                
+//                LineChartView(
+//                    lineChartParameters: LineChartParameters(
+//                        data: values,
+//                        dataTimestamps: dates,
+//                        dataLabels: labels,
+//                        labelColor: .mint.opacity(0.7),
+//                        secondaryLabelColor: .gray,
+//                        labelsAlignment: .left,
+//                        dataPrecisionLength: 0,
+//                        indicatorPointColor: .mint,
+//                        indicatorPointSize: 10,
+//                        lineColor: .purple.opacity(0.7),
+//                        lineSecondColor: .mint,
+//                        lineWidth: 4,
+//                        dotsWidth: 3,
+//                        dragGesture: true,
+//                        hapticFeedback: true)
+//                )
+//                    .background(.white)
+//                    .cornerRadius(20)
+//                    .shadow(color: .secondary.opacity(0.4), radius: 8, x: 0, y: 0)
+//                    .aspectRatio(1.5, contentMode: .fit)
+//                    .blur(radius: blurValue)
+
+                
+                // MARK: - Dark Mode Changing Background
+                
                 LineChartView(
                     lineChartParameters: LineChartParameters(
                         data: values,
@@ -78,12 +108,13 @@ struct TimeLineView: View {
                         dragGesture: true,
                         hapticFeedback: true)
                 )
-                    .background(.gray.opacity(0.01))
-                    .background(.white)
+                    .background(Color(UIColor.systemBackground))
                     .cornerRadius(20)
-                    .shadow(color: .gray.opacity(0.4), radius: 8, x: 0, y: 0)
+                    .shadow(color: .secondary.opacity(0.65), radius: 8, x: 0, y: 0)
                     .aspectRatio(1.5, contentMode: .fit)
                     .blur(radius: blurValue)
+                
+                // MARK: - Continue
                 
                 VStack(alignment: .trailing, spacing: 0) {
                     Text("Emotional Record")
@@ -125,6 +156,7 @@ struct TimeLineView_Previews: PreviewProvider {
         
         TimeLineView(sessions: sessions)
             .padding()
+//            .preferredColorScheme(.dark)
         
     }
 }
