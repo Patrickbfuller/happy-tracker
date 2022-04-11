@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */; };
 		AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */; };
-		AF311ED127EBAD9300118C9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */; };
 		AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED227EBB45A00118C9D /* LiveFrameView.swift */; };
 		AF311ED727EBB66F00118C9D /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED627EBB66F00118C9D /* CameraError.swift */; };
 		AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED827EBB6B600118C9D /* CameraManager.swift */; };
@@ -54,6 +53,7 @@
 		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
 		CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */; };
 		CF8BDE4B27F348C6005071FD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8BDE4A27F348C6005071FD /* UserModel.swift */; };
+		CF9CE686280468E900572DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF9CE685280468E900572DD9 /* GoogleService-Info.plist */; };
 		CFB9F0BB27FF413E005F8257 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */; };
 		CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */; };
 		CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */; };
@@ -76,7 +76,6 @@
 /* Begin PBXFileReference section */
 		AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
-		AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF311ED227EBB45A00118C9D /* LiveFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFrameView.swift; sourceTree = "<group>"; };
 		AF311ED627EBB66F00118C9D /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
 		AF311ED827EBB6B600118C9D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -113,12 +112,12 @@
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
 		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
 		CF8BDE4A27F348C6005071FD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CF9CE685280468E900572DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "happy-trackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModelTests.swift; sourceTree = "<group>"; };
@@ -154,8 +153,8 @@
 		AF311EC927EB9B4300118C9D /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */,
 				AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */,
+				AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -183,10 +182,10 @@
 			isa = PBXGroup;
 			children = (
 				AF311ED627EBB66F00118C9D /* CameraError.swift */,
-				AF311EDA27EBBB2000118C9D /* FrameManager.swift */,
 				AF311ED827EBB6B600118C9D /* CameraManager.swift */,
 				AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */,
 				AFB6DB9D27FCDBF6004E2EE8 /* CustomDateFormatter.swift */,
+				AF311EDA27EBBB2000118C9D /* FrameManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -214,16 +213,15 @@
 			children = (
 				AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */,
 				AF91F19727E8C62F0015CCE9 /* ContentView.swift */,
-				AF91F1A827E8CC080015CCE9 /* View */,
 				AF91F1AD27E8CC6A0015CCE9 /* Component */,
-				AF7F63CA27EB981600A96F5E /* ViewModel */,
-				AF91F1AC27E8CC440015CCE9 /* Service */,
-				AF91F1AA27E8CC310015CCE9 /* Model */,
 				AF4D9AF727ED13C1007ED7FA /* CoreML */,
+				AF91F1AA27E8CC310015CCE9 /* Model */,
+				AF91F1AC27E8CC440015CCE9 /* Service */,
 				AF7F63CB27EB982B00A96F5E /* Util */,
+				AF91F1A827E8CC080015CCE9 /* View */,
+				AF7F63CA27EB981600A96F5E /* ViewModel */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
-				AF311ED027EBAD9300118C9D /* GoogleService-Info.plist */,
-				CF2E79CD27ECCCF700C4B27E /* GoogleService-Info.plist */,
+				CF9CE685280468E900572DD9 /* GoogleService-Info.plist */,
 				AF91F19B27E8C6310015CCE9 /* Preview Content */,
 			);
 			path = "happy-tracker";
@@ -243,11 +241,11 @@
 				AF311EC927EB9B4300118C9D /* SideMenu */,
 				F12A714D27ED08B70083A112 /* Authentication */,
 				AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */,
-				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
+				CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */,
 				AF7F63CE27EB990500A96F5E /* MainUserView.swift */,
 				AF7F63D227EB994300A96F5E /* ProfileView.swift */,
+				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
 				AF7F63D427EB995B00A96F5E /* UserLandingView.swift */,
-				CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,10 +255,10 @@
 			children = (
 				AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */,
 				AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */,
-				CFDB39BB27F21490001CF008 /* RecordModel.swift */,
-				CF8BDE4A27F348C6005071FD /* UserModel.swift */,
 				AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */,
+				CFDB39BB27F21490001CF008 /* RecordModel.swift */,
 				AF7F63D627EB999F00A96F5E /* SideMenuOption.swift */,
+				CF8BDE4A27F348C6005071FD /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,18 +275,18 @@
 		AF91F1AD27E8CC6A0015CCE9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */,
-				AF6B87DF27F260A2004D749E /* SessionDoneView.swift */,
-				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
-				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
-				AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */,
-				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
-				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
+				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
 				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
 				AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */,
+				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
+				CF58170B27EC94C00047EC87 /* MiniListRow.swift */,
+				CF58170D27EC94EF0047EC87 /* MiniListView.swift */,
 				AF7F63D027EB991E00A96F5E /* ProfileInfoView.swift */,
+				AF6B87DF27F260A2004D749E /* SessionDoneView.swift */,
+				AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */,
+				AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -407,7 +405,7 @@
 			files = (
 				AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */,
 				AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */,
-				AF311ED127EBAD9300118C9D /* GoogleService-Info.plist in Resources */,
+				CF9CE686280468E900572DD9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HWYFX3H97P;
+				DEVELOPMENT_TEAM = HD55Y7F67X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -647,7 +645,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HWYFX3H97P;
+				DEVELOPMENT_TEAM = HD55Y7F67X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";

@@ -15,7 +15,7 @@ struct TimeLineView: View {
     
     let dateFormatter = CustomDateFormatter.shared
     
-    @State var showingHint = true
+    @State var showingHint = false
     var blurValue: Double {showingHint ? 3.0 : 0.0}
     
     var dates: [Date] = []
