@@ -12,12 +12,9 @@ struct EmotionPrediction {
     let emotionIndex: Double
     
     var emotion: String {
-        switch emotionIndex {
-        case 0..<0.33:
+        if emotionIndex < 0.50 {
             return "sad"
-        case 0.33..<0.66:
-            return "neutral"
-        default:
+        } else {
             return "happy"
         }
     }
