@@ -12,8 +12,9 @@ import SwiftUI
 
 class SessionListViewModel: ObservableObject {
     
-    @Published var sessions: [RecordModel] = []
+    @Published var sessions: [RecordModel]?
 //    @State var toggleIsOn: Bool
+
     
     init() {
         if let userID = Auth.auth().currentUser?.uid {
@@ -21,6 +22,8 @@ class SessionListViewModel: ObservableObject {
         } else {
             print("ERROR LOGGING: could not access current user id for fetching sessions.")
         }
+        
+        print("***\n\t -- session list viewmodel INIT-ing - sessions count: \(sessions?.count)")
     }
     
        
@@ -46,6 +49,7 @@ class SessionListViewModel: ObservableObject {
                             return session
                         })
                 }
+                print("***\n\t -- session list viewmodel SNAPSHOOTING-ing - sessions count: \(self.sessions?.count)")
             }
     }
     
