@@ -91,6 +91,8 @@ struct LoginView: View {
         .background(Color("pale").opacity(0.2))
         .onDisappear {
             print(" Disappearing Login view; disabled: \(viewModel.isDisabled)")
+        }.onTapGesture {
+            self.hideKeyboard()
         }
     }
 }

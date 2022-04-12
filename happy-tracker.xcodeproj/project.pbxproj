@@ -60,6 +60,7 @@
 		CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */; };
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
 		CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BD27F21A25001CF008 /* SessionService.swift */; };
+		F1573F722805B769002A5E14 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1573F712805B769002A5E14 /* ViewExtensions.swift */; };
 		F1E03DB927F4C31800530B7F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E03DB827F4C31800530B7F /* UserService.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewModelTests.swift; sourceTree = "<group>"; };
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		CFDB39BD27F21A25001CF008 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		F1573F712805B769002A5E14 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		F1E03DB827F4C31800530B7F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 				AF7F63CB27EB982B00A96F5E /* Util */,
 				AF91F1A827E8CC080015CCE9 /* View */,
 				AF7F63CA27EB981600A96F5E /* ViewModel */,
+				F1573F702805B733002A5E14 /* Extensions */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
 				CF9CE685280468E900572DD9 /* GoogleService-Info.plist */,
 				AF91F19B27E8C6310015CCE9 /* Preview Content */,
@@ -310,6 +313,14 @@
 				CF0F786127E8F038009965CE /* RegisterView.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F1573F702805B733002A5E14 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1573F712805B769002A5E14 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +455,7 @@
 				AFB6DB9E27FCDBF6004E2EE8 /* CustomDateFormatter.swift in Sources */,
 				F1E03DB927F4C31800530B7F /* UserService.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
+				F1573F722805B769002A5E14 /* ViewExtensions.swift in Sources */,
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
 				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,
 				CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */,
@@ -612,10 +624,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HD55Y7F67X;
+				DEVELOPMENT_TEAM = Z7CPB7B7NY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -629,8 +642,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrioalex.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -642,10 +656,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HD55Y7F67X;
+				DEVELOPMENT_TEAM = Z7CPB7B7NY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -659,8 +674,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrioalex.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -100,6 +100,9 @@ struct RegisterView: View {
             
         }
         .background(Color("pale").opacity(0.2))
+        .onTapGesture {
+            self.hideKeyboard()
+        }
         
     }
     
