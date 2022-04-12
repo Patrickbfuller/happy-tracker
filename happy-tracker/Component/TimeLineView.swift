@@ -7,7 +7,7 @@
 
 import SwiftUI
 import LineChartView
-import Firebase
+import FirebaseFirestore
 
 struct TimeLineView: View {
     
@@ -60,6 +60,7 @@ struct TimeLineView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Group {
+                                
                 LineChartView(
                     lineChartParameters: LineChartParameters(
                         data: values,
@@ -78,12 +79,13 @@ struct TimeLineView: View {
                         dragGesture: true,
                         hapticFeedback: true)
                 )
-                    .background(.gray.opacity(0.01))
-                    .background(.white)
+                    .background(Color(UIColor.systemBackground))
                     .cornerRadius(20)
-                    .shadow(color: .gray.opacity(0.4), radius: 8, x: 0, y: 0)
+                    .shadow(color: .secondary.opacity(0.65), radius: 8, x: 0, y: 0)
                     .aspectRatio(1.5, contentMode: .fit)
                     .blur(radius: blurValue)
+                
+                // MARK: - Continue
                 
                 VStack(alignment: .trailing, spacing: 0) {
                     Text("Emotional Record")
@@ -125,6 +127,7 @@ struct TimeLineView_Previews: PreviewProvider {
         
         TimeLineView(sessions: sessions)
             .padding()
+//            .preferredColorScheme(.dark)
         
     }
 }
