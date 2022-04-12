@@ -18,8 +18,8 @@ class SessionListViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testSessionListViewModel_RecordModel_shouldBeEmpty() {
+    func testSessionListViewModel_RecordModel_shouldBeNil() {
         let vm = SessionListViewModel()
-        XCTAssert(vm.sessions.isEmpty)
+        XCTAssertNil(vm.sessions)
     }
 }
