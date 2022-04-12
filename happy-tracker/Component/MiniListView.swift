@@ -18,10 +18,14 @@ struct MiniListView: View {
     
     
     var sessions: [RecordModel] {
-        if showingOldestFirst {
-            return sessionListViewModel.sessions
+        if let sessions = sessionListViewModel.sessions {
+            if showingOldestFirst {
+                return sessions
+            } else {
+                return sessions.reversed()
+            }
         } else {
-            return sessionListViewModel.sessions.reversed()
+            return []
         }
     }
     

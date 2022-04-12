@@ -15,9 +15,14 @@ struct UserLandingView: View {
         VStack{
             //Chart
             //Text("Chart Goes here")
-            TimeLineView(sessions: sessionListViewModel.sessions.reversed())
+            if sessionListViewModel.sessions != nil {
+            TimeLineView(sessions: sessionListViewModel.sessions!.reversed())
                 .padding(.horizontal, 8)
                 .padding(.top, 5)
+            } else {
+                Image(systemName: "exclamationmark.triangle")
+                    .font(.system(size: 40))
+            }
             
             //Text("Session list goes here")
             //List of Dates and Happy/Sad Labels

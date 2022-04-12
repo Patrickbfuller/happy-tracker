@@ -9,49 +9,56 @@ import SwiftUI
 struct MainUserView: View {
     @State var showSideMenu: Bool = false
     @EnvironmentObject var viewModel: AuthViewModel
-    @ObservedObject var sessionListViewModel = SessionListViewModel()
+    @StateObject var sessionListViewModel = SessionListViewModel()
+    
+    @State var isLoading = true
     
     var body: some View {
-        
-        GeometryReader { geo in
-            ZStack(alignment: .topLeading) {
-                
-                Color("pale")
-                    .ignoresSafeArea(.all)
-                
-                if sessionListViewModel.sessions.isEmpty {
-                    GetStartedView()
-                        .navigationBarHidden(showSideMenu)
-                } else {
-                    UserLandingView()
-                    .environmentObject(sessionListViewModel)
-                    .frame(width: geo.size.width, height: geo.size.height)
-                    .navigationBarHidden(showSideMenu)
-                }
-                if showSideMenu {
-                    ZStack {
-                        Color(.black)
-                            .opacity(showSideMenu ? 0.25 : 0.0)
+        Group {
+            //            if sessionListViewModel.sessions == nil {
+            if isLoading || sessionListViewModel.sessions == nil {
+                ProgressView()
+                    .scaleEffect(3)
+            } else {
+                GeometryReader { geo in
+                    ZStack(alignment: .topLeading) {
+                        
+                        Color("pale")
                             .ignoresSafeArea(.all)
-                    }.onTapGesture {
-                        withAnimation(.easeOut) {
-                            showSideMenu = false
+                        
+                        if sessionListViewModel.sessions?.isEmpty ?? false {
+                            GetStartedView()
+                                .navigationBarHidden(showSideMenu)
+                        } else {
+                            UserLandingView()
+                                .environmentObject(sessionListViewModel)
+                                .frame(width: geo.size.width, height: geo.size.height)
+                                .navigationBarHidden(showSideMenu)
                         }
+                        if showSideMenu {
+                            ZStack {
+                                Color(.black)
+                                    .opacity(showSideMenu ? 0.25 : 0.0)
+                                    .ignoresSafeArea(.all)
+                            }.onTapGesture {
+                                withAnimation(.easeOut) {
+                                    showSideMenu = false
+                                }
+                            }
+                        }
+                        
+                        SideMenuView(showThis: $showSideMenu)
+                            .frame(width: 300)
+                            .offset(x: showSideMenu ? 0 : -300, y: 0)
+                            .background(showSideMenu ? Color.white : Color.clear)
+                            .alert("Error loading your user data. Please logout.", isPresented: $viewModel.isDisabled) {
+                                Button("Logout") {
+                                    //print(viewModel.currentUser)
+                                    viewModel.signOut()
+                                }
+                            }
                     }
                 }
-                
-                SideMenuView(showThis: $showSideMenu)
-                    .frame(width: 300)
-                    .offset(x: showSideMenu ? 0 : -300, y: 0)
-                    .background(showSideMenu ? Color.white : Color.clear)
-                    .alert("Error loading your user data. Please logout.", isPresented: $viewModel.isDisabled) {
-                        Button("Logout") {
-                            //print(viewModel.currentUser)
-                            viewModel.signOut()
-                        }
-                    }
-                
-                
             }
         }
         .navigationTitle("Dashboard")
@@ -73,6 +80,11 @@ struct MainUserView: View {
         .onAppear{
             showSideMenu = false
             //print(viewModel.currentUser)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                isLoading = false
+                print("changing is loading to false")
+            }
         }
     }
 }
