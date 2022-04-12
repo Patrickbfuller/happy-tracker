@@ -13,8 +13,8 @@ import SwiftUI
 class SessionListViewModel: ObservableObject {
     
     @Published var sessions: [RecordModel]?
-//    @State var toggleIsOn: Bool
-
+    //    @State var toggleIsOn: Bool
+    
     
     init() {
         if let userID = Auth.auth().currentUser?.uid {
@@ -22,18 +22,14 @@ class SessionListViewModel: ObservableObject {
         } else {
             print("ERROR LOGGING: could not access current user id for fetching sessions.")
         }
-        
-        print("***\n\t -- session list viewmodel INIT-ing - sessions count: \(sessions?.count)")
     }
     
-       
-           
     func addSnapshotListener(userID: String) {
         Firestore.firestore()
             .collection("session")
             .whereField("userID", isEqualTo: userID)
             .order(by: "timestamp", descending: true)
-            //.order(by: "timestamp", descending: toggleIsOn ? true : false)
+        //.order(by: "timestamp", descending: toggleIsOn ? true : false)
             .addSnapshotListener { snapshot, err in
                 if let err = err {
                     print("Error getting sessions: \(err)")
@@ -49,16 +45,15 @@ class SessionListViewModel: ObservableObject {
                             return session
                         })
                 }
-                print("***\n\t -- session list viewmodel SNAPSHOOTING-ing - sessions count: \(self.sessions?.count)")
             }
     }
     
-//    func toggle(){
-//        Toggle(isOn: $toggleIsOn,
-//                           label: {
-//                        Text(toggleIsOn ? "Recent" : "Oldest")
-//                    })
-//    }
+    //    func toggle(){
+    //        Toggle(isOn: $toggleIsOn,
+    //                           label: {
+    //                        Text(toggleIsOn ? "Recent" : "Oldest")
+    //                    })
+    //    }
     
     
 }
