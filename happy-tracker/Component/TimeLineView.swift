@@ -58,59 +58,69 @@ struct TimeLineView: View {
     }
     
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            Group {
-                                
-                LineChartView(
-                    lineChartParameters: LineChartParameters(
-                        data: values,
-                        dataTimestamps: dates,
-                        dataLabels: labels,
-                        labelColor: .mint.opacity(0.7),
-                        secondaryLabelColor: .secondary,
-                        labelsAlignment: .left,
-                        dataPrecisionLength: 0,
-                        indicatorPointColor: .mint,
-                        indicatorPointSize: 10,
-                        lineColor: .purple.opacity(0.7),
-                        lineSecondColor: .mint,
-                        lineWidth: 4,
-                        dotsWidth: 3,
-                        dragGesture: true,
-                        hapticFeedback: true)
-                )
-                    .background(Color(UIColor.systemBackground))
-                    .cornerRadius(20)
-                    .shadow(color: .secondary.opacity(0.65), radius: 8, x: 0, y: 0)
-                    .aspectRatio(1.5, contentMode: .fit)
-                    .blur(radius: blurValue)
+        Group {
+            
+            if dates.count > 1 {
                 
-                // MARK: - Continue
-                
-                VStack(alignment: .trailing, spacing: 0) {
-                    Text("Emotional Record")
-                        .fontWeight(.bold)
-                        .font(.title)
-                        .padding([.top, .trailing], 16)
-                        .foregroundColor(.indigo)
+                ZStack(alignment: .topTrailing) {
+                    LineChartView(
+                        lineChartParameters: LineChartParameters(
+                            data: values,
+                            dataTimestamps: dates,
+                            dataLabels: labels,
+                            labelColor: .mint.opacity(0.7),
+                            secondaryLabelColor: .secondary,
+                            labelsAlignment: .left,
+                            dataPrecisionLength: 0,
+                            indicatorPointColor: .mint,
+                            indicatorPointSize: 10,
+                            lineColor: .purple.opacity(0.7),
+                            lineSecondColor: .mint,
+                            lineWidth: 4,
+                            dotsWidth: 3,
+                            dragGesture: true,
+                            hapticFeedback: true)
+                    )
+                        .background(Color(UIColor.systemBackground))
+                    //                    .cornerRadius(20)
+                    //                    .shadow(color: .secondary.opacity(0.65), radius: 8, x: 0, y: 0)
+                    //                    .aspectRatio(1.5, contentMode: .fit)
                         .blur(radius: blurValue)
-                    Button { // action
-                        withAnimation() {
-                            showingHint.toggle()
-                        }
-                    } label: {
-                        ZStack(alignment: .topTrailing) {
-                            Image(systemName: "info.circle")
-                                .padding()
-                                .foregroundColor(.gray)
-                            if showingHint {
-                                HintBoxView()
+                    
+                    VStack(alignment: .trailing, spacing: 0) {
+                        Text("Emotional Record")
+                            .fontWeight(.bold)
+                            .font(.title)
+                            .padding([.top, .trailing], 16)
+                            .foregroundColor(.indigo)
+                            .blur(radius: blurValue)
+                        Button { // action
+                            withAnimation() {
+                                showingHint.toggle()
+                            }
+                        } label: {
+                            ZStack(alignment: .topTrailing) {
+                                Image(systemName: "info.circle")
+                                    .padding()
+                                    .foregroundColor(.gray)
+                                if showingHint {
+                                    HintBoxView()
+                                }
                             }
                         }
+                        
                     }
+                }
+            } else {
+                GeometryReader { geo in
+                    EmptyGraphPlaceholder()
+                    //                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
                 }
             }
         }
+        .cornerRadius(20)
+        .shadow(color: .secondary.opacity(0.65), radius: 8, x: 0, y: 0)
+        .aspectRatio(1.5, contentMode: .fit)
     }
 }
 
@@ -127,7 +137,7 @@ struct TimeLineView_Previews: PreviewProvider {
         
         TimeLineView(sessions: sessions)
             .padding()
-//            .preferredColorScheme(.dark)
+        //            .preferredColorScheme(.dark)
         
     }
 }
