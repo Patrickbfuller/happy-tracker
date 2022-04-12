@@ -138,7 +138,7 @@ struct ShowHidePredictionButton: View {
         }
         .foregroundColor(.white)
         .padding(5)
-        .background(Color("customMint"))
+        .background(Color("medium"))
         .cornerRadius(5)
         .padding(5)
     }
@@ -218,7 +218,7 @@ struct HintView: View {
         }
         .padding()
         .foregroundColor(.white)
-        .background(Color("customMint"))
+        .background(Color("medium"))
     }
 }
 
