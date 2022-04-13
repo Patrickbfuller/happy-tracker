@@ -16,9 +16,12 @@ struct LoginView: View {
         ScrollView(showsIndicators: true) {
         VStack {
             Spacer()
-            Text("Emotional Check-up")
+            Text("Emotional Health")
                 .font(.title)
                 .fontWeight(.bold)
+            Text("Check-up")
+                .font(.title2)
+                .fontWeight(.semibold)
         
             // Logo
             LogoView()
@@ -97,11 +100,11 @@ struct LoginView: View {
     }
 }
 
-//struct LoginView_Previews: PreviewProvider {
-//    
-//    
-//    static var previews: some View {
-//        LoginView()
-//            .environmentObject(AuthViewModel())
-//    }
-//}
+struct LoginView_Previews: PreviewProvider {
+    
+    
+    static var previews: some View {
+        LoginView()
+            .environmentObject(AuthViewModel())
+    }
+}
