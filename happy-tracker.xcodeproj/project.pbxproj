@@ -14,6 +14,7 @@
 		AF311ED927EBB6B600118C9D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED827EBB6B600118C9D /* CameraManager.swift */; };
 		AF311EDB27EBBB2000118C9D /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311EDA27EBBB2000118C9D /* FrameManager.swift */; };
 		AF311EDD27EBBF0500118C9D /* CGImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */; };
+		AF48797E280767CA00EDC60C /* EmptyGraphPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48797D280767CA00EDC60C /* EmptyGraphPlaceholder.swift */; };
 		AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */; };
 		AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */; };
 		AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */; };
@@ -82,6 +83,7 @@
 		AF311ED827EBB6B600118C9D /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		AF311EDA27EBBB2000118C9D /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		AF311EDC27EBBF0500118C9D /* CGImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Ext.swift"; sourceTree = "<group>"; };
+		AF48797D280767CA00EDC60C /* EmptyGraphPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyGraphPlaceholder.swift; sourceTree = "<group>"; };
 		AF4D9AF127ED030D007ED7FA /* BufferPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferPrediction.swift; sourceTree = "<group>"; };
 		AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePredictionView.swift; sourceTree = "<group>"; };
 		AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionRecognitionClassifierHNS.mlmodel; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				AF91F1B427E8D8EB0015CCE9 /* CustomAuthLabel.swift */,
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
 				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
+				AF48797D280767CA00EDC60C /* EmptyGraphPlaceholder.swift */,
 				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
 				AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */,
 				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
@@ -456,6 +459,7 @@
 				F1E03DB927F4C31800530B7F /* UserService.swift in Sources */,
 				AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */,
 				F1573F722805B769002A5E14 /* ViewExtensions.swift in Sources */,
+				AF48797E280767CA00EDC60C /* EmptyGraphPlaceholder.swift in Sources */,
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
 				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,
 				CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmptyGraphPlaceholder: View {
     
-    @State var showingHint: Bool = true
+    @State var showingHint: Bool = false
     var body: some View {
         ZStack {
             HStack {
