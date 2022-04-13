@@ -22,7 +22,7 @@ struct RecordSessionView: View {
     @State var showingHint = false
     @State var showingLivePrediction = false
     
-    @StateObject var sessionViewModel = RecordSessionViewModel()
+    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
     var blurRadius: CGFloat {
         switch sessionViewModel.status {

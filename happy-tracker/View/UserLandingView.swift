@@ -9,7 +9,8 @@ import SwiftUI
 struct UserLandingView: View {
         
     @EnvironmentObject var sessionListViewModel: SessionListViewModel
-
+    
+    @StateObject var recordSessionViewModel = RecordSessionViewModel()
     
     var body: some View {
         VStack{
@@ -32,6 +33,7 @@ struct UserLandingView: View {
             
             NavigationLink { // destination
                 RecordSessionView()
+                    .environmentObject(recordSessionViewModel)
             } label: {
                 CustomButtonLabel(buttonLabel: "Record Session")
             }

@@ -83,7 +83,6 @@ struct MainUserView: View {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isLoading = false
-                print("changing is loading to false")
             }
         }
     }
