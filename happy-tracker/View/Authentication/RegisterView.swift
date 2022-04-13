@@ -24,9 +24,12 @@ struct RegisterView: View {
         ScrollView(showsIndicators: true) {
         VStack {
             Spacer()
-            Text("Emotional Check-up")
+            Text("Emotional Health")
                 .font(.title)
                 .fontWeight(.bold)
+            Text("Check-up")
+                .font(.title2)
+                .fontWeight(.semibold)
         
             // Logo
             LogoView()

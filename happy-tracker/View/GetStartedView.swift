@@ -19,9 +19,12 @@ struct GetStartedView: View {
                     .font(.largeTitle)
                     .padding(.top,50)
                 
-            Text("Emotional Check-up")
-                .font(.title)
-                .fontWeight(.bold)
+                Text("Emotional Health")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Check-up")
+                    .font(.title2)
+                    .fontWeight(.semibold)
                
                 Spacer()
                 LogoView()
@@ -29,7 +32,7 @@ struct GetStartedView: View {
   
        
       
-            Text("Emotional Check-up detects your \n emotions through facial expressions")
+            Text("Emotional Health Check-up detects your \n emotions through facial expressions")
                  //   .lineLimit(nil)
                     .multilineTextAlignment(.center)
                     .font(.title3)
