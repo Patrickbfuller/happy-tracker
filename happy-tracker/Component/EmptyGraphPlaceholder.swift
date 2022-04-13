@@ -19,7 +19,7 @@ struct EmptyGraphPlaceholder: View {
                     Image(systemName: "chart.line.uptrend.xyaxis")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 80)//, height: geo.size.height / 3)
+                        .frame(width: 80)
                         .foregroundColor(.gray)
                     Text("Your progress will appear here.")
                         .fontWeight(.semibold)
@@ -30,28 +30,43 @@ struct EmptyGraphPlaceholder: View {
                     Spacer()
                 }
                 .padding()
+                .blur(radius: showingHint ? 3 : 0)
                 Spacer()
             }
             // Z-layer with info button
-            HStack {
-                Spacer()
+
                 VStack {
                     Button {
-                        showingHint.toggle()
+                        withAnimation { showingHint.toggle() }
                     } label: {
-                        Image(systemName: "info.circle")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .padding()
+                        HStack {
+                            if showingHint {
+                                HintView()
+                            } else {
+                                Spacer()
+                                Image(systemName: "info.circle")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                    .padding()
+                            }
+                        }
                     }
                     Spacer()
                 }
-            }
         }
-        .background(.white.opacity(0.85))
+        .background(Color(UIColor.systemBackground).opacity(0.8))
         .background(
             LinearGradient(
-                colors: [.white, .white, Color("customMint"), .purple, Color("customMint"), .white, .white],
+                colors: [
+                    Color(UIColor.systemBackground),
+                    Color(UIColor.systemBackground),
+                    Color(UIColor.systemBackground),
+                    .purple,
+                    Color("customMint"),
+                    Color(UIColor.systemBackground),
+                    Color(UIColor.systemBackground),
+                    Color(UIColor.systemBackground)
+                ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -63,13 +78,26 @@ struct EmptyGraphPlaceholder: View {
         var body: some View {
             HStack {
                 Spacer()
-                Text("Your progress will only show once you have multiple")
-                Divider()
-                Text("In the graph, if you record multiple times in one day, the new session will replace the previous one.")
-                    .multilineTextAlignment(.center)
+                VStack {
+                    Text("Progress is graphed after recording over multiple days.")
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                    Text("Newer sessions on the same day replace older ones in the graph.")
+                }
                 Spacer()
             }
-            .background(Color("customMint").opacity(0.3))
+            .padding(.vertical, 30)
+//            .padding(.horizontal)
+            .multilineTextAlignment(.center)
+            .foregroundColor(.primary)
+//            .background(.gray.opacity(0.25))
+            .background(Color("customMint").opacity(0.25))
+            .background(Color(UIColor.systemBackground))
+            .cornerRadius(20)
+            .padding(.vertical)
+            .padding(.horizontal, 8)
         }
     }
 }
@@ -77,6 +105,8 @@ struct EmptyGraphPlaceholder: View {
 struct EmptyGraphPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
         EmptyGraphPlaceholder()
+            .ignoresSafeArea()
+//            .preferredColorScheme(.dark)
     }
 }
 
