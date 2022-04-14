@@ -14,28 +14,39 @@ struct UserLandingView: View {
     
     var body: some View {
         VStack{
-            //Chart
-            //Text("Chart Goes here")
-            if sessionListViewModel.sessions != nil {
-            TimeLineView(sessions: sessionListViewModel.sessions!.reversed())
-                .padding(.horizontal, 8)
-                .padding(.top, 5)
+            
+            // MARK: - if sessions empty
+            if sessionListViewModel.sessions?.isEmpty ?? false {
+                GetStartedView()
+                    .environmentObject(recordSessionViewModel)
+                
+            // MARK: - If sessions not empty
+                
             } else {
-                Image(systemName: "exclamationmark.triangle")
-                    .font(.system(size: 40))
+                
+                // MARK: - Session Graph Widget
+                if sessionListViewModel.sessions != nil {
+                    TimeLineView(sessions: sessionListViewModel.sessions!.reversed())
+                        .padding(.horizontal, 8)
+                        .padding(.top, 5)
+                } else {
+                    Image(systemName: "exclamationmark.triangle")
+                        .font(.system(size: 40))
+                }
+                // MARK: - Session List Widget
+                MiniListView()
+                    .environmentObject(sessionListViewModel)
             }
             
-            //Text("Session list goes here")
-            //List of Dates and Happy/Sad Labels
-
-            MiniListView()
-                .environmentObject(sessionListViewModel)
-            
+            // MARK: - Record Button
             NavigationLink { // destination
                 RecordSessionView()
                     .environmentObject(recordSessionViewModel)
             } label: {
                 CustomButtonLabel(buttonLabel: "Record Session")
+            }
+            if sessionListViewModel.sessions?.isEmpty ?? false {
+                Spacer()
             }
         }
     }

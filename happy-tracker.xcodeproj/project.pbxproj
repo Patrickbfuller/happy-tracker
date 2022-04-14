@@ -19,6 +19,7 @@
 		AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */; };
 		AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */; };
 		AF4D9AFB27ED14B5007ED7FA /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */; };
+		AF62AAF1280898B8000BF67D /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62AAF0280898B8000BF67D /* GetStartedView.swift */; };
 		AF69191827F7809300D9BCDB /* SessionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69191727F7809300D9BCDB /* SessionListViewModel.swift */; };
 		AF6B87DC27F22279004D749E /* SessionTextEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */; };
 		AF6B87DE27F23664004D749E /* RecordSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */; };
@@ -48,7 +49,6 @@
 		AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */; };
 		CF0F786227E8F038009965CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786127E8F038009965CE /* RegisterView.swift */; };
 		CF0F786D27E905C1009965CE /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786C27E905C1009965CE /* LineChartView */; };
-		CF49441C27FE0AA100FA5F72 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */; };
 		CF58170827EC946C0047EC87 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170727EC946C0047EC87 /* AuthViewModel.swift */; };
 		CF58170C27EC94C00047EC87 /* MiniListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170B27EC94C00047EC87 /* MiniListRow.swift */; };
 		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
@@ -88,6 +88,7 @@
 		AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePredictionView.swift; sourceTree = "<group>"; };
 		AF4D9AF827ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EmotionRecognitionClassifierHNS.mlmodel; sourceTree = "<group>"; };
 		AF4D9AFA27ED14B4007ED7FA /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		AF62AAF0280898B8000BF67D /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		AF69191727F7809300D9BCDB /* SessionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListViewModel.swift; sourceTree = "<group>"; };
 		AF6B87DB27F22279004D749E /* SessionTextEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTextEntryView.swift; sourceTree = "<group>"; };
 		AF6B87DD27F23664004D749E /* RecordSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModel.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
 		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
@@ -246,7 +246,6 @@
 				AF311EC927EB9B4300118C9D /* SideMenu */,
 				F12A714D27ED08B70083A112 /* Authentication */,
 				AF7F63CC27EB98DB00A96F5E /* AppSettingsView.swift */,
-				CF49441B27FE0AA100FA5F72 /* GetStartedView.swift */,
 				AF7F63CE27EB990500A96F5E /* MainUserView.swift */,
 				AF7F63D227EB994300A96F5E /* ProfileView.swift */,
 				AF91F1B827E8EB740015CCE9 /* RecordSessionView.swift */,
@@ -284,6 +283,7 @@
 				AF91F1B627E8DBF60015CCE9 /* CustomButton.swift */,
 				AF91F1B227E8D38F0015CCE9 /* CustomTextField.swift */,
 				AF48797D280767CA00EDC60C /* EmptyGraphPlaceholder.swift */,
+				AF62AAF0280898B8000BF67D /* GetStartedView.swift */,
 				AF311ED227EBB45A00118C9D /* LiveFrameView.swift */,
 				AF4D9AF527ED1200007ED7FA /* LivePredictionView.swift */,
 				AF91F1AE27E8CF0C0015CCE9 /* LogoView.swift */,
@@ -441,6 +441,7 @@
 				AF91F1B927E8EB740015CCE9 /* RecordSessionView.swift in Sources */,
 				AF69191827F7809300D9BCDB /* SessionListViewModel.swift in Sources */,
 				AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */,
+				AF62AAF1280898B8000BF67D /* GetStartedView.swift in Sources */,
 				AF4D9AF927ED13D9007ED7FA /* EmotionRecognitionClassifierHNS.mlmodel in Sources */,
 				AF91F1A727E8CBF90015CCE9 /* LoginView.swift in Sources */,
 				AF7F63CD27EB98DB00A96F5E /* AppSettingsView.swift in Sources */,
@@ -463,7 +464,6 @@
 				AF4D9AF627ED1200007ED7FA /* LivePredictionView.swift in Sources */,
 				AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */,
 				CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */,
-				CF49441C27FE0AA100FA5F72 /* GetStartedView.swift in Sources */,
 				AF7F63D127EB991E00A96F5E /* ProfileInfoView.swift in Sources */,
 				AF311ED727EBB66F00118C9D /* CameraError.swift in Sources */,
 				CF0F786227E8F038009965CE /* RegisterView.swift in Sources */,
@@ -632,7 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Z7CPB7B7NY;
+				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -646,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrioalex.happy-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -664,7 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = Z7CPB7B7NY;
+				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -678,7 +678,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrioalex.happy-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -27,17 +27,12 @@ struct MainUserView: View {
                         Color("pale")
                             .ignoresSafeArea(.all)
                         
-                        if sessionListViewModel.sessions?.isEmpty ?? false {
-                            GetStartedView()
-                                .environmentObject(recordSessionViewModel)
-                                .navigationBarHidden(showSideMenu)
-                        } else {
-                            UserLandingView()
-                                .environmentObject(recordSessionViewModel)
-                                .environmentObject(sessionListViewModel)
-                                .frame(width: geo.size.width, height: geo.size.height)
-                                .navigationBarHidden(showSideMenu)
-                        }
+                        UserLandingView()
+                            .environmentObject(recordSessionViewModel)
+                            .environmentObject(sessionListViewModel)
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .navigationBarHidden(showSideMenu)
+                        
                         if showSideMenu {
                             ZStack {
                                 Color(.black)

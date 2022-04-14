@@ -17,8 +17,8 @@ struct GetStartedView: View {
                 .ignoresSafeArea()
             
             VStack{
-              
-            Text("Welcome to")
+                
+                Text("Welcome to")
                     .font(.largeTitle)
                     .padding(.top,50)
                 
@@ -28,38 +28,31 @@ struct GetStartedView: View {
                 Text("Check-up")
                     .font(.title2)
                     .fontWeight(.semibold)
-               
+                
                 Spacer()
                 LogoView()
-
-  
-       
-      
-            Text("Emotional Health Check-up detects your \n emotions through facial expressions")
-                 //   .lineLimit(nil)
+                
+                
+                
+                
+                Text("Emotional Health Check-up detects your \n emotions through facial expressions")
+                //   .lineLimit(nil)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .padding(.bottom,140)
-              
-            Text("Start your first session👇")
+                
+//                Spacer()
+                Text("Start your first session👇")
                     .font(.callout)
                     .fontWeight(.semibold)
-                NavigationLink { // destination
-                    RecordSessionView()
-                        .environmentObject(recordSessionViewModel)
-                } label: {
-                    CustomButtonLabel(buttonLabel: "Record Session")
-                }
-            
-                Spacer()
             }
         }
-
-  
-
-
+        
+        
+        
+        
     }
-
+    
 }
 
 struct GetStartedView_Previews: PreviewProvider {
