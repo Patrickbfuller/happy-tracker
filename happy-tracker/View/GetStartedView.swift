@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GetStartedView: View {
+    
+    @EnvironmentObject var recordSessionViewModel: RecordSessionViewModel
+    
     var body: some View {
         ZStack{
             Color("pale").opacity(0.2)
@@ -43,6 +46,7 @@ struct GetStartedView: View {
                     .fontWeight(.semibold)
                 NavigationLink { // destination
                     RecordSessionView()
+                        .environmentObject(recordSessionViewModel)
                 } label: {
                     CustomButtonLabel(buttonLabel: "Record Session")
                 }

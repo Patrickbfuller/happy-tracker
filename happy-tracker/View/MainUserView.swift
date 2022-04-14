@@ -10,6 +10,7 @@ struct MainUserView: View {
     @State var showSideMenu: Bool = false
     @EnvironmentObject var viewModel: AuthViewModel
     @StateObject var sessionListViewModel = SessionListViewModel()
+    @StateObject var recordSessionViewModel = RecordSessionViewModel()
     
     @State var isLoading = true
     
@@ -28,9 +29,11 @@ struct MainUserView: View {
                         
                         if sessionListViewModel.sessions?.isEmpty ?? false {
                             GetStartedView()
+                                .environmentObject(recordSessionViewModel)
                                 .navigationBarHidden(showSideMenu)
                         } else {
                             UserLandingView()
+                                .environmentObject(recordSessionViewModel)
                                 .environmentObject(sessionListViewModel)
                                 .frame(width: geo.size.width, height: geo.size.height)
                                 .navigationBarHidden(showSideMenu)

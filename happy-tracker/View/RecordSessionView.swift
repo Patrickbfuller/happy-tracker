@@ -22,10 +22,10 @@ struct RecordSessionView: View {
     @State var showingHint = false
     @State var showingLivePrediction = false
     
-    @EnvironmentObject var sessionViewModel: RecordSessionViewModel
+    @EnvironmentObject var recordSessionViewModel: RecordSessionViewModel
     
     var blurRadius: CGFloat {
-        switch sessionViewModel.status {
+        switch recordSessionViewModel.status {
         case .notStarted:
             return 0
         case .isRecording:
@@ -45,7 +45,8 @@ struct RecordSessionView: View {
                 .ignoresSafeArea()
             
             /// Visual Feed
-            LiveFrameView().environmentObject(sessionViewModel)
+            LiveFrameView()
+                .environmentObject(recordSessionViewModel)
                 .blur(radius: blurRadius)
             
             VStack {
@@ -56,12 +57,12 @@ struct RecordSessionView: View {
                 
                 /// Vanishable  Live Prediction View
                 if showingLivePrediction {
-                    LivePredictionView().environmentObject(sessionViewModel)
+                    LivePredictionView().environmentObject(recordSessionViewModel)
                 }
                 
                 /// Vanished Error Box - unless is error
-                if sessionViewModel.cameraError != nil {
-                    CameraErrorView(sessionViewModel.cameraError!)
+                if recordSessionViewModel.cameraError != nil {
+                    CameraErrorView(recordSessionViewModel.cameraError!)
                 }
 
                 /// Vanishable  HintBox - tappable
@@ -81,13 +82,13 @@ struct RecordSessionView: View {
                 ZStack {
                     /// Start/Stop Record Button
                     StartStopButton()
-                        .environmentObject(sessionViewModel)
-                        .disabled(sessionViewModel.cameraError != nil)
+                        .environmentObject(recordSessionViewModel)
+                        .disabled(recordSessionViewModel.cameraError != nil)
 
                     /// Vanishable Stopwatch Timer
-                    if sessionViewModel.status == .isRecording {
+                    if recordSessionViewModel.status == .isRecording {
                         HStack {
-                            RecordingTimerView().environmentObject(sessionViewModel.stopwatch)
+                            RecordingTimerView().environmentObject(recordSessionViewModel.stopwatch)
                                 .padding(.leading)
                             Spacer()
                         }
@@ -95,12 +96,12 @@ struct RecordSessionView: View {
                 }
             }
             /// Getting text after recording
-            if sessionViewModel.status == .gettingText {
-                SessionTextEntryView().environmentObject(sessionViewModel)
+            if recordSessionViewModel.status == .gettingText {
+                SessionTextEntryView().environmentObject(recordSessionViewModel)
             }
             /// Thank you banner
-            if sessionViewModel.status == .done {
-                SessionDoneView().environmentObject(sessionViewModel)
+            if recordSessionViewModel.status == .done {
+                SessionDoneView().environmentObject(recordSessionViewModel)
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -115,10 +116,10 @@ struct RecordSessionView: View {
             }
         }
         .onDisappear { // Handle session flow interrupts
-            if sessionViewModel.status == .isRecording {
-                sessionViewModel.stopSession()
-            } else if sessionViewModel.status == .done {
-                sessionViewModel.resetSession()
+            if recordSessionViewModel.status == .isRecording {
+                recordSessionViewModel.stopSession()
+            } else if recordSessionViewModel.status == .done {
+                recordSessionViewModel.resetSession()
             }
         }
     }

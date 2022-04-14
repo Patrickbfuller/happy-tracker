@@ -9,8 +9,8 @@ import SwiftUI
 struct UserLandingView: View {
         
     @EnvironmentObject var sessionListViewModel: SessionListViewModel
+    @EnvironmentObject var recordSessionViewModel: RecordSessionViewModel
     
-    @StateObject var recordSessionViewModel = RecordSessionViewModel()
     
     var body: some View {
         VStack{
