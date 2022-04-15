@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 @main
-struct happy_trackerApp: App {
+struct emotional_health_checkupApp: App {
     // MARK: PROPERTIES
     @StateObject var viewModel = AuthViewModel()
     

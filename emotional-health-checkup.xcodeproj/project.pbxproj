@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2B34812809F7CF00A6588F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF2B34802809F7CF00A6588F /* GoogleService-Info.plist */; };
 		AF311ECB27EB9B6C00118C9D /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */; };
 		AF311ECD27EB9C5900118C9D /* SideMenuOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */; };
 		AF311ED327EBB45A00118C9D /* LiveFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF311ED227EBB45A00118C9D /* LiveFrameView.swift */; };
@@ -33,7 +34,7 @@
 		AF7F63D327EB994300A96F5E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63D227EB994300A96F5E /* ProfileView.swift */; };
 		AF7F63D527EB995B00A96F5E /* UserLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63D427EB995B00A96F5E /* UserLandingView.swift */; };
 		AF7F63D727EB999F00A96F5E /* SideMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F63D627EB999F00A96F5E /* SideMenuOption.swift */; };
-		AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */; };
+		AF91F19627E8C62F0015CCE9 /* emotional-health-checkupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F19527E8C62F0015CCE9 /* emotional-health-checkupApp.swift */; };
 		AF91F19827E8C62F0015CCE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91F19727E8C62F0015CCE9 /* ContentView.swift */; };
 		AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF91F19927E8C6310015CCE9 /* Assets.xcassets */; };
 		AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF91F19C27E8C6310015CCE9 /* Preview Assets.xcassets */; };
@@ -54,10 +55,8 @@
 		CF58170E27EC94EF0047EC87 /* MiniListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170D27EC94EF0047EC87 /* MiniListView.swift */; };
 		CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */; };
 		CF8BDE4B27F348C6005071FD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8BDE4A27F348C6005071FD /* UserModel.swift */; };
-		CF9CE686280468E900572DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF9CE685280468E900572DD9 /* GoogleService-Info.plist */; };
 		CFB9F0BB27FF413E005F8257 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */; };
 		CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */; };
-		CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */; };
 		CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */; };
 		CFDB39BC27F21490001CF008 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BB27F21490001CF008 /* RecordModel.swift */; };
 		CFDB39BE27F21A25001CF008 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDB39BD27F21A25001CF008 /* SessionService.swift */; };
@@ -71,11 +70,12 @@
 			containerPortal = AF91F18A27E8C62F0015CCE9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AF91F19127E8C62F0015CCE9;
-			remoteInfo = "happy-tracker";
+			remoteInfo = "emotional-health-checkup";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF2B34802809F7CF00A6588F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF311ECA27EB9B6C00118C9D /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		AF311ECC27EB9C5900118C9D /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
 		AF311ED227EBB45A00118C9D /* LiveFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFrameView.swift; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		AF7F63D227EB994300A96F5E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AF7F63D427EB995B00A96F5E /* UserLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLandingView.swift; sourceTree = "<group>"; };
 		AF7F63D627EB999F00A96F5E /* SideMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOption.swift; sourceTree = "<group>"; };
-		AF91F19227E8C62F0015CCE9 /* happy-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "happy-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happy_trackerApp.swift; sourceTree = "<group>"; };
+		AF91F19227E8C62F0015CCE9 /* EHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF91F19527E8C62F0015CCE9 /* emotional-health-checkupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "emotional-health-checkupApp.swift"; sourceTree = "<group>"; };
 		AF91F19727E8C62F0015CCE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF91F19927E8C6310015CCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF91F19C27E8C6310015CCE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -117,14 +117,12 @@
 		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "happy-tracker/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
+		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "emotional-health-checkup/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
 		CF58170D27EC94EF0047EC87 /* MiniListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniListView.swift; sourceTree = "<group>"; };
 		CF8BDE4A27F348C6005071FD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		CF9CE685280468E900572DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "happy-trackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB9F0AE27FF40D6005F8257 /* emotional-health-checkupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "emotional-health-checkupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSessionViewModelTests.swift; sourceTree = "<group>"; };
-		CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = happy_trackerTests.swift; sourceTree = "<group>"; };
 		CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionListViewModelTests.swift; sourceTree = "<group>"; };
 		CFDB39BB27F21490001CF008 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		CFDB39BD27F21A25001CF008 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
@@ -197,8 +195,9 @@
 		AF91F18927E8C62F0015CCE9 = {
 			isa = PBXGroup;
 			children = (
-				AF91F19427E8C62F0015CCE9 /* happy-tracker */,
-				CFB9F0AF27FF40D6005F8257 /* happy-trackerTests */,
+				AF91F19427E8C62F0015CCE9 /* emotional-health-checkup */,
+				AF2B34802809F7CF00A6588F /* GoogleService-Info.plist */,
+				CFB9F0AF27FF40D6005F8257 /* emotional-health-checkupTests */,
 				AF91F19327E8C62F0015CCE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,16 +205,16 @@
 		AF91F19327E8C62F0015CCE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF91F19227E8C62F0015CCE9 /* happy-tracker.app */,
-				CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */,
+				AF91F19227E8C62F0015CCE9 /* EHC.app */,
+				CFB9F0AE27FF40D6005F8257 /* emotional-health-checkupTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF91F19427E8C62F0015CCE9 /* happy-tracker */ = {
+		AF91F19427E8C62F0015CCE9 /* emotional-health-checkup */ = {
 			isa = PBXGroup;
 			children = (
-				AF91F19527E8C62F0015CCE9 /* happy_trackerApp.swift */,
+				AF91F19527E8C62F0015CCE9 /* emotional-health-checkupApp.swift */,
 				AF91F19727E8C62F0015CCE9 /* ContentView.swift */,
 				AF91F1AD27E8CC6A0015CCE9 /* Component */,
 				AF4D9AF727ED13C1007ED7FA /* CoreML */,
@@ -226,10 +225,9 @@
 				AF7F63CA27EB981600A96F5E /* ViewModel */,
 				F1573F702805B733002A5E14 /* Extensions */,
 				AF91F19927E8C6310015CCE9 /* Assets.xcassets */,
-				CF9CE685280468E900572DD9 /* GoogleService-Info.plist */,
 				AF91F19B27E8C6310015CCE9 /* Preview Content */,
 			);
-			path = "happy-tracker";
+			path = "emotional-health-checkup";
 			sourceTree = "<group>";
 		};
 		AF91F19B27E8C6310015CCE9 /* Preview Content */ = {
@@ -297,16 +295,15 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		CFB9F0AF27FF40D6005F8257 /* happy-trackerTests */ = {
+		CFB9F0AF27FF40D6005F8257 /* emotional-health-checkupTests */ = {
 			isa = PBXGroup;
 			children = (
 				CFB9F0B727FF413E005F8257 /* AuthViewModelTests.swift */,
-				CFB9F0B927FF413E005F8257 /* happy_trackerTests.swift */,
 				CFB9F0B827FF413E005F8257 /* RecordSessionViewModelTests.swift */,
 				AF6DDD0327FF618A00566640 /* StopwatchTest.swift */,
 				CFB9F0BA27FF413E005F8257 /* SessionListViewModelTests.swift */,
 			);
-			path = "happy-trackerTests";
+			path = "emotional-health-checkupTests";
 			sourceTree = "<group>";
 		};
 		F12A714D27ED08B70083A112 /* Authentication */ = {
@@ -329,9 +326,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF91F19127E8C62F0015CCE9 /* happy-tracker */ = {
+		AF91F19127E8C62F0015CCE9 /* emotional-health-checkup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF91F1A027E8C6310015CCE9 /* Build configuration list for PBXNativeTarget "happy-tracker" */;
+			buildConfigurationList = AF91F1A027E8C6310015CCE9 /* Build configuration list for PBXNativeTarget "emotional-health-checkup" */;
 			buildPhases = (
 				AF91F18E27E8C62F0015CCE9 /* Sources */,
 				AF91F18F27E8C62F0015CCE9 /* Frameworks */,
@@ -341,20 +338,20 @@
 			);
 			dependencies = (
 			);
-			name = "happy-tracker";
+			name = "emotional-health-checkup";
 			packageProductDependencies = (
 				CF0F786C27E905C1009965CE /* LineChartView */,
 				AF7F63C627EB972600A96F5E /* FirebaseAuth */,
 				AF7F63C827EB972600A96F5E /* FirebaseFirestore */,
 				CF58172F27ECB1330047EC87 /* FirebaseFirestoreSwift-Beta */,
 			);
-			productName = "happy-tracker";
-			productReference = AF91F19227E8C62F0015CCE9 /* happy-tracker.app */;
+			productName = "emotional-health-checkup";
+			productReference = AF91F19227E8C62F0015CCE9 /* EHC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFB9F0AD27FF40D6005F8257 /* happy-trackerTests */ = {
+		CFB9F0AD27FF40D6005F8257 /* emotional-health-checkupTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "happy-trackerTests" */;
+			buildConfigurationList = CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "emotional-health-checkupTests" */;
 			buildPhases = (
 				CFB9F0AA27FF40D6005F8257 /* Sources */,
 				CFB9F0AB27FF40D6005F8257 /* Frameworks */,
@@ -365,9 +362,9 @@
 			dependencies = (
 				CFB9F0B327FF40D6005F8257 /* PBXTargetDependency */,
 			);
-			name = "happy-trackerTests";
-			productName = "happy-trackerTests";
-			productReference = CFB9F0AE27FF40D6005F8257 /* happy-trackerTests.xctest */;
+			name = "emotional-health-checkupTests";
+			productName = "emotional-health-checkupTests";
+			productReference = CFB9F0AE27FF40D6005F8257 /* emotional-health-checkupTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -389,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF91F18D27E8C62F0015CCE9 /* Build configuration list for PBXProject "happy-tracker" */;
+			buildConfigurationList = AF91F18D27E8C62F0015CCE9 /* Build configuration list for PBXProject "emotional-health-checkup" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -406,8 +403,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF91F19127E8C62F0015CCE9 /* happy-tracker */,
-				CFB9F0AD27FF40D6005F8257 /* happy-trackerTests */,
+				AF91F19127E8C62F0015CCE9 /* emotional-health-checkup */,
+				CFB9F0AD27FF40D6005F8257 /* emotional-health-checkupTests */,
 			);
 		};
 /* End PBXProject section */
@@ -419,7 +416,7 @@
 			files = (
 				AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */,
 				AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */,
-				CF9CE686280468E900572DD9 /* GoogleService-Info.plist in Resources */,
+				AF2B34812809F7CF00A6588F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +477,7 @@
 				AF7F63CF27EB990500A96F5E /* MainUserView.swift in Sources */,
 				AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */,
 				AF4D9AF227ED030D007ED7FA /* BufferPrediction.swift in Sources */,
-				AF91F19627E8C62F0015CCE9 /* happy_trackerApp.swift in Sources */,
+				AF91F19627E8C62F0015CCE9 /* emotional-health-checkupApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +489,6 @@
 				CFB9F0BC27FF413E005F8257 /* RecordSessionViewModelTests.swift in Sources */,
 				AF6DDD0427FF618A00566640 /* StopwatchTest.swift in Sources */,
 				CFB9F0BE27FF413E005F8257 /* SessionListViewModelTests.swift in Sources */,
-				CFB9F0BD27FF413E005F8257 /* happy_trackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +497,7 @@
 /* Begin PBXTargetDependency section */
 		CFB9F0B327FF40D6005F8257 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AF91F19127E8C62F0015CCE9 /* happy-tracker */;
+			target = AF91F19127E8C62F0015CCE9 /* emotional-health-checkup */;
 			targetProxy = CFB9F0B227FF40D6005F8257 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -631,8 +627,8 @@
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HD55Y7F67X;
+				DEVELOPMENT_ASSET_PATHS = "\"emotional-health-checkup/Preview Content\"";
+				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -646,8 +642,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.emotional-health-checkup";
+				PRODUCT_NAME = EHC;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -663,8 +659,8 @@
 				CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION = shallow;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"happy-tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = HD55Y7F67X;
+				DEVELOPMENT_ASSET_PATHS = "\"emotional-health-checkup/Preview Content\"";
+				DEVELOPMENT_TEAM = HWYFX3H97P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to detect facial emotion.";
@@ -678,8 +674,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.happy-tracker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iostrio.emotional-health-checkup";
+				PRODUCT_NAME = EHC;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -697,12 +693,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.happy-trackerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.emotional-health-checkupTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happy-tracker.app/happy-tracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EHC.app/EHC";
 			};
 			name = Debug;
 		};
@@ -716,19 +712,19 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.happy-trackerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mirna.emotional-health-checkupTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happy-tracker.app/happy-tracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EHC.app/EHC";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF91F18D27E8C62F0015CCE9 /* Build configuration list for PBXProject "happy-tracker" */ = {
+		AF91F18D27E8C62F0015CCE9 /* Build configuration list for PBXProject "emotional-health-checkup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF91F19E27E8C6310015CCE9 /* Debug */,
@@ -737,7 +733,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF91F1A027E8C6310015CCE9 /* Build configuration list for PBXNativeTarget "happy-tracker" */ = {
+		AF91F1A027E8C6310015CCE9 /* Build configuration list for PBXNativeTarget "emotional-health-checkup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF91F1A127E8C6310015CCE9 /* Debug */,
@@ -746,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "happy-trackerTests" */ = {
+		CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "emotional-health-checkupTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CFB9F0B427FF40D6005F8257 /* Debug */,

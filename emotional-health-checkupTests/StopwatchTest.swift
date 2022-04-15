@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import happy_tracker
+@testable import EHC
 
 class StopwatchTest: XCTestCase {
     
