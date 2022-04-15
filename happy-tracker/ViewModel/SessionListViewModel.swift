@@ -15,6 +15,7 @@ class SessionListViewModel: ObservableObject {
     @Published var sessions: [RecordModel]?
     //    @State var toggleIsOn: Bool
     
+    @Published var dbError: Error?
     
     init() {
         if let userID = Auth.auth().currentUser?.uid {
@@ -26,13 +27,14 @@ class SessionListViewModel: ObservableObject {
     
     func addSnapshotListener(userID: String) {
         Firestore.firestore()
-            .collection("session")
+            .collection("sessions")
             .whereField("userID", isEqualTo: userID)
             .order(by: "timestamp", descending: true)
-        //.order(by: "timestamp", descending: toggleIsOn ? true : false)
             .addSnapshotListener { snapshot, err in
+                print("**||DEBUG\n\n snapshot heard \n")
                 if let err = err {
                     print("Error getting sessions: \(err)")
+                    self.dbError = err
                 } else {
                     self.sessions = snapshot!.documents
                         .compactMap({ docSnapshot -> RecordModel? in
@@ -47,13 +49,5 @@ class SessionListViewModel: ObservableObject {
                 }
             }
     }
-    
-    //    func toggle(){
-    //        Toggle(isOn: $toggleIsOn,
-    //                           label: {
-    //                        Text(toggleIsOn ? "Recent" : "Oldest")
-    //                    })
-    //    }
-    
     
 }

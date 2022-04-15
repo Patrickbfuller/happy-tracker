@@ -15,50 +15,56 @@ struct MainUserView: View {
     @State var isLoading = true
     
     var body: some View {
-        Group {
-            //            if sessionListViewModel.sessions == nil {
-            if isLoading || sessionListViewModel.sessions == nil {
-                ProgressView()
-                    .scaleEffect(3)
-            } else {
-                GeometryReader { geo in
-                    ZStack(alignment: .topLeading) {
-                        
-                        Color("pale")
-                            .ignoresSafeArea(.all)
-                        
-                        UserLandingView()
-                            .environmentObject(recordSessionViewModel)
-                            .environmentObject(sessionListViewModel)
-                            .frame(width: geo.size.width, height: geo.size.height)
-                            .navigationBarHidden(showSideMenu)
-                        
-                        if showSideMenu {
-                            ZStack {
-                                Color(.black)
-                                    .opacity(showSideMenu ? 0.25 : 0.0)
-                                    .ignoresSafeArea(.all)
-                            }.onTapGesture {
-                                withAnimation(.easeOut) {
-                                    showSideMenu = false
-                                }
-                            }
+        
+        GeometryReader { geo in
+            ZStack(alignment: .topLeading) {
+                
+                Color("pale")
+                    .ignoresSafeArea(.all)
+                
+                Group {
+                    VStack {
+                        if sessionListViewModel.dbError != nil {
+                            DBErrorView()
                         }
-                        
-                        SideMenuView(showThis: $showSideMenu)
-                            .frame(width: 300)
-                            .offset(x: showSideMenu ? 0 : -300, y: 0)
-                            .background(showSideMenu ? Color.white : Color.clear)
-                            .alert("Error loading your user data. Please logout.", isPresented: $viewModel.isDisabled) {
-                                Button("Logout") {
-                                    //print(viewModel.currentUser)
-                                    viewModel.signOut()
-                                }
-                            }
+                        if isLoading || sessionListViewModel.sessions == nil {
+                            ProgressView()
+                                .scaleEffect(3)
+                                .padding()
+                        } else {
+                            UserLandingView()
+                                .environmentObject(recordSessionViewModel)
+                                .environmentObject(sessionListViewModel)
+                        }
                     }
                 }
+                .navigationBarHidden(showSideMenu)
+                .frame(width: geo.size.width, height: geo.size.height)
+                if showSideMenu {
+                    ZStack {
+                        Color(.black)
+                            .opacity(showSideMenu ? 0.25 : 0.0)
+                            .ignoresSafeArea(.all)
+                    }.onTapGesture {
+                        withAnimation(.easeOut) {
+                            showSideMenu = false
+                        }
+                    }
+                }
+                
+                SideMenuView(showThis: $showSideMenu)
+                    .frame(width: 300)
+                    .offset(x: showSideMenu ? 0 : -300, y: 0)
+                    .background(showSideMenu ? Color.white : Color.clear)
+                    .alert("Error loading your user data. Please logout.", isPresented: $viewModel.isDisabled) {
+                        Button("Logout") {
+                            //print(viewModel.currentUser)
+                            viewModel.signOut()
+                        }
+                    }
             }
         }
+        
         .navigationTitle("Dashboard")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -90,5 +96,21 @@ struct MainUserView_Previews: PreviewProvider {
     static var previews: some View {
         MainUserView()
             .environmentObject(AuthViewModel())
+    }
+}
+
+struct DBErrorView: View {
+    
+    var body: some View {
+        VStack {
+            Image(systemName: "exclamationmark.triangle")
+            Text("Error fetching data.")
+                .fontWeight(.bold)
+        }
+        .padding()
+        .foregroundColor(.white)
+        .background(.red)
+        .cornerRadius(20)
+        
     }
 }
