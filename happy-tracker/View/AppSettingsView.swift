@@ -7,10 +7,12 @@
 import SwiftUI
 
 struct AppSettingsView: View {
+    // MARK: PROPERTIES
     //@Binding var isDarkMode: Bool
     //@State var preferredColorScheme: ColorScheme = .light
     @AppStorage("isDarkMode") private var isDarkMode = false
     
+    // MARK: BODY
     var body: some View {
         ZStack(alignment: .top) {
             Color("pale")
@@ -29,17 +31,17 @@ struct AppSettingsView: View {
                 
                 Spacer()
                 
-//                if changeColor {
-//                    Image(systemName: "switch.2")
-//                        .font(.system(size: 50))
-//                }
+                //                if changeColor {
+                //                    Image(systemName: "switch.2")
+                //                        .font(.system(size: 50))
+                //                }
                 
                 VStack(alignment: .leading) {
                     Text("Toggle Color Scheme")
                         .font(.system(size: 25))
                         .padding()
-//                    Toggle("Change Color Theme", isOn: $isDarkMode)
-//                        .padding()
+                    //                    Toggle("Change Color Theme", isOn: $isDarkMode)
+                    //                        .padding()
                     Picker("Color Mode", selection: $isDarkMode) {
                         Text("Light")
                             .tag(false)
@@ -47,7 +49,7 @@ struct AppSettingsView: View {
                             .tag(true)
                     }.pickerStyle(SegmentedPickerStyle())
                         .padding()
-                   
+                    
                 }
                 
                 Spacer()

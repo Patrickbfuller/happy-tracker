@@ -10,25 +10,25 @@ import Firebase
 
 @main
 struct happy_trackerApp: App {
-
- @StateObject var viewModel = AuthViewModel()
-   
+    // MARK: PROPERTIES
+    @StateObject var viewModel = AuthViewModel()
+    
     
     @AppStorage("isDarkMode") private var isDarkMode = false
     @AppStorage("inOrder") private var inOrder = true
     
     init() {
-
+        
         FirebaseApp.configure()
         
-       //try? Auth.auth().signOut()
+        //try? Auth.auth().signOut()
     }
-
+    // MARK: BODY
     var body: some Scene {
         WindowGroup {
             NavigationView{
-             ContentView()
-                    //.environmentObject(viewModel)
+                ContentView()
+                //.environmentObject(viewModel)
             }
             .navigationViewStyle(.stack)
             .environmentObject(viewModel)

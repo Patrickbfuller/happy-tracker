@@ -20,11 +20,7 @@ class AuthViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    
     func test_AuthViewModel_isError_shouldBeFalse() {
-        
-        //   let isError: Bool = Bool.random()
-        
         
         let vm = AuthViewModel()
         
@@ -33,8 +29,6 @@ class AuthViewModelTests: XCTestCase {
     }
     
     func test_AuthViewModel_setError_isErrorShouldBeTrue() {
-        
-        //   let isError: Bool = Bool.random()
         
         // Given
         let vm = AuthViewModel()

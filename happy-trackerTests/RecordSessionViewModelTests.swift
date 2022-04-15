@@ -9,15 +9,15 @@ import XCTest
 @testable import happy_tracker
 
 class RecordSessionViewModelTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     
     func test_RecordSessionViewModel_init_status_should_equal_notStarted() {
         
@@ -39,7 +39,7 @@ class RecordSessionViewModelTests: XCTestCase {
         XCTAssertEqual(vm.status, RecordSessionViewModel.Status.isRecording)
     }
     
-
+    
     func test_RecordSessionViewModel_submitSession_statusShoulEqualToDone() {
         //Given
         let vm = RecordSessionViewModel()
@@ -53,10 +53,6 @@ class RecordSessionViewModelTests: XCTestCase {
     }
     
     
-    
-    
-    
-
     func test_RecordSessionViewModel_status_shouldBeReset_notStarted() {
         //Given
         let vm = RecordSessionViewModel()
@@ -67,7 +63,7 @@ class RecordSessionViewModelTests: XCTestCase {
         
         //Then
         XCTAssertTrue(vm.self.status  == .notStarted)
-
+        
     }
-
+    
 }

@@ -7,11 +7,11 @@
 import SwiftUI
 
 struct UserLandingView: View {
-        
+    // MARK: PROPERTIES
     @EnvironmentObject var sessionListViewModel: SessionListViewModel
     @EnvironmentObject var recordSessionViewModel: RecordSessionViewModel
     
-    
+    // MARK: BODY
     var body: some View {
         VStack{
             
@@ -20,7 +20,7 @@ struct UserLandingView: View {
                 GetStartedView()
                     .environmentObject(recordSessionViewModel)
                 
-            // MARK: - If sessions not empty
+                // MARK: - If sessions not empty
                 
             } else {
                 

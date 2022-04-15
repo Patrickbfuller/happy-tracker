@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct LiveFrameView: View {
-    
+    // MARK: PROPERTIES
     @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
-//    var image: CGImage?
-    
+    //    var image: CGImage?
+    // MARK: BODY
     var body: some View {
         
         Group {

@@ -11,15 +11,12 @@ import SwiftUI
 import FirebaseFirestore
 
 struct MiniListRow: View {
+    // MARK: PROPERTIES
     
     var backgroundOpacity: Double
-    
     var session: RecordModel
-    
     var formatter = CustomDateFormatter.shared
-    
     var emotionLabel: String
-    
     var emotionIndexLabel: String
     
     init(session: RecordModel, backgroundOpacity: Double) {
@@ -29,10 +26,10 @@ struct MiniListRow: View {
         emotionLabel = emotion.emotionIndex > 0.5 ? "Happy" : "Sad"
         emotionIndexLabel = String(format: "( %.0f )", emotion.emotionIndex*100)
     }
-    
+    // MARK: BODY
     var body: some View {
         ZStack {
-//            Color.mint.opacity(backgroundOpacity)
+            //            Color.mint.opacity(backgroundOpacity)
             Color("customMint").opacity(backgroundOpacity)
             HStack(alignment: .top, spacing: 0.0) {
                 
@@ -44,20 +41,20 @@ struct MiniListRow: View {
                     HStack {
                         Text(emotionLabel)
                             .fontWeight(.bold)
-                            //.frame(width: 70, alignment: .leading)
+                        //.frame(width: 70, alignment: .leading)
                         
                         //Spacer()
                         
                         Text(emotionIndexLabel)
                             .fontWeight(.thin)
-                            //.frame(alignment: .trailing)
+                        //.frame(alignment: .trailing)
                         
                         Spacer()
                     }
                     .frame(width:110)
                 }
                 .padding(.horizontal)
-
+                
                 Rectangle()
                     .frame(width: 0.5)
                     .foregroundColor(.primary.opacity(0.5))

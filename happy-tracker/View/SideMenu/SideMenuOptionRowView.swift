@@ -7,14 +7,15 @@
 import SwiftUI
 
 struct SideMenuOptionRowView: View {
+    // MARK: PROPERTIES
     let viewModel: SideMenuOption
-    
+    // MARK: BODY
     var body: some View {
         HStack(spacing: 16) {
             Image(systemName: viewModel.imageName)
             
             Text(viewModel.menuOption)
-                //.foregroundColor(.black)
+            //.foregroundColor(.black)
             
             Spacer()
         }

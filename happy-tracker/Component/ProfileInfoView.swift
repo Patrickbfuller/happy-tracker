@@ -7,9 +7,11 @@
 import SwiftUI
 
 struct ProfileInfoView: View {
+    // MARK: PROPERTIES
     let text: String
     let imageName: String?
     
+    // MARK: BODY
     var body: some View {
         RoundedRectangle(cornerRadius: 25)
             .fill(Color("light"))

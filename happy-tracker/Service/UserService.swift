@@ -36,6 +36,7 @@ enum UserServiceError: Error {
     case snapshotError
 }
 
+// MARK: EXTENSION
 extension UserServiceError: LocalizedError {
     
     var errorDescription: String? {

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LivePredictionView: View {
-    
+    // MARK: PROPERTIES
     @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
     @State var predictionLabel = ""
     
-        
+    // MARK: BODY
     var body: some View {
         
         PredictionLabelBox(label: predictionLabel)
@@ -21,7 +21,7 @@ struct LivePredictionView: View {
                 updatePredLabel(cvpBuffer: cvpBuffer)
             }
     }
-    
+    // MARK: FUNCTIONS
     func updatePredLabel(cvpBuffer: CVPixelBuffer?) {
         ImageClassifier.classifyBuffer(cvpBuffer: cvpBuffer) { bufferPred in
             let emotionPred = EmotionPrediction(
@@ -50,7 +50,7 @@ struct PredictionLabelBox: View {
         "happy": .green,
         "sad": .blue
     ]
-    
+    // MARK: BODY
     var body: some View {
         Text(label.capitalized)
             .fontWeight(.black)

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: PROPERTIES
     @EnvironmentObject var viewModel: AuthViewModel
     
-    
+    // MARK: BODY
     var body: some View {
- 
+        
         Group {
             //no user logged in
             if viewModel.userSession == nil {
@@ -20,9 +21,9 @@ struct ContentView: View {
                 LoginView()
             } else {
                 //have a logged in user
-               
+                
                 MainUserView()
-                    //.preferredColorScheme(isDarkMode ? .dark : .light)
+                //.preferredColorScheme(isDarkMode ? .dark : .light)
             }
         }
         

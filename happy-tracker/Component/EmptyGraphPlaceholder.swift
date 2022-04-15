@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct EmptyGraphPlaceholder: View {
-    
+    // MARK: PROPERTIES
     @State var showingHint: Bool = false
+    // MARK: BODY
     var body: some View {
         ZStack {
             HStack {
@@ -34,25 +35,25 @@ struct EmptyGraphPlaceholder: View {
                 Spacer()
             }
             // Z-layer with info button
-
-                VStack {
-                    Button {
-                        withAnimation { showingHint.toggle() }
-                    } label: {
-                        HStack {
-                            if showingHint {
-                                HintView()
-                            } else {
-                                Spacer()
-                                Image(systemName: "info.circle")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .padding()
-                            }
+            
+            VStack {
+                Button {
+                    withAnimation { showingHint.toggle() }
+                } label: {
+                    HStack {
+                        if showingHint {
+                            HintView()
+                        } else {
+                            Spacer()
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .padding()
                         }
                     }
-                    Spacer()
                 }
+                Spacer()
+            }
         }
         .background(Color(UIColor.systemBackground).opacity(0.8))
         .background(
@@ -74,7 +75,7 @@ struct EmptyGraphPlaceholder: View {
     }
     
     struct HintView: View {
-        
+        // MARK: BODY
         var body: some View {
             HStack {
                 Spacer()
@@ -89,10 +90,10 @@ struct EmptyGraphPlaceholder: View {
                 Spacer()
             }
             .padding(.vertical, 30)
-//            .padding(.horizontal)
+            //            .padding(.horizontal)
             .multilineTextAlignment(.center)
             .foregroundColor(.primary)
-//            .background(.gray.opacity(0.25))
+            //            .background(.gray.opacity(0.25))
             .background(Color("customMint").opacity(0.25))
             .background(Color(UIColor.systemBackground))
             .cornerRadius(20)
@@ -106,7 +107,7 @@ struct EmptyGraphPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
         EmptyGraphPlaceholder()
             .ignoresSafeArea()
-//            .preferredColorScheme(.dark)
+        //            .preferredColorScheme(.dark)
     }
 }
 

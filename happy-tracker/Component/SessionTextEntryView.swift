@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SessionTextEntryView: View {
-    
+    // MARK: PROPERTIES
     @EnvironmentObject var sessionViewModel: RecordSessionViewModel
     
     @State var description = ""
     var placeholder = "5-20 words describing your feelings"
-    
+    // MARK: BODY
     var body: some View {
         ZStack {
             Color.black.opacity(0.5)
@@ -77,7 +77,7 @@ struct SessionTextEntryView: View {
             .cornerRadius(20)
             
             .overlay(RoundedRectangle(cornerRadius: 20)
-                        .stroke(lineWidth: 2))
+                .stroke(lineWidth: 2))
             .foregroundColor(.white)
             .padding(30)
         }

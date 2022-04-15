@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CustomButton: View {
-    
+    // MARK: PROPERTIES
     var buttonLabel: String
     
     var action: () -> Void
-    
+    // MARK: BODY
     var body: some View {
         Button {
             // action
@@ -25,9 +25,9 @@ struct CustomButton: View {
 }
 
 struct CustomButtonLabel: View {
-     
+    // MARK: PROPERTIES
     var buttonLabel: String
-    
+    // MARK: BODY
     var body: some View {
         Text(buttonLabel)
             .fontWeight(.bold)

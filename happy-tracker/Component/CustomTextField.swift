@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct CustomTextField: View {
-    
+    // MARK: PROPERTIES
     let placeholder: String
     @Binding var inputText: String
     let isSecure: Bool
-    
+    // MARK: BODY
     var body: some View {
         
         
         Group {
             if isSecure {
                 SecureField(placeholder, text: $inputText)
-                    
+                
                 
             } else {
                 TextField(placeholder, text: $inputText)
                 
-                 
+                
             }
         }
         .padding()

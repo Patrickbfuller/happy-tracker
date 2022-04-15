@@ -92,10 +92,10 @@ class CameraManager: ObservableObject {
             for: .video,
             position: .front)
         
-//        let device = AVCaptureDevice.default(
-//            .builtInWideAngleCamera,
-//            for: .video,
-//            position: .back)
+        //        let device = AVCaptureDevice.default(
+        //            .builtInWideAngleCamera,
+        //            for: .video,
+        //            position: .back)
         
         guard let camera = device else {
             set(error: .cameraUnavailable)
@@ -121,8 +121,8 @@ class CameraManager: ObservableObject {
         if session.canAddOutput(videoOutput) {
             session.addOutput(videoOutput)
             videoOutput.videoSettings =
-                [kCVPixelBufferPixelFormatTypeKey as String:
-                    kCVPixelFormatType_32BGRA]
+            [kCVPixelBufferPixelFormatTypeKey as String:
+                kCVPixelFormatType_32BGRA]
             let videoConnection = videoOutput.connection(with: .video)
             videoConnection?.videoOrientation = .portrait
         } else {

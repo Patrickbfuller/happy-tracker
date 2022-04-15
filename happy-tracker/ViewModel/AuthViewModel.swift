@@ -12,6 +12,7 @@ import FirebaseAuth
 
 
 class AuthViewModel: ObservableObject {
+    
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserModel?
     @Published var isDisabled: Bool = false
@@ -20,9 +21,9 @@ class AuthViewModel: ObservableObject {
     var authError: Error?
     
     @Published var isError: Bool = false
-
-   init() {
-
+    
+    init() {
+        
         self.userSession = Auth.auth().currentUser
         
         if let userSessionId = userSession?.uid {
@@ -34,7 +35,8 @@ class AuthViewModel: ObservableObject {
                 self.currentUser = user
             }
         }
-}
+    }
+    // MARK: FUNCTIONS
     
     func login(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
@@ -118,6 +120,7 @@ enum AuthError: Error {
     case passwordConfirmFailure
     
 }
+// MARK: EXTENSION
 
 extension AuthError: LocalizedError {
     

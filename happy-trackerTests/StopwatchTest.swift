@@ -27,37 +27,37 @@ class StopwatchTest: XCTestCase {
     }
     
     // Not getting currently testing asynchronous timer properly
-//    func test_Stopwatch_start_stop_at_various_time() {
-//        // Given
-//        let stopwatch = Stopwatch()
-//        let waitTime = 1
-//
-//        // When
-//        DispatchQueue.main.async {
-//            stopwatch.startStop()
-//
-//            DispatchQueue(label: "test").sync {}
-//
-//            Thread.sleep(forTimeInterval: 3)
-//            stopwatch.startStop()
-//        }
-//        Thread.sleep(forTimeInterval: 10)
-//        // Then
-//        XCTAssertEqual(stopwatch.time, waitTime)
-//        XCTAssertEqual(stopwatch.time, -1)
-//    }
-//
-//    func test_Stopwatch_restartsFrom0() {
-//        // Given
-//        let stopwatch = Stopwatch()
-//        
-//        // When
-//        stopwatch.startStop()
-//        sleep(3)
-//        stopwatch.startStop()
-//        stopwatch.startStop()
-//
-//        // Then
-//        XCTAssertEqual(stopwatch.time, 0)
-//    }
+    //    func test_Stopwatch_start_stop_at_various_time() {
+    //        // Given
+    //        let stopwatch = Stopwatch()
+    //        let waitTime = 1
+    //
+    //        // When
+    //        DispatchQueue.main.async {
+    //            stopwatch.startStop()
+    //
+    //            DispatchQueue(label: "test").sync {}
+    //
+    //            Thread.sleep(forTimeInterval: 3)
+    //            stopwatch.startStop()
+    //        }
+    //        Thread.sleep(forTimeInterval: 10)
+    //        // Then
+    //        XCTAssertEqual(stopwatch.time, waitTime)
+    //        XCTAssertEqual(stopwatch.time, -1)
+    //    }
+    //
+    //    func test_Stopwatch_restartsFrom0() {
+    //        // Given
+    //        let stopwatch = Stopwatch()
+    //        
+    //        // When
+    //        stopwatch.startStop()
+    //        sleep(3)
+    //        stopwatch.startStop()
+    //        stopwatch.startStop()
+    //
+    //        // Then
+    //        XCTAssertEqual(stopwatch.time, 0)
+    //    }
 }

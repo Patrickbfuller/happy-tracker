@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 
 
 struct MiniListView: View {
-    
+    // MARK: PROPERTIES
     @EnvironmentObject var sessionListViewModel: SessionListViewModel
     @State var showingOldestFirst = true
     
@@ -28,7 +28,7 @@ struct MiniListView: View {
             return []
         }
     }
-    
+    // MARK: BODY
     var body: some View {
         ZStack(alignment: .bottom){
             
@@ -49,7 +49,6 @@ struct MiniListView: View {
                 }
                 
                 
-                
                 ScrollView(showsIndicators: true) {
                     VStack(spacing: 4) {
                         ForEach(Array(zip(sessions.indices, sessions)), id: \.0)
@@ -60,8 +59,6 @@ struct MiniListView: View {
                                 backgroundOpacity: index % 2 == 0 ? 0.1 : 0.3)
                         }
                     }
-                    
-                    
                 }
                 
             }
@@ -72,9 +69,7 @@ struct MiniListView: View {
                 .opacity(0.5)
                 .ignoresSafeArea()
                 .frame(height: 50)
-                .allowsHitTesting(false)
-            
-            
+                .allowsHitTesting(false)       
         }
         
     }

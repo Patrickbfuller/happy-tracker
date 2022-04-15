@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LogoView: View {
+    
+    // MARK: BODY
     var body: some View {
         
         Image(systemName: "brain.head.profile")

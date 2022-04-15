@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct MainUserView: View {
+    // MARK: PROPERTIES
     @State var showSideMenu: Bool = false
     @EnvironmentObject var viewModel: AuthViewModel
     @StateObject var sessionListViewModel = SessionListViewModel()
@@ -14,6 +15,7 @@ struct MainUserView: View {
     
     @State var isLoading = true
     
+    // MARK: BODY
     var body: some View {
         Group {
             //            if sessionListViewModel.sessions == nil {

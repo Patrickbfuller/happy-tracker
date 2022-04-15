@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct GetStartedView: View {
-    
+    // MARK: PROPERTIES
     @EnvironmentObject var recordSessionViewModel: RecordSessionViewModel
-    
+    // MARK: BODY
     var body: some View {
         ZStack{
             Color("pale").opacity(0.2)
                 .ignoresSafeArea()
             
             VStack{
-                
                 Text("Welcome to")
                     .font(.largeTitle)
                     .padding(.top,50)
@@ -32,27 +31,19 @@ struct GetStartedView: View {
                 Spacer()
                 LogoView()
                 
-                
-                
-                
                 Text("Emotional Health Check-up detects your \n emotions through facial expressions")
                 //   .lineLimit(nil)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .padding(.bottom,140)
                 
-//                Spacer()
+                //                Spacer()
                 Text("Start your first session👇")
                     .font(.callout)
                     .fontWeight(.semibold)
             }
         }
-        
-        
-        
-        
     }
-    
 }
 
 struct GetStartedView_Previews: PreviewProvider {

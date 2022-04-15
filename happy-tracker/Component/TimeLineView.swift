@@ -10,7 +10,7 @@ import LineChartView
 import FirebaseFirestore
 
 struct TimeLineView: View {
-    
+    // MARK: PROPERTIES
     let calendar = Calendar(identifier: .gregorian)
     
     let dateFormatter = CustomDateFormatter.shared
@@ -56,7 +56,7 @@ struct TimeLineView: View {
             }
         }
     }
-    
+    // MARK: BODY
     var body: some View {
         Group {
             
@@ -81,11 +81,11 @@ struct TimeLineView: View {
                             dragGesture: true,
                             hapticFeedback: true)
                     )
-                        .background(Color(UIColor.systemBackground))
+                    .background(Color(UIColor.systemBackground))
                     //                    .cornerRadius(20)
                     //                    .shadow(color: .secondary.opacity(0.65), radius: 8, x: 0, y: 0)
                     //                    .aspectRatio(1.5, contentMode: .fit)
-                        .blur(radius: blurValue)
+                    .blur(radius: blurValue)
                     
                     VStack(alignment: .trailing, spacing: 0) {
                         Text("Emotional Record")
@@ -143,7 +143,7 @@ struct TimeLineView_Previews: PreviewProvider {
 }
 
 struct HintBoxView: View {
-    
+    // MARK: BODY
     var body: some View {
         HStack {
             Text("Try dragging across the line!\n( Tap to close )")

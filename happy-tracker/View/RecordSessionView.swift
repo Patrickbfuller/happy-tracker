@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecordSessionView: View {
-    
+    // MARK: PROPERTIES
     /*
      STORY POINTS: 1
      - Hide side panel menu if its part of this view
@@ -36,7 +36,7 @@ struct RecordSessionView: View {
     }
     
     var transparentBackground = Color.black.opacity(0.5)
-    
+    // MARK: BODY
     var body: some View {
         
         ZStack {
@@ -64,7 +64,7 @@ struct RecordSessionView: View {
                 if recordSessionViewModel.cameraError != nil {
                     CameraErrorView(recordSessionViewModel.cameraError!)
                 }
-
+                
                 /// Vanishable  HintBox - tappable
                 if showingHint {
                     HintView()
@@ -84,7 +84,7 @@ struct RecordSessionView: View {
                     StartStopButton()
                         .environmentObject(recordSessionViewModel)
                         .disabled(recordSessionViewModel.cameraError != nil)
-
+                    
                     /// Vanishable Stopwatch Timer
                     if recordSessionViewModel.status == .isRecording {
                         HStack {
@@ -126,9 +126,11 @@ struct RecordSessionView: View {
 }
 
 struct ShowHidePredictionButton: View {
-    
+    // MARK: PROPERTIES
     @Binding var showingPrediction: Bool
     
+    
+    // MARK: BODY
     var body: some View {
         Button { // action
             withAnimation {
@@ -166,9 +168,10 @@ class Stopwatch: ObservableObject {
 }
 
 struct InfoButton: View {
-    
+    // MARK: PROPERTIES
     @Binding var bindingBool: Bool
     
+    // MARK: BODY
     var body: some View {
         Button {
             withAnimation {
@@ -184,13 +187,14 @@ struct InfoButton: View {
 
 
 struct CameraErrorView: View {
-    
+    // MARK: PROPERTIES
     var cameraError: CameraError
     
     init(_ cameraError: CameraError) {
         self.cameraError = cameraError
     }
     
+    // MARK: BODY
     var body: some View {
         
         HStack {
@@ -211,6 +215,7 @@ struct CameraErrorView: View {
 }
 
 struct HintView: View {
+    // MARK: BODY
     var body: some View {
         HStack {
             Spacer()
@@ -239,14 +244,16 @@ struct RecordingTimerView: View {
 }
 
 struct StartStopButton: View {
+    // MARK: PROPERTIES
     @State var caption = ""
     
     @EnvironmentObject var sessionViewModel: RecordSessionViewModel
-        
+    
     var buttonLabel: String {
         sessionViewModel.status == .notStarted ? "Start" : "Stop"
     }
-        
+    
+    // MARK: BODY
     var body: some View {
         Button { // action
             if sessionViewModel.status == .notStarted {

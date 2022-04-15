@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct SessionDoneView: View {
-    
+    // MARK: PROPERTIES
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var sessionViewModel: RecordSessionViewModel
-
+    
+    // MARK: BODY
     var body: some View {
         ZStack {
             Color.black.opacity(0.5)
                 .ignoresSafeArea()
             VStack(spacing: 20) {
-
+                
                 Text("Thank You!")
                     .font(.title2)
                 Text("Your session is complete")
@@ -31,7 +32,7 @@ struct SessionDoneView: View {
                         .fontWeight(.bold)
                         .padding(8)
                         .overlay(RoundedRectangle(cornerRadius: 10)
-                                    .stroke(lineWidth: 3))
+                            .stroke(lineWidth: 3))
                 }
                 
             }
@@ -40,11 +41,11 @@ struct SessionDoneView: View {
             .background(Color("medium"))
             
             .cornerRadius(20)
-
+            
             .padding(2)
             .overlay(RoundedRectangle(cornerRadius: 20)
-                        .stroke(
-                            lineWidth: 5))
+                .stroke(
+                    lineWidth: 5))
             .foregroundColor(.white)
             .padding()
         }
