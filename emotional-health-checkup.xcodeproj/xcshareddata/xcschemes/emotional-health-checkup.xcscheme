@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF91F19127E8C62F0015CCE9"
-               BuildableName = "happy-tracker.app"
-               BlueprintName = "happy-tracker"
-               ReferencedContainer = "container:happy-tracker.xcodeproj">
+               BuildableName = "EHC.app"
+               BlueprintName = "emotional-health-checkup"
+               ReferencedContainer = "container:emotional-health-checkup.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CFB9F0AD27FF40D6005F8257"
-               BuildableName = "happy-trackerTests.xctest"
-               BlueprintName = "happy-trackerTests"
-               ReferencedContainer = "container:happy-tracker.xcodeproj">
+               BuildableName = "emotional-health-checkupTests.xctest"
+               BlueprintName = "emotional-health-checkupTests"
+               ReferencedContainer = "container:emotional-health-checkup.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF91F19127E8C62F0015CCE9"
-            BuildableName = "happy-tracker.app"
-            BlueprintName = "happy-tracker"
-            ReferencedContainer = "container:happy-tracker.xcodeproj">
+            BuildableName = "EHC.app"
+            BlueprintName = "emotional-health-checkup"
+            ReferencedContainer = "container:emotional-health-checkup.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF91F19127E8C62F0015CCE9"
-            BuildableName = "happy-tracker.app"
-            BlueprintName = "happy-tracker"
-            ReferencedContainer = "container:happy-tracker.xcodeproj">
+            BuildableName = "EHC.app"
+            BlueprintName = "emotional-health-checkup"
+            ReferencedContainer = "container:emotional-health-checkup.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
