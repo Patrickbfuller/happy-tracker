@@ -1,13 +1,13 @@
 #Customize the codemagic.yml file according to your project and commit it to the root of the repository
 
 workflows:
-  happy-tracker-workflow:
-    name: Happy Tracker Pipeline
+  emotional-health-checkup-workflow:
+    name: Emotional Health Checkup Pipeline
     environment:
       xcode: latest
       vars:
-          PROJECT: "happy-tracker.xcodeproj"
-          SCHEME: "happy-tracker"
+          PROJECT: "emotional-health-checkup.xcodeproj"
+          SCHEME: "emotional-health-checkup"
     #triggering:
       #events:
         #- push
@@ -27,7 +27,7 @@ workflows:
               --device "iPhone 11"
    #clean build test CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
         test_report: build/ios/test/*.xml
-      - name: Build happy-tracker
+      - name: Build emotional-health-checkup
         script: |
           xcodebuild build -project "$PROJECT" \
           -scheme "$SCHEME" \
