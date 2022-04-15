@@ -30,6 +30,7 @@ struct GetStartedView: View {
                 
                 Spacer()
                 LogoView()
+                Spacer()
                 
                 Text("Emotional Health Check-up detects your \n emotions through facial expressions")
                 //   .lineLimit(nil)
