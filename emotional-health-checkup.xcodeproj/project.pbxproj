@@ -48,6 +48,8 @@
 		AFB89FFB27FCC92B00AE38F8 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */; };
 		AFC40D0A27EE0E9600EA02F5 /* EmotionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */; };
 		AFE79ED027F36E8B00D62EFF /* PredictionCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */; };
+		AFFB8FDF280DA08200542A72 /* EHCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFB8FDE280DA08200542A72 /* EHCUITests.swift */; };
+		AFFB8FE1280DA08200542A72 /* EHCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFB8FE0280DA08200542A72 /* EHCUITestsLaunchTests.swift */; };
 		CF0F786227E8F038009965CE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F786127E8F038009965CE /* RegisterView.swift */; };
 		CF0F786D27E905C1009965CE /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = CF0F786C27E905C1009965CE /* LineChartView */; };
 		CF58170827EC946C0047EC87 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58170727EC946C0047EC87 /* AuthViewModel.swift */; };
@@ -65,6 +67,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AFFB8FE2280DA08200542A72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF91F18A27E8C62F0015CCE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF91F19127E8C62F0015CCE9;
+			remoteInfo = "emotional-health-checkup";
+		};
 		CFB9F0B227FF40D6005F8257 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF91F18A27E8C62F0015CCE9 /* Project object */;
@@ -115,6 +124,9 @@
 		AFB89FFA27FCC92B00AE38F8 /* TimeLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
 		AFC40D0927EE0E9600EA02F5 /* EmotionPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionPrediction.swift; sourceTree = "<group>"; };
 		AFE79ECF27F36E8B00D62EFF /* PredictionCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionCounter.swift; sourceTree = "<group>"; };
+		AFFB8FDC280DA08200542A72 /* EHCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EHCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFB8FDE280DA08200542A72 /* EHCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHCUITests.swift; sourceTree = "<group>"; };
+		AFFB8FE0280DA08200542A72 /* EHCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CF0F786127E8F038009965CE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		CF58170727EC946C0047EC87 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CF58170B27EC94C00047EC87 /* MiniListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MiniListRow.swift; path = "emotional-health-checkup/Component/MiniListRow.swift"; sourceTree = SOURCE_ROOT; };
@@ -139,6 +151,13 @@
 				CF58173027ECB1330047EC87 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				AF7F63C727EB972600A96F5E /* FirebaseAuth in Frameworks */,
 				CF0F786D27E905C1009965CE /* LineChartView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFB8FD9280DA08200542A72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +217,7 @@
 				AF91F19427E8C62F0015CCE9 /* emotional-health-checkup */,
 				AF2B34802809F7CF00A6588F /* GoogleService-Info.plist */,
 				CFB9F0AF27FF40D6005F8257 /* emotional-health-checkupTests */,
+				AFFB8FDD280DA08200542A72 /* EHCUITests */,
 				AF91F19327E8C62F0015CCE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,6 +227,7 @@
 			children = (
 				AF91F19227E8C62F0015CCE9 /* EHC.app */,
 				CFB9F0AE27FF40D6005F8257 /* emotional-health-checkupTests.xctest */,
+				AFFB8FDC280DA08200542A72 /* EHCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,6 +316,15 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		AFFB8FDD280DA08200542A72 /* EHCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFFB8FDE280DA08200542A72 /* EHCUITests.swift */,
+				AFFB8FE0280DA08200542A72 /* EHCUITestsLaunchTests.swift */,
+			);
+			path = EHCUITests;
+			sourceTree = "<group>";
+		};
 		CFB9F0AF27FF40D6005F8257 /* emotional-health-checkupTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +379,24 @@
 			productReference = AF91F19227E8C62F0015CCE9 /* EHC.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AFFB8FDB280DA08200542A72 /* EHCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFFB8FE6280DA08200542A72 /* Build configuration list for PBXNativeTarget "EHCUITests" */;
+			buildPhases = (
+				AFFB8FD8280DA08200542A72 /* Sources */,
+				AFFB8FD9280DA08200542A72 /* Frameworks */,
+				AFFB8FDA280DA08200542A72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFFB8FE3280DA08200542A72 /* PBXTargetDependency */,
+			);
+			name = EHCUITests;
+			productName = EHCUITests;
+			productReference = AFFB8FDC280DA08200542A72 /* EHCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CFB9F0AD27FF40D6005F8257 /* emotional-health-checkupTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFB9F0B627FF40D6005F8257 /* Build configuration list for PBXNativeTarget "emotional-health-checkupTests" */;
@@ -374,11 +422,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					AF91F19127E8C62F0015CCE9 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					AFFB8FDB280DA08200542A72 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = AF91F19127E8C62F0015CCE9;
 					};
 					CFB9F0AD27FF40D6005F8257 = {
 						CreatedOnToolsVersion = 13.3;
@@ -405,6 +457,7 @@
 			targets = (
 				AF91F19127E8C62F0015CCE9 /* emotional-health-checkup */,
 				CFB9F0AD27FF40D6005F8257 /* emotional-health-checkupTests */,
+				AFFB8FDB280DA08200542A72 /* EHCUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -417,6 +470,13 @@
 				AF91F19D27E8C6310015CCE9 /* Preview Assets.xcassets in Resources */,
 				AF91F19A27E8C6310015CCE9 /* Assets.xcassets in Resources */,
 				AF2B34812809F7CF00A6588F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFFB8FDA280DA08200542A72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +541,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFFB8FD8280DA08200542A72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFB8FDF280DA08200542A72 /* EHCUITests.swift in Sources */,
+				AFFB8FE1280DA08200542A72 /* EHCUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CFB9F0AA27FF40D6005F8257 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +564,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AFFB8FE3280DA08200542A72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF91F19127E8C62F0015CCE9 /* emotional-health-checkup */;
+			targetProxy = AFFB8FE2280DA08200542A72 /* PBXContainerItemProxy */;
+		};
 		CFB9F0B327FF40D6005F8257 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF91F19127E8C62F0015CCE9 /* emotional-health-checkup */;
@@ -683,6 +757,38 @@
 			};
 			name = Release;
 		};
+		AFFB8FE4280DA08200542A72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pbfuid.EHCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "emotional-health-checkup";
+			};
+			name = Debug;
+		};
+		AFFB8FE5280DA08200542A72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pbfuid.EHCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "emotional-health-checkup";
+			};
+			name = Release;
+		};
 		CFB9F0B427FF40D6005F8257 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -738,6 +844,15 @@
 			buildConfigurations = (
 				AF91F1A127E8C6310015CCE9 /* Debug */,
 				AF91F1A227E8C6310015CCE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFFB8FE6280DA08200542A72 /* Build configuration list for PBXNativeTarget "EHCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFFB8FE4280DA08200542A72 /* Debug */,
+				AFFB8FE5280DA08200542A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

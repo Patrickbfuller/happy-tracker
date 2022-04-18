@@ -38,6 +38,16 @@
                ReferencedContainer = "container:emotional-health-checkup.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AFFB8FDB280DA08200542A72"
+               BuildableName = "EHCUITests.xctest"
+               BlueprintName = "EHCUITests"
+               ReferencedContainer = "container:emotional-health-checkup.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
